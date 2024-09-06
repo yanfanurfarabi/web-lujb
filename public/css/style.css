@@ -1,0 +1,509 @@
+*{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: #2c3f50;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.NavBar{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    width: 50%;
+}
+
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-nav{
+    height: 52px;
+}
+
+.li-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 10px;
+    align-items: center;
+}
+
+.ul-nav{
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.nav-menu:hover{
+    color: #f9e73d;
+    border-bottom: 2px solid #f9e73d;
+}
+
+.SidebarDashboard{
+    padding: 40px 0 0 30px;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    background-color: #2c3f50;
+}
+
+.SidebarMenu{
+    width: auto;
+    margin: 15px 0;
+}
+
+.SideMenu{
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+    transition: .4s ease;
+}
+
+.SideMenu:hover{
+    color: #549294;
+    padding-left: 8px;
+}
+
+.DashboardContainer{
+    padding: 15px 0;
+    height: auto;
+    margin-left: 270px;
+}
+
+.InnerDashboard{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Card{
+    display: flex;
+    flex: 0 0 calc(43% - 1px);
+    margin: 10px;
+    justify-content: flex-start;
+    box-shadow: 2px 4px 4px 3px rgba(157, 157, 157, 0.2);
+    background-color: #2c3f50;
+    border-radius: 8px;
+}
+
+.InnerCard{
+    width: 100%;
+    padding: 10px;
+}
+
+.DashboardForm{
+    width: 100%;
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    height: 320px;
+    background-color: #2c3f50;
+    padding-top: 40px;
+}
+
+.Footer{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.InnerFooter{
+    margin: 0 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.InnerFooter > div{
+    margin: 0 15px 0 15px;
+}
+
+.FooterInfo{
+    width: 40%;
+}
+
+.FooterInfoIcon{
+    display: flex;
+    justify-content: center;
+}
+
+.FooterLogo{
+    height: 125px;
+}
+
+.FooterContent{
+    display: block;
+    width: 40%;
+}
+
+.FooterContentTitle{
+    color: #fff;
+}
+
+.FooterContentSeparator{
+    width: 120px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 18px;
+}
+
+.FooterTail{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 12px;
+}
+
+.FooterTailText{
+    color: #ababab;
+}
+
+.FooterLink{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.FooterLink:hover{
+    color: #f9e73d;
+    padding-left: 20px;
+}
+
+.LineGap{
+    border-bottom: 2px solid #fff;
+}
+
+.BannerCanvas{
+    width: 100%;
+    background-color: #929292;
+}
+
+.ActiveBanner{
+    width: 100%;
+    height: 450px;
+    background-image: url("/img/banner-test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 60%;
+}
+
+.Banner{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.Container{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.InnerContainer{
+    width: 80%;
+    margin: auto;
+}
+
+.InnerContent{
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.InnerContent > div{
+    margin: 2%;
+}
+
+.ContainerBanner{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.ContainerImage{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.ContainerContent, .ContainerTitle{
+    width: 50%;
+}
+
+.ContainerLink{
+    margin: 30px 0 30px 0;
+}
+
+.LoginContainer{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    top: 20vh;
+    position: absolute;
+}
+
+.LoginContent{
+    background-color: #549294;
+    width: 400px;
+    height: 260px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 6px 4px 3px rgba(157, 157, 157, 0.3);
+}
+
+.Login{
+    width: 80%;
+    display: block;
+}
+
+.LoginForm{
+    top: 6%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.LoginLabel{
+    margin: 10px 0;
+}
+
+.LoginInput{
+    width: 220px;
+    height: 26px;
+}
+
+.LoginButton{
+    width: 220px;
+    margin: 20px 0;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #3e9840;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.LoginButton:hover{
+    background-color: #41cd43;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.Button{
+    width: 160px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #929292;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: .4s ease;
+}
+
+.Button:hover{
+    color: #000;
+    background-color: #f9e73d;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.ContactContainer{
+    width: 80%;
+    margin: auto;
+    background-color: #929292;
+}
+
+.ListProductCategory{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.ListCategory{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.Category{
+    margin: 10px 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.Category:hover{
+    color: #f9e73d;
+    font-weight: 500;
+    transform: scale(1.1);
+}
+
+.ProductContainer{
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    justify-items: center;
+}
+
+.ProductList{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.ProductCard{
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    margin: 20px 15px;
+    flex: 0 0 calc(27% - -1px);
+    border: 2px solid #dadada;
+    box-shadow: 3px 4px 4px 3px rgba(157, 157, 157, 0.1);
+}
+
+.ProductImageContainer{
+    width: auto;
+    height: 360px;
+}
+
+.ProductImage{
+    width: 55%;
+    object-fit: cover;
+    padding: 10px;
+    transition: .4s;
+    opacity: .8;
+}
+
+.ProductImage:hover{
+    transform: scale(1.03);
+    opacity: 100;
+}
+
+.ProductTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.InquiryContainer{
+    width: 100%;
+    height: 260px;
+    background-color: #929292;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteseparator{
+    border-bottom: 3px solid #fff;
+}
+
+.white{
+   color: #fff; 
+}
+
+.black{
+    color: #000;
+}
+
+.text_small, li.small, span.small, p.small, a.small, b.small, i.small, u.small, h1.small, h2.small, h3.small, h4.small, h5.small, h6.small{
+    font-size: 15px;
+}
+
+.text_medium, li.medium, span.medium, p.medium, a.medium, b.medium, i.medium, u.medium, h1.medium, h2.medium, h3.medium, h4.medium, h5.medium, h6.medium{
+    font-size: 18px;
+}
+
+.text_big, li.big, span.big, p.big, a.big, b.big, i.big, u.big, h1.big, h2.big, h3.big, h4.big, h5.big, h6.big{
+    font-size: 22px;
+}
+
+.text_xl, li.xl, span.xl, p.xl, a.xl, b.xl, i.xl, u.xl, h1.xl, h2.xl, h3.xl, h4.xl, h5.xl, h6.xl{
+    font-size: 32px;
+}
+
+.text_light, li.light, span.light, p.light, a.light, b.light, i.light, u.light, h1.light, h2.light, h3.light, h4.light, h5.light, h6.light{
+    font-weight: 300;
+}
+
+.text_reguler, li.reguler, span.reguler, p.reguler, a.reguler, b.reguler, i.reguler, u.reguler, h1.reguler, h2.reguler, h3.reguler, h4.reguler, h5.reguler, h6.reguler{
+    font-weight: 400;
+}
+
+.text_semibold, li.semibold, span.semibold, p.semibold, a.semibold, b.semibold, i.semibold, u.semibold, h1.semibold, h2.semibold, h3.semibold, h4.semibold, h5.semibold, h6.semibold{
+    font-weight: 500;
+}
+
+.text_bold, li.bold, span.bold, p.bold, a.bold, b.bold, i.bold, u.bold, h1.bold, h2.bold, h3.bold, h4.bold, h5.bold, h6.bold{
+    font-weight: 700;
+}
+
+.text_bolder, li.bolder, span.bolder, p.bolder, a.bolder, b.bolder, i.bolder, u.bolder, h1.bolder, h2.bolder, h3.bolder, h4.bolder, h5.bolder, h6.bolder{
+    font-weight: 800;
+}
+
+.text_center, span.center, p.center, a.center, b.center, i.center, u.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center{
+    text-align: center;
+}
+
+.text_justify, span.justify, p.justify, a.justify, b.justify, i.justify, u.justify, h1.justify, h2.justify, h3.justify, h4.justify, h5.justify, h6.justify{
+    text-align: justify;
+}
+
+.text_underline, span.underline, p.underline, a.underline, b.underline, i.underline, u.underline, h1.underline, h2.underline, h3.underline, h4.underline, h5.underline, h6.underline{
+    text-decoration: underline;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
