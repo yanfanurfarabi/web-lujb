@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GeneralData extends Model
+class Product_Category extends Model
 {
-    protected $table = 'generaldatas';
+    use HasFactory;
 
+    protected $guarded = ['id'];
 }

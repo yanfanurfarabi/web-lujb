@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\GeneraldataController;
+use App\Models\GeneralData;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,8 +12,8 @@ Route::get('/product', function () {
     return view('page.product');
 });
 
-Route::get('/award', function () {
-    return view('page.award');
+Route::get('/services', function () {
+    return view('page.services');
 });
 
 Route::get('/profile', function () {
@@ -30,9 +32,21 @@ Route::get('/dashboard', function () {
     return view('cms.dashboard');
 });
 
-Route::get('/dashboard/generaldata', function () {
-    return view('cms.generalsdata');
-});
+// Route::get('/dashboard/generaldata/', function() {
+//     $datas = GeneralData::where('name');
+//     // $titles = GeneralData::where('name');
+//     $values = GeneralData::where('value');
+
+//     return view('cms.generalsdata',[
+//         'data' => $datas,
+//         // 'name' => $titles,
+//         'value' => $values,
+//     ]);
+// });
+
+Route::get('/dashboard/generaldata/', [GeneraldataController::class, 'indexData'])->name('datas');
+Route::get('/dashboard/generaldata/{id}/edit',[GeneraldataController::class, 'editData'])->name('datas.edit');
+Route::put('/dashboard/generaldata/{$id}/update', [GeneraldataController::class, 'updateData'])->name('datas.update');
 
 Route::get('/dashboard/generalimage', function () {
     return view('cms.generalsimage');
@@ -52,4 +66,8 @@ Route::get('/dashboard/productcategory', function () {
 
 Route::get('/dashboard/footer', function () {
     return view('cms.footer');
+});
+
+Route::get('/dashboard/home', function () {
+    return view('cms.home');
 });

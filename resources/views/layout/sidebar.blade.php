@@ -1,7 +1,7 @@
 
 
 <div class="SidebarDashboard">
-    <a href="/dashboard" class="SideMenu big bold">Dashboard</a>
+    <h3 class="white big bold">Dashboard</h3>
     {{-- <p class="big bold">Dashboard</p> --}}
     <div class="whiteseparator"></div>
     <ul class="SidebarMenuList">
@@ -12,4 +12,15 @@
         <li class="SidebarMenu"><a href="/dashboard/productcategory" class="SideMenu semibold">Product Category</a></li>
         <li class="SidebarMenu"><a href="/dashboard/footer" class="SideMenu semibold">Footer</a></li>
     </ul>
+
+    {{-- <h3 class="white big bold">By Page</h3>
+    <div class="whiteseparator"></div>
+    <ul class="SidebarMenuList">
+        <li class="SidebarMenu"><a href="/dashboard/home" class="SideMenu semibold">Home page</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/product" class="SideMenu semibold">Product page</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/services" class="SideMenu semibold">Services page</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/profile" class="SideMenu semibold">Profile page</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/contact" class="SideMenu semibold">Contact page</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/footer" class="SideMenu semibold">Footer</a></li>
+    </ul> --}}
 </div>

@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('desc');
-            $table->string('spec');
+            $table->text('desc');
+            $table->text('spec');
             $table->string('bannerimage');
-            $table->string('bannerspec');
             $table->string('sortOrder');
             $table->boolean('isActive');
             $table->timestamps();
@@ -25,7 +24,6 @@ return new class extends Migration
 
         Schema::create('products_category', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('category');
             $table->boolean('isActive');
             $table->string('sortOrder');

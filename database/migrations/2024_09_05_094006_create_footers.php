@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->string('label');
-            $table->string('value');
+            $table->string('name');
+            $table->text('value');
             $table->boolean('isActive');
             $table->timestamps();
         });

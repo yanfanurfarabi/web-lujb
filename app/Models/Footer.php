@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GeneralData extends Model
+class Footer extends Model
 {
-    protected $table = 'generaldatas';
+    use HasFactory;
 
 }

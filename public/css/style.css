@@ -1,13 +1,13 @@
 *{
-    color: white;
+    color: black;
     font-family: "Poppins", sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
 
 nav{
-    background-color: #2c3f50;
-    height: 80px;
+    background-color: #f0f0f0;
+    height: 70px;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -19,45 +19,53 @@ nav{
     justify-content: space-around;
 }
 
-.logo{
+.Logo{
     margin: 10px;
     display: flex;
     justify-content: start;
-    width: 50%;
+    width: 60px;
+    overflow: hidden;
+}
+
+.LogoNav{
+    width: 100%;
+    object-fit: cover;
+}
+
+.LogoNavLink{
+    width: 200px;
+    height: 60px;
 }
 
 .menu{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
 }
 
-.logo-nav{
-    height: 52px;
-}
-
 .li-nav{
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    margin: 20px 10px;
+    justify-content: center;
+    margin: 0 5px;
     align-items: center;
 }
 
 .ul-nav{
+    width: 80%;
     list-style: none;
     display: flex;
 }
 
 .nav-menu{
-    color: #fff;
     font-weight: 600;
     text-decoration: none;
     border-bottom: none;
 }
 
 .nav-menu:hover{
-    color: #f9e73d;
-    border-bottom: 2px solid #f9e73d;
+    color: #ff9500;
+    border-bottom: 2px solid #ff9500;
 }
 
 .SidebarDashboard{
@@ -82,7 +90,7 @@ nav{
 }
 
 .SideMenu:hover{
-    color: #549294;
+    color: #03ffeb;
     padding-left: 8px;
 }
 
@@ -103,7 +111,7 @@ nav{
     margin: 10px;
     justify-content: flex-start;
     box-shadow: 2px 4px 4px 3px rgba(157, 157, 157, 0.2);
-    background-color: #2c3f50;
+    background-color: #dcdcdc;
     border-radius: 8px;
 }
 
@@ -117,6 +125,18 @@ nav{
     margin: 16px 0;
     display: flex;
     flex-direction: column;
+}
+
+.ButtonFile{
+    width: 160px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #005f9f;
+    transition: .4s;
+}
+
+.ButtonFile:hover{
+    background-color: #0099ff;
 }
 
 footer{
@@ -206,58 +226,114 @@ footer{
 .ActiveBanner{
     width: 100%;
     height: 450px;
-    background-image: url("/img/banner-test.png");
+    /* background-image: url("/img/banner-test.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 80% 60%;
+    background-position: 80% 60%; */
 }
 
 .Banner{
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 450px;
     position: absolute;
 }
 
 .Container{
     width: 100%;
     height: auto;
-    margin: 20px 0;
+    /* padding: 20px 0; */
 }
 
 .InnerContainer{
-    width: 80%;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+}
+
+.FullContainer{
+    width: 100%;
     margin: auto;
 }
 
 .InnerContent{
+    width: 100%;
     margin: 0 20px 0 20px;
     display: flex;
-    justify-content: space-around;
-}
-
-.InnerContent > div{
-    margin: 2%;
 }
 
 .ContainerBanner{
-    width: 50%;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 .ContainerImage{
     width: 100%;
-    max-height: 500px;
+    height: 500px;
     object-fit: cover;
+    border-radius: 30px;
 }
 
-.ContainerContent, .ContainerTitle{
+.ContainerImageFull{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+}
+
+.ContainerContent{
+    padding: 10px;
+}
+
+.ContainerContent, .ContainerBanner{
     width: 50%;
 }
 
 .ContainerLink{
     margin: 30px 0 30px 0;
+}
+
+.ContainerList{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.FullContent{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.VisiMisi{
+    width: 50%;
+    margin: 20px;
+}
+
+.VisiMisiContainer{
+    width: 80%;
+}
+
+.VisiMisiList{
+    width: 60%;
+}
+
+.VisiMisiBanner{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.VisiMisiIcon{
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
 }
 
 .LoginContainer{
@@ -322,24 +398,21 @@ footer{
 }
 
 .Button{
-    width: 160px;
-    height: 30px;
+    width: 180px;
+    height: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #929292;
-    border: 2px solid #000;
+    background-color: #005f9f;
     border-radius: 20px;
     text-decoration: none;
     transition: .4s ease;
 }
 
 .Button:hover{
-    color: #000;
-    background-color: #f9e73d;
+    background-color: #0099ff;
     cursor: pointer;
-    font-weight: 700;
 }
 
 .ContactContainer{
@@ -348,15 +421,14 @@ footer{
     background-color: #929292;
 }
 
-.ListProductCategory{
-    width: 80%;
-    height: 50px;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    background-color: #000;
-    border-radius: 10px;
-    align-items: center;
+.ContactInfo{
+    padding: 20px;
+    display: block;
+}
+
+.ContactInfoLabel{
+    width: 40%;
+    margin: 20px 40px;
 }
 
 .ListCategory{
@@ -378,6 +450,89 @@ footer{
     transform: scale(1.1);
 }
 
+.ProductNavigation{
+    width: 85%;
+    height: auto;
+    border: 2px solid #0000002e;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+    display: grid;
+    overflow: hidden;
+    margin: auto;
+}
+
+.NavigationList1{
+    display: flex;
+}
+
+.NavigationList2{
+    display: grid;
+    grid-template-areas:
+    'navigation1 navigation1 navigation1 navigation1'
+      'navigation2 navigation2 navigation3 navigation3'
+      'navigation2 navigation2 navigation4 navigation4';
+    gap: 10px;
+}
+
+.NavigationList3{
+    display: flex;
+    gap: 10px;
+}
+
+.Navigation1{
+    width: 100%;
+    height: 240px;
+    background: url('/img/banner_navigation1.jpg') no-repeat;
+}
+
+.Navigation2{
+    height: 500px;
+    grid-area: navigation2;
+    background: url('/img/banner_navigation2.jpg') no-repeat;
+}
+
+.Navigation3{
+    height: 240px;
+    grid-area: navigation3;
+    background: url('/img/banner_navigation3.jpg') no-repeat;
+}
+
+.Navigation4{
+    height: 240px;
+    grid-area: navigation4;
+    background: url('/img/banner-test.png') no-repeat;
+}
+
+.Navigation5{
+    width: 50%;
+    height: 240px;
+    background: url('/img/banner_navigation5.jpg') no-repeat;
+}
+
+.Navigation6{
+    width: 50%;
+    height: 240px;
+    background: url('/img/banner-test.png') no-repeat;
+}
+
+.Navigation1, .Navigation2, .Navigation3, .Navigation4, .Navigation5, .Navigation6{
+    background-color: #EEEEEE;
+    display: flex;
+    align-items: start;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid #cbcbcb;
+    transition: .4s ease;
+    opacity: .9;
+    scale: .98;
+}
+
+.Navigation1:hover, .Navigation2:hover, .Navigation3:hover, .Navigation4:hover, .Navigation5:hover, .Navigation6:hover{
+    opacity: 1;
+    transform: scale(1.01);
+}
+
 .ProductContainer{
     width: 80%;
     margin: auto;
@@ -392,6 +547,17 @@ footer{
     justify-content: flex-start;
 }
 
+.ListProductCategory{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 10px;
+    align-items: center;
+}
+
 .ProductCard{
     max-width: 400px;
     height: auto;
@@ -403,8 +569,12 @@ footer{
 }
 
 .ProductImageContainer{
-    width: auto;
-    height: 360px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .ProductImage{
@@ -413,6 +583,7 @@ footer{
     padding: 10px;
     transition: .4s;
     opacity: .8;
+    overflow: hidden;
 }
 
 .ProductImage:hover{
@@ -426,18 +597,143 @@ footer{
     justify-content: center;
 }
 
+.ProductCategoryContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.CategoryCard{
+    width: 190px;
+    height: 190px;
+    margin: 10px;
+    border: 2px solid #000;
+    background-color: #929292;
+    transition: .4s;
+}
+
+.CategoryCard:hover{
+    transform: scale(1.05);
+}
+
+.CategoryContainer{
+    padding: 15px 0;
+}
+
+.MenuContainer{
+    width: 100%;
+    display: flex;
+}
+
+.MenuCard{
+    width: 400px;
+    height: 380px;
+    margin: 15px;
+    border: 2px solid rgb(241 , 241, 241);
+    box-shadow: 9px 5px 19px 1px rgba(185, 185, 185, 0.2);
+    transition: all .4s;
+}
+
+.MenuCard:hover{
+    transform: scale(1.05);
+}
+
+.CardTitleContainer{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.CategoryCardTitle{
+    width: 90%;
+    padding: 10px;
+    top: 55%;
+    position: relative;
+    text-decoration: none;
+}
+
+.CardTitle{
+    width: 100%;
+    position: relative;
+    top: 85%;
+}
+
 .InquiryContainer{
     width: 100%;
-    height: 260px;
+    height: 300px;
     background-color: #929292;
     display: flex;
     margin: auto;
     justify-content: center;
     align-items: center;
+    background: url('/img/bg_inquiry2.jpg') no-repeat;
+    background-position: 100% 60%;
+}
+
+.Inquiry{
+    margin-right: 40px;
+}
+
+.item1{
+    grid-area: item1;
+    height: 130px;
+}
+.item2{
+    grid-area: item2;
+    height: 260px;
+}
+.item3{
+    grid-area: item3;
+    height: 130px;
+}
+.item4{
+    grid-area: item4;
+    height: 130px;
+}
+.item5{
+    grid-area: item5;
+    height: 130px;
+}
+.item6{
+    grid-area: item6;
+    height: 130px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'item1 item1 item1 item1'
+    'item2 item2 item3 item3'
+    'item2 item2 item4 item4'
+    'item5 item5 item6 item6';
+  gap: 10px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.grid-container > a{
+  background-color: #EEEEEE;
+  box-shadow: 0 0 10px 0 rgba(241, 241, 241, 0.3);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border: 2px solid #000;
+  cursor: pointer;
 }
 
 .whiteseparator{
     border-bottom: 3px solid #fff;
+}
+
+.gap-20{
+    height: 20px;
+}
+
+.card-spacer{
+    height: 200px;
 }
 
 .white{

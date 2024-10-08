@@ -12,7 +12,7 @@
 
     <div class="LoginContainer">
         <div class="InnerContainer">
-            <div class="InnerContent">
+            <div class="InnerContent align-center">
                 {{-- <img src="img/logo-lujb.png" alt="#logo"> --}}
                 <div class="LoginContent">
                     <div class="Login">

@@ -4,18 +4,20 @@
 
 <div class="BannerCanvas">
     <div class="ActiveBanner">
+        <img src="img/banner_product.jpg" alt="" class="Banner">
     </div>
 </div>
 
 <div class="Container">
+    <div class="gap-20"></div>
     <div class="ListProductCategory">
         <ul class="ListCategory">
-            <li class="Category small light">Fuel Pump</li>
-            <li class="Category small light">Hose</li>
-            <li class="Category small light">Hose Meter</li>
-            <li class="Category small light">Flexible Pipes</li>
-            <li class="Category small light">ATG</li>
-            <li class="Category small light">Panel</li>
+            <li class="white Category small semibold">Fuel Pump</li>
+            <li class="white Category small semibold">Hose</li>
+            <li class="white Category small semibold">Hose Meter</li>
+            <li class="white Category small semibold">Flexible Pipes</li>
+            <li class="white Category small semibold">ATG</li>
+            <li class="white Category small semibold">Panel</li>
         </ul>
     </div>
 </div>
@@ -33,21 +35,34 @@
                     <img src="img/tatsuno1.png" alt="#tatsuno" class="ProductImage">
                  </div>
                 <div class="ProductTitle">
-                    <p class="black xl bold center">Sanki 1</p>
+                    <p class="black xl semibold center">Sanki 1</p>
                 </div>
             </div>
 
             <div class="ProductCard">
-                <img src="img/tatsuno1.png" alt="#tatsuno" class="ProductImage">
+                <div class="ProductImageContainer">
+                    <img src="img/tatsuno1.png" alt="#tatsuno " class="ProductImage">
+                </div>
                 <div class="ProductTitle">
-                    <p class="black xl bold center">Sanki 1</p>
+                    <p class="black xl semibold center">Sanki 1</p>
                 </div>
             </div>
 
             <div class="ProductCard">
-                <img src="img/tatsuno1.png" alt="#tatsuno" class="ProductImage">
+                <div class="ProductImageContainer">
+                    <img src="img/tatsuno1.png" alt="#tatsuno" class="ProductImage">
+                </div>
                 <div class="ProductTitle">
-                    <p class="black xl bold center">Sanki 1</p>
+                    <p class="black xl semibold center">Sanki 1</p>
+                </div>
+            </div>
+
+            <div class="ProductCard">
+                <div class="ProductImageContainer">
+                    <img src="img/tatsuno1.png" alt="#tatsuno" class="ProductImage">
+                </div>
+                <div class="ProductTitle">
+                    <p class="black xl semibold center">Sanki 1</p>
                 </div>
             </div>
 
@@ -59,8 +74,8 @@
     <div class="InquiryContainer">
         <div class="Inquiry">
             <p class="black big semibold">Interested with our services?</p>
-            <div class="Button">Inquiry</div>
         </div>
+            <div class="white Button">Inquiry</div>
     </div>
 </div>
 

@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('generals_data', function (Blueprint $table) {
+        Schema::create('generaldatas', function (Blueprint $table) {
             $table->id();
-            $table->string('label');
+            $table->text('name');
             $table->string('value');
-            $table->boolean('isActive');
             $table->timestamps();
         });
 
-        Schema::create('generals_image', function (Blueprint $table) {
+        Schema::create('generalimages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('image');
+            $table->string('link');
             $table->boolean('isActive');
             $table->timestamps();
         });
@@ -33,7 +33,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('generals_data');
-        Schema::dropIfExists('generals_image');
+        Schema::dropIfExists('generaldatas');
+        Schema::dropIfExists('generalimages');
     }
 };
