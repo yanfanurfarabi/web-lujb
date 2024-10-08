@@ -11,18 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('generaldatas', function (Blueprint $table) {
+        Schema::create('generaldata', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->string('value');
+            $table->string('name');
+            $table->text('value');
             $table->timestamps();
         });
 
-        Schema::create('generalimages', function (Blueprint $table) {
+        Schema::create('generalimage', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->string('link');
+            $table->boolean('isActive');
+            $table->timestamps();
+        });
+
+        Schema::create('client', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('image');
             $table->boolean('isActive');
             $table->timestamps();
         });
@@ -33,7 +40,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('generaldatas');
-        Schema::dropIfExists('generalimages');
+        Schema::dropIfExists('generaldata');
+        Schema::dropIfExists('generalimage');
     }
 };

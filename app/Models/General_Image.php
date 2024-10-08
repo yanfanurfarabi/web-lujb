@@ -9,4 +9,6 @@ class General_Image extends Model
 {
     use HasFactory;
 
+    protected $table = 'generalimage';
+
 }

@@ -9,4 +9,6 @@ class Footer extends Model
 {
     use HasFactory;
 
+    protected $table = 'footer';
+
 }

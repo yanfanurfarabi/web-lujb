@@ -8,16 +8,15 @@ class GeneraldataController extends Controller
 {
     public function indexData(){
         $datas = GeneralData::all();
-        // $titles = GeneralData::where('name');
-        // $values = GeneralData::where('value');
 
         return view('cms.generalsdata', compact('datas'));
     }
 
     public function editData($id){
+
         $datas = GeneralData::findOrFail($id);
 
-        return view('cms.generalsdata', compact('datas'));
+        return view('cms.generalsdataedit', compact('datas'));
     }
 
     public function updateData($id, Request $request){
@@ -32,7 +31,7 @@ class GeneraldataController extends Controller
         $datas->value = $request->input('value');
         $datas->save();
 
-        return redirect()->route('cms.generalsdata')->with('success', 'updated!');
+        return redirect()->route('datas.index')->with('success', 'updated!');
     }
 
 }

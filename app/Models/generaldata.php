@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class GeneralData extends Model
 {
-    protected $table = 'generaldatas';
+    protected $table = 'generaldata';
 
 }

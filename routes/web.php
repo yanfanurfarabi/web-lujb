@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\GeneraldataController;
+use App\Http\Controllers\GeneralImageController;
+use App\Models\General_Image;
 use App\Models\GeneralData;
 use Illuminate\Support\Facades\Route;
 
@@ -32,25 +34,14 @@ Route::get('/dashboard', function () {
     return view('cms.dashboard');
 });
 
-// Route::get('/dashboard/generaldata/', function() {
-//     $datas = GeneralData::where('name');
-//     // $titles = GeneralData::where('name');
-//     $values = GeneralData::where('value');
-
-//     return view('cms.generalsdata',[
-//         'data' => $datas,
-//         // 'name' => $titles,
-//         'value' => $values,
-//     ]);
-// });
-
-Route::get('/dashboard/generaldata/', [GeneraldataController::class, 'indexData'])->name('datas');
+Route::get('/dashboard/generaldata/', [GeneraldataController::class, 'indexData'])->name('datas.index');
 Route::get('/dashboard/generaldata/{id}/edit',[GeneraldataController::class, 'editData'])->name('datas.edit');
-Route::put('/dashboard/generaldata/{$id}/update', [GeneraldataController::class, 'updateData'])->name('datas.update');
+Route::put('/dashboard/generaldata/{id}', [GeneraldataController::class, 'updateData'])->name('datas.update');
 
-Route::get('/dashboard/generalimage', function () {
-    return view('cms.generalsimage');
-});
+//View, Edit & update 
+Route::get('/dashboard/generalimage', [GeneralImageController::class, 'index'])->name('generalimage');
+Route::get('/dashboard/generalimage/{id}/edit', [GeneralImageController::class, 'editImage'])->name('generalimage.edit');
+Route::put('/dashboard/generalimage/{id}', [GeneralImageController::class, 'updateImage'])->name('generalimage.update');
 
 Route::get('/dashboard/banner', function () {
     return view('cms.banners');
