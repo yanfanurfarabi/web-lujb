@@ -36,7 +36,7 @@
                                     <form action="{{ route('destroy', $data->id) }} " method="POST">
                                         @csrf   
                                         @method('DELETE')
-                                        <button type="submit">Delete</button>
+                                        <button type="submit" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
                                     </form>
                                 </td>
                                 

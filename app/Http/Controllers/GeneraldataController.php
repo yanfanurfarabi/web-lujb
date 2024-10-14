@@ -12,13 +12,6 @@ class GeneraldataController extends Controller
         return view('cms.generalsdata', compact('datas'));
     }
 
-    // public function home() {
-
-    //     $datas = GeneralData::all('id');
-
-    //     return view('page.home', compact('datas'));
-    // }
-
     public function create(){
         return view('cms.generalsdatacreate');
     }
@@ -40,7 +33,7 @@ class GeneraldataController extends Controller
     public function edit($id){
         $datas = GeneralData::findOrFail($id);
 
-        return view('cms.generalsdataedit');
+        return view('cms.generalsdataedit', compact('datas'));
     }
 
     public function update($id, Request $request){
@@ -63,7 +56,7 @@ class GeneraldataController extends Controller
         $datas = GeneralData::findOrFail($id);
         $datas->delete();
 
-        return redirect()->route('index')->with('success', 'Deleted!');
+        return redirect()->route('cms.generalsdata')->with('success', 'Deleted!');
     }
 
 }

@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Edit</p>
+            <p class="big bold">Create</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">

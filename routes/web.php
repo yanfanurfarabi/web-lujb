@@ -12,6 +12,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Storage;
 
 // Route::get('/', function() {
 //     $datas = GeneralData::all('value');
