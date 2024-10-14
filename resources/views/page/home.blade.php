@@ -1,3 +1,4 @@
+{{-- @dd($datas) --}}
 @extends('index')
 
 @section('content')
@@ -12,7 +13,12 @@
 
 <div class="Container">
     <div class="gap-20"></div>
-    <p class="xl black bold center">Specialized In Petrol Station <br> Equipment Products and Installation</p>
+        {{-- <p class="xl black bold center"> {!! $datas !!} </p> --}}
+        {{-- @foreach ($datas as $data) --}}
+        @csrf
+        <p class="xl black bold center"> {{ $datas }} </p>
+            
+        {{-- @endforeach --}}
     <div class="gap-20"></div>
 </div>
 
@@ -44,7 +50,7 @@
         <img src="img/why_us.jpeg" alt="" class="ContainerImage">
     </div>
         <div class="ContainerContent">
-            <h3 class="xl bold black">Title</h3>
+            <h3 class="xl bold black"> {{ $datas }} </h3>
             <div class="ContainerList">
                 <p class="black small reguler">Body</p>
                 </div>

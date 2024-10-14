@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Edit</p>
+            <p class="big bold">Edit Banner</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,19 +19,24 @@
         </div>
     @endif
 
-    <form action="{{ route('image.update', $image->id) }} " method="POST" enctype="multipart/form-data">
+    <form action="{{ route('banner.update', $banner->id) }} " method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
         <div class="Card">
             <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $image->name) }} " required>
+            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $banner->name) }} " required>
+        </div>
+
+        <div class="Card">
+            <label for="BannerCategory" class="edittitle">Banner Category</label>
+            <input type="text" class="editlabel" id="BannerCategory" name="BannerCategory" value="{{ old('BannerCategory', $banner->BannerCategory) }} " required>
         </div>
 
         <div class="Card">
             <label for="value" class="edittitle">Image</label>
-            @if ($image->image)
-            <p class="semibold">Current Image : <img src=" {{ asset('storage/images/' . $image->image) }} " alt=""> </p>
+            @if ($banner->image)
+            <p class="semibold">Current Image : <img src=" {{ asset('storage/images/' . $banner->image) }} " alt=""> </p>
             @endif
             <input type="file" class="" name="image" id="image">
         </div>

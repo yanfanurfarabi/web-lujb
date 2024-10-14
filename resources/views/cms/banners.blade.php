@@ -1,3 +1,5 @@
+{{-- @dd($banner) --}}
+
 @extends('dashboardindex')
 
 @section('content')
@@ -11,39 +13,32 @@
 
         <div class="Card">
             <div class="InnerCard">
-                <p class="big bold">Content Home</p>
-                <form action="" class="DashboardForm">
-                    <label for="HeadlineHome">Headline Home</label>
-                    <input type="text" id="HeadlineHome" placeholder="Headline Home Edit..." class="black">
-                    <label for="ContentHome">Content Home</label>
-                    <input type="text" name="" id="ContentHome" placeholder="Sementengsayur ini ada 2" class="black">
-                </form>
-            </div>
-        </div>
 
-        <div class="Card">
-            <div class="InnerCard">
-                <p class="big bold">Content Home</p>
-                <form action="" class="DashboardForm">
-                    <label for="HeadlineHome">Headline Home</label>
-                    <input type="text" id="HeadlineHome" placeholder="Headline Home Edit..." class="black">
-                    <label for="ContentHome">Content Home</label>
-                    <input type="text" name="" id="ContentHome" placeholder="Sementengsayur ini ada 2" class="black">
-                </form>
-            </div>
-        </div>
+                <table id="form">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>BannerCategory</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        @foreach($banner as $banners)
+                            
+                            <tr>
+                                <td>{{ $banners->name }}</td>
+                                @if ($banners->image != "")
+                                <td> <img src="{{ asset('storage/img/'. $banners->image) }}" alt="image" width= "800"></td>
+                                @endif
+                                <td>{{ $banners->BannerCategory }}</td>
+                                <td><a href="{{ route('banner.edit', $banners->id) }}" class="small">Edit</a></td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
 
-        <div class="Card">
-            <div class="InnerCard">
-                <p class="big bold">Content Home</p>
-                <form action="" class="DashboardForm">
-                    <label for="HeadlineHome">Headline Home</label>
-                    <input type="text" id="HeadlineHome" placeholder="Headline Home Edit..." class="black">
-                    <label for="ContentHome">Content Home</label>
-                    <input type="text" name="" id="ContentHome" placeholder="Sementengsayur ini ada 2" class="black">
-                </form>
-            </div>
-        </div>
 
     </div>
 </div>

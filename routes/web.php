@@ -1,14 +1,27 @@
 <?php
 
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\GeneraldataController;
 use App\Http\Controllers\GeneralImageController;
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\ProductController;
+use App\Models\Banner;
 use App\Models\General_Image;
 use App\Models\GeneralData;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
-Route::get('/', function () {
-    return view('page.home');
-});
+// Route::get('/', function() {
+//     $datas = GeneralData::all('value');
+
+//     return view('page.home',[
+//         'datas' => $datas,
+//     ]);
+// });
+
+Route::get('/', [GeneraldataController::class, 'home']);
 
 Route::get('/product', function () {
     return view('page.product');
@@ -34,29 +47,42 @@ Route::get('/dashboard', function () {
     return view('cms.dashboard');
 });
 
-Route::get('/dashboard/generaldata/', [GeneraldataController::class, 'indexData'])->name('datas.index');
-Route::get('/dashboard/generaldata/{id}/edit',[GeneraldataController::class, 'editData'])->name('datas.edit');
-Route::put('/dashboard/generaldata/{id}', [GeneraldataController::class, 'updateData'])->name('datas.update');
+//View, Edit & update General Data
+// Route::get('/dashboard/generaldata/', [GeneraldataController::class, 'index'])->name('datas');
+// Route::get('/dashboard/generaldata/{id}/edit',[GeneraldataController::class, 'edit'])->name('datas.edit');
+// Route::put('/dashboard/generaldata/{id}/', [GeneraldataController::class, 'update'])->name('datas.update');
+// Route::delete('/dashboard/generaldata/{id}/', [GeneraldataController::class, 'destroy'])->name('datas.destroy');
+// Route::get('/dashboard/generaldata/create/' ,[GeneraldataController::class, 'create'])->name('datas.create');
+// Route::post('/dashboard/generaldata/', [GeneraldataController::class, 'store']);
 
-//View, Edit & update 
-Route::get('/dashboard/generalimage', [GeneralImageController::class, 'index'])->name('generalimage');
-Route::get('/dashboard/generalimage/{id}/edit', [GeneralImageController::class, 'editImage'])->name('generalimage.edit');
-Route::put('/dashboard/generalimage/{id}', [GeneralImageController::class, 'updateImage'])->name('generalimage.update');
+Route::resource('/dashboard/generaldata/', GeneraldataController::class);
 
-Route::get('/dashboard/banner', function () {
-    return view('cms.banners');
-});
+// Route::resource('/dashboard/generaldata/', GeneraldataController::class)
+//                 ->missing(function(Request $request){
+//                     return redirect::route('cms.generalsdata');
+//                 });
 
-Route::get('/dashboard/product', function () {
-    return view('cms.product');
-});
+// Route::resource('/dashboard/generaldata/', GeneraldataController::class)->withTrashed();
+                
+//View, Edit & update General Image
+Route::get('/dashboard/generalimage/', [GeneralImageController::class, 'index'])->name('image');
+Route::get('/dashboard/generalimage/{id}/edit', [GeneralImageController::class, 'edit'])->name('image.edit');
+Route::put('/dashboard/generalimage/{id}', [GeneralImageController::class, 'update'])->name('image.update');
+
+//View, Edit & update Banners 
+Route::get('/dashboard/banner', [BannerController::class, 'index'])->name('banner');
+Route::get('/dashboard/banner/{id}/edit', [BannerController::class, 'edit'])->name('banner.edit');
+Route::put('/dashboard/banner/{id}', [BannerController::class, 'update'])->name('banner.update');
+// Route::post('/');
+
+Route::get('/dashboard/footer', [FooterController::class, 'index'])->name('footer');
+Route::get('/dashboard/footer/{id}/edit', [FooterController::class, 'edit'])->name('footer.edit');
+Route::put('/dashboard/footer/{id}', [FooterController::class, 'update'])->name('footer.update');
+
+Route::resource('/dashboard/product', ProductController::class);
 
 Route::get('/dashboard/productcategory', function () {
     return view('cms.productcategory');
-});
-
-Route::get('/dashboard/footer', function () {
-    return view('cms.footer');
 });
 
 Route::get('/dashboard/home', function () {

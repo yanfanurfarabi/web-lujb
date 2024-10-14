@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class GeneralData extends Model
 {
+
     protected $table = 'generaldata';
+    
+    protected $fillable = [ 'name', 'value' ];
 
 }

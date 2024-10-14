@@ -6,20 +6,44 @@ use Illuminate\Http\Request;
 
 class GeneraldataController extends Controller
 {
-    public function indexData(){
+    public function index(){
         $datas = GeneralData::all();
 
         return view('cms.generalsdata', compact('datas'));
     }
 
-    public function editData($id){
+    // public function home() {
 
-        $datas = GeneralData::findOrFail($id);
+    //     $datas = GeneralData::all('id');
 
-        return view('cms.generalsdataedit', compact('datas'));
+    //     return view('page.home', compact('datas'));
+    // }
+
+    public function create(){
+        return view('cms.generalsdatacreate');
     }
 
-    public function updateData($id, Request $request){
+    public function store(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'value' => 'required',
+        ]);
+
+        GeneralData::create([
+            'name' => $request->name,
+            'value' => $request->value,
+        ]);
+
+        return redirect()->route('index')->with('success', 'Added!');
+    }
+
+    public function edit($id){
+        $datas = GeneralData::findOrFail($id);
+
+        return view('cms.generalsdataedit');
+    }
+
+    public function update($id, Request $request){
         $request->validate([
             'name' => 'required',
             'value' => 'required',
@@ -31,7 +55,15 @@ class GeneraldataController extends Controller
         $datas->value = $request->input('value');
         $datas->save();
 
-        return redirect()->route('datas.index')->with('success', 'updated!');
+        return redirect()->route('cms.generalsdata')->with('success', 'updated!');
+    }
+
+    public function destroy($id){
+        
+        $datas = GeneralData::findOrFail($id);
+        $datas->delete();
+
+        return redirect()->route('index')->with('success', 'Deleted!');
     }
 
 }

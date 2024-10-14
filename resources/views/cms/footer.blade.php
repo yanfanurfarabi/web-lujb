@@ -1,8 +1,11 @@
+{{-- @dd($footer) --}}
+
 @extends('dashboardindex')
 
 @section('content')
 
-<div class="Container"> 
+<div class="Container">
+    <div class="gap-20"></div>
         <h1 class="center black">Footer</h3>
 </div>
 
@@ -11,39 +14,33 @@
 
         <div class="Card">
             <div class="InnerCard">
-                <p class="big bold">Content Home</p>
-                <form action="" class="DashboardForm">
-                    <label for="HeadlineHome">Headline Home</label>
-                    <input type="text" id="HeadlineHome" placeholder="Headline Home Edit..." class="black">
-                    <label for="ContentHome">Content Home</label>
-                    <input type="text" name="" id="ContentHome" placeholder="Sementengsayur ini ada 2" class="black">
-                </form>
-            </div>
-        </div>
 
-        <div class="Card">
-            <div class="InnerCard">
-                <p class="big bold">Content Home</p>
-                <form action="" class="DashboardForm">
-                    <label for="HeadlineHome">Headline Home</label>
-                    <input type="text" id="HeadlineHome" placeholder="Headline Home Edit..." class="black">
-                    <label for="ContentHome">Content Home</label>
-                    <input type="text" name="" id="ContentHome" placeholder="Sementengsayur ini ada 2" class="black">
-                </form>
-            </div>
-        </div>
+                <table id="form">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th>isActive</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-        <div class="Card">
-            <div class="InnerCard">
-                <p class="big bold">Content Home</p>
-                <form action="" class="DashboardForm">
-                    <label for="HeadlineHome">Headline Home</label>
-                    <input type="text" id="HeadlineHome" placeholder="Headline Home Edit..." class="black">
-                    <label for="ContentHome">Content Home</label>
-                    <input type="text" name="" id="ContentHome" placeholder="Sementengsayur ini ada 2" class="black">
-                </form>
-            </div>
-        </div>
+                        @foreach($footer as $footers)
+                            
+                            <tr>
+                                <td>{{ $footers->name }} </td>
+                                <td>{{ $footers->value }} </td>
+                                <td>{{ $footers->isActive }} </td>
+                                <td>
+                                    <a href="{{ route('footer.edit', $footers->id) }}" class="small">Edit</a>
+                                </td>
+                            </tr>
+
+                        @endforeach
+                    </tbody>
+                </table>
+
 
     </div>
 </div>

@@ -1,4 +1,4 @@
-{{-- @dd($datas) --}}
+{{-- @dd($footer) --}}
 @extends('dashboardindex')
 
 @section('content')
@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Edit</p>
+            <p class="big bold">Edit Footer</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -18,19 +18,19 @@
             </ul>
         </div>
     @endif
-    
-    <form action="{{ route('update', $datas->id) }} " method="POST">
+
+    <form action="{{ route('footer.update', $footer->id) }} " method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
         <div class="Card">
             <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $datas->name) }} " required>
+            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $footer->name) }} " required>
         </div>
 
         <div class="Card">
             <label for="value" class="edittitle">Value</label>
-            <textarea class="editlabel textarea" name="value">{{ old('value', $datas->value) }}</textarea>
+            <input type="text" class="editlabel" id="value" name="value" value="{{ old('value', $footer->value) }} " required>
         </div>
 
         <button type="submit" class="Button">Update</button>

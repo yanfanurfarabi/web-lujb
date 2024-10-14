@@ -24,24 +24,30 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         @foreach($datas as $data)
-                        {{-- @if (is_object($data) && @isset($data->value))
-                            <td>{{ $data->value }} </td>
-                        @else
-                            <td>Data tidak Valid</td>
-                            @endif --}}
                             
                             <tr>
                                 <td>{{ $data->name }} </td>
                                 <td>{{ $data->value }} </td>
                                 <td>
-                                    <a href="{{ route('datas.edit', $data->id) }}" class="small">Edit</a>
+                                    <button type="button"><a href="{{ route('edit', $data->id)}}" class="">Edit</a></button>
+                                        
+                                    <form action="{{ route('destroy', $data->id) }} " method="POST">
+                                        @csrf   
+                                        @method('DELETE')
+                                        <button type="submit">Delete</button>
+                                    </form>
                                 </td>
+                                
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-
+                            
+                            
+                            @endforeach
+                        </tbody>
+                    </table>
+                    
+                    <a href="{{ route('create') }}">Add New</a>
 
     </div>
 </div>

@@ -1,4 +1,4 @@
-{{-- @dd($generalimages) --}}
+{{-- @dd($image) --}}
 
 @extends('dashboardindex')
 
@@ -22,18 +22,21 @@
                             <th>Image</th>
                             <th>link</th>
                             <th>is Active</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($generalimage as $generalimages)
+                        @foreach($image as $img)
                             
                             <tr>
-                                <td>{{ $generalimages->name }}</td>
-                                <td> <img src="{{ asset('storage/images'. $generalimages->image) }}" alt=""></td>
-                                <td>{{ $generalimages->link }}</td>
-                                {{-- <td>{{ $data->value }}</td> --}}
+                                <td>{{ $img->name }}</td>
+                                @if ($img->image != "")
+                                <td> <img src="{{ asset('storage/img/'. $img->image) }}" alt="image" width= "300"></td>
+                                @endif
+                                <td>{{ $img->link }}</td>
+                                <td>{{ $img->isActive }}</td>
                                 <td>
-                                    <a href="{{ route('generalimage.edit', $generalimages->id) }}" class="small">Edit</a>
+                                    <a href="{{ route('image.edit', $img->id) }}" class="small">Edit</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -44,5 +47,7 @@
     </div>
 </div>
 
+    </div>
+</div>
 
 @endsection

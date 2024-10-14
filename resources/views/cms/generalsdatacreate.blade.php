@@ -19,18 +19,17 @@
         </div>
     @endif
     
-    <form action="{{ route('update', $datas->id) }} " method="POST">
+    <form action="{{ route('store') }} " method="POST">
         @csrf
-        @method('PUT')
 
         <div class="Card">
-            <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $datas->name) }} " required>
+            <label for="name" class="edittitle">Name : </label>
+            <input type="text" class="editlabel" name="name" required>
         </div>
 
         <div class="Card">
-            <label for="value" class="edittitle">Value</label>
-            <textarea class="editlabel textarea" name="value">{{ old('value', $datas->value) }}</textarea>
+            <label for="value" class="edittitle">Value : </label>
+            <textarea class="editlabel textarea" name="value" required></textarea>
         </div>
 
         <button type="submit" class="Button">Update</button>

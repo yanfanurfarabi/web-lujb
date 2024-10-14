@@ -9,39 +9,38 @@ use Storage;
 class GeneralImageController extends Controller
 {
     public function index(){
-        $generalimage = General_Image::all();
+        $image = General_Image::all();
 
-        return view('cms.generalsimage', compact('generalimage'));
+        return view('cms.generalsimage', compact('image'));
     }
 
-    public function editImage($id){
-        $generalimage = General_Image::findOrFail($id);
+    public function edit($id){
+        $image = General_Image::findOrFail($id);
 
-        return view('cms.generalsimageedit', compact('generalimage'));
+        return view('cms.generalsimageedit', compact('image'));
     }
 
-    public function updateImage($id, Request $request){
+    public function update($id, Request $request){
         $request->validate([
             'name' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        $generalimage = General_Image::find($id);
+        $image = General_Image::find($id);
 
         if($request->hasFile('image')){
-            if($generalimage->image){
-                Storage::delete('public/img', $generalimage->image);
+            if($image->image){
+                Storage::delete('/public/img'. $image->image);
             }
+            $imageName = time().'.'.$request->image->getClientOriginalextension();
+            $request->image->storeAs('/public/img/'. $imageName);
 
-            $generalimageNew = time().'.'.$request->image->extension();
-            $request->image->storeAs('public/img', $generalimageNew);
-
-            $generalimage->image = $generalimageNew;
+            $image->image = $imageName;
         }
 
-        $generalimage->name = $request->name;
-        $generalimage->save();
+        $image->name = $request->name;
+        $image->save();
 
-        return redirect()->route('cms.general')->with('success', 'updated!');
+        return redirect()->route('image')->with('success', 'updated!');
     }
 }
