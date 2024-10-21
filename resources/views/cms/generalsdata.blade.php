@@ -31,7 +31,7 @@
                                 <td>{{ $data->name }} </td>
                                 <td>{{ $data->value }} </td>
                                 <td>
-                                    <button type="button"><a href="{{ route('edit', $data->id)}}" class="">Edit</a></button>
+                                    <button type="button"><a href="{{ route('edit', $data->id) }}">Edit</a></button>
                                         
                                     <form action="{{ route('destroy', $data->id) }} " method="POST">
                                         @csrf   

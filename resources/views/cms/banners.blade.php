@@ -5,6 +5,7 @@
 @section('content')
 
 <div class="Container"> 
+    <div class="gap-20"></div>
         <h1 class="center black">Banners Content</h3>
 </div>
 
@@ -33,13 +34,13 @@
                                 <td> <img src="{{ asset('storage/img/'. $banners->image) }}" alt="image" width= "800"></td>
                                 @endif
                                 <td>{{ $banners->BannerCategory }}</td>
-                                <td><a href="{{ route('banner.edit', $banners->id) }}" class="small">Edit</a></td>
+                                <td><a href="{{ route('edit', $banners->id) }}" class="small">Edit</a></td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-
+                <a href="{{ route('create') }}">Add New</a>
     </div>
 </div>
 

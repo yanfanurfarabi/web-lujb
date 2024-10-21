@@ -19,27 +19,31 @@ class BannerController extends Controller
         return view('cms.bannerscreate');
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
+
+        // dd ($request->all());
         $request->validate([
             'name' => 'required',
+            'BannerCategory' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            'bannercategory' => 'required',
         ]);
-
-        // Proses upload image
+        
+        // // Proses upload image
         if ($request->hasFile('image')) {
-            $bannerName = time() . '.' . $request->image->getClientOriginalextension();
-            $request->image->storeAs('public/banners'.$bannerName);
+            $bannerName = time().'.'.$request->image->getClientOriginalextension();
+            $request->image->storeAs('/public/img/'. $bannerName);
 
             Banner::create([
                 'name' => $request->name,
+                'BannerCategory' => $request->BannerCategory,
                 'image' => $bannerName,
-                'bannercategory' => $request->bannercategory
             ]);
         }
 
-        return redirect()->route('cms.banners')->with('success', 'Banner created successfully.');
+        // $path = $request->file('image')->store('/public/img/');
+            
+            
+        return redirect()->route('index')->with('success', 'Banner created successfully.');
     }
 
     public function edit($id) {
@@ -50,8 +54,8 @@ class BannerController extends Controller
 
     public function update(Request $request, $id){
         $request->validate([
-            'name' => 'required',
-            'BannerCategory' => 'required',
+            'name' => 'nullable',
+            'BannerCategory' => 'nullable',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -69,6 +73,13 @@ class BannerController extends Controller
         $banner->name = $request->name;
         $banner->save();
         
-        return redirect()->route('banner')->with('success', 'updated');
+        return redirect()->route('index')->with('success', 'updated');
+    }
+
+    public function destroy($id){
+        $banner = Banner::findOrFail($id);
+        $banner->delete();
+
+        return redirect()->route('index')->with('sucess', 'Deleted!');
     }
     }

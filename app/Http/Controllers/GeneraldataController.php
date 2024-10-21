@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\GeneralData;
 use Illuminate\Http\Request;
 
@@ -52,11 +53,10 @@ class GeneraldataController extends Controller
     }
 
     public function destroy($id){
-        
         $datas = GeneralData::findOrFail($id);
         $datas->delete();
 
-        return redirect()->route('cms.generalsdata')->with('success', 'Deleted!');
+        return redirect()->route('cms.generalsdata');
     }
 
 }

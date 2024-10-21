@@ -36,14 +36,21 @@
                                 <td>{{ $img->link }}</td>
                                 <td>{{ $img->isActive }}</td>
                                 <td>
-                                    <a href="{{ route('image.edit', $img->id) }}" class="small">Edit</a>
+                                    <a href="{{ route('generalimage.edit', $img->id) }}" class="small">Edit</a>
+
+                                    <form action="{{ route('generalimage.destroy', $img->id) }} " method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
+                                    </form>
+
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-
+                <a href="{{ route('generalimage.create') }}">Add New</a>
     </div>
 </div>
 
