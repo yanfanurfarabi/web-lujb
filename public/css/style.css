@@ -848,3 +848,7 @@ footer{
 .flex{
     display: flex;
 }
+
+.no-underline{
+    text-decoration: none;
+}

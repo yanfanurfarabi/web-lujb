@@ -28,7 +28,7 @@ class GeneraldataController extends Controller
             'value' => $request->value,
         ]);
 
-        return redirect()->route('index')->with('success', 'Added!');
+        return redirect()->route('generaldata.index')->with('success', 'Added!');
     }
 
     public function edit($id){
@@ -49,14 +49,14 @@ class GeneraldataController extends Controller
         $datas->value = $request->input('value');
         $datas->save();
 
-        return redirect()->route('cms.generalsdata')->with('success', 'updated!');
+        return redirect()->route('generaldata.index')->with('success', 'updated!');
     }
 
     public function destroy($id){
         $datas = GeneralData::findOrFail($id);
         $datas->delete();
 
-        return redirect()->route('cms.generalsdata');
+        return redirect()->route('generaldata.index');
     }
 
 }

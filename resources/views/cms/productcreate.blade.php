@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Create</p>
+            <p class="big bold">Create New Product</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,7 +19,7 @@
         </div>
     @endif
     
-    <form action="{{ route('product.store') }} " method="POST">
+    <form action="{{ route('product.store') }} " method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="Card">
@@ -35,6 +35,16 @@
         <div class="Card">
             <label for="spec" class="edittitle">Specification : </label>
             <textarea class="editlabel textarea" name="spec" required></textarea>
+        </div>
+
+        <div class="Card">
+            <label for="sortOrder" class="edittitle">sortOrder : </label>
+            <input type="text" class="editlabel" name="sortOrder" required>
+        </div>
+
+        <div class="Card">
+            <label for="isActive" class="edittitle">isActive : </label>
+            <input type="text" class="editlabel" name="isActive" required>
         </div>
 
         <div class="Card">

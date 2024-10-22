@@ -29,10 +29,11 @@
         </div>
 
         <div class="Card">
-            <label for="value" class="edittitle">Image</label>
+            <label for="image" class="edittitle">Image</label>
             @if ($image->image)
-            <p class="semibold">Current Image : <img src=" {{ asset('storage/images/' . $image->image) }} " alt=""> </p>
+            <p class="semibold">Current Image : <img src=" {{ asset('storage/img/' . $image->image) }} " alt="" width="300"> </p>
             @endif
+            <div class="gap-20"></div>
             <input type="file" class="" name="image" id="image">
         </div>
 

@@ -19,7 +19,7 @@
         </div>
     @endif
     
-    <form action="{{ route('store') }} " method="POST">
+    <form action="{{ route('generaldata.store') }} " method="POST">
         @csrf
 
         <div class="Card">

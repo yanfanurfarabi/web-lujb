@@ -11,4 +11,6 @@ class General_Image extends Model
 
     protected $table = 'generalimage';
 
+    protected $fillable = [ 'name', 'image', 'isActive' ];
+
 }

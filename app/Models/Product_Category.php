@@ -10,4 +10,6 @@ class Product_Category extends Model
     use HasFactory;
 
     protected $table = 'product_category';
+
+    protected $fillable = ['category', 'isActive', 'sortOrder'];
 }

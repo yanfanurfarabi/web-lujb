@@ -5,6 +5,7 @@ use App\Http\Controllers\GeneraldataController;
 use App\Http\Controllers\GeneralImageController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductCategoryController;
 use App\Models\Banner;
 use App\Models\General_Image;
 use App\Models\GeneralData;
@@ -12,7 +13,6 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
 
 Route::get('/product', function () {
     return view('page.product');
@@ -62,22 +62,27 @@ Route::resource('dashboard/generalimage', GeneralImageController::class);
 
 
 //View, Edit & update Banners 
-Route::resource('dashboard/banner/', BannerController::class);
+Route::resource('dashboard/banner', BannerController::class);
 
 // Route::get('/dashboard/banner', [BannerController::class, 'index'])->name('banner');
 // Route::get('/dashboard/banner/{id}/edit', [BannerController::class, 'edit'])->name('banner.edit');
 // Route::put('/dashboard/banner/{id}', [BannerController::class, 'update'])->name('banner.update');
 // Route::post('/');
 
-Route::get('/dashboard/footer', [FooterController::class, 'index'])->name('footer');
-Route::get('/dashboard/footer/{id}/edit', [FooterController::class, 'edit'])->name('footer.edit');
-Route::put('/dashboard/footer/{id}', [FooterController::class, 'update'])->name('footer.update');
+//View, Edit & update Footer 
+Route::resource('dashboard/footer', FooterController::class);
+
+// Route::get('/dashboard/footer', [FooterController::class, 'index'])->name('footer');
+// Route::get('/dashboard/footer/{id}/edit', [FooterController::class, 'edit'])->name('footer.edit');
+// Route::put('/dashboard/footer/{id}', [FooterController::class, 'update'])->name('footer.update');
 
 Route::resource('/dashboard/product', ProductController::class);
 
-Route::get('/dashboard/productcategory', function () {
-    return view('cms.productcategory');
-});
+Route::resource('/dashboard/productcategory', ProductCategoryController::class);
+
+// Route::get('/dashboard/productcategory', function () {
+//     return view('cms.productcategory');
+// });
 
 Route::get('/dashboard/home', function () {
     return view('cms.home');

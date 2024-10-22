@@ -63,7 +63,7 @@ class BannerController extends Controller
 
         if($request->hasFile('image')){
             if($banner->image){
-                Storage::delete('/public/img'. $banner->image);
+                Storage::delete('/public/img/'. $banner->image);
             }
             $bannerName = time().'.'.$request->image->getClientOriginalextension();
             $request->image->storeAs('/public/img/'. $bannerName);

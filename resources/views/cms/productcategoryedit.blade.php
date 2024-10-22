@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Edit</p>
+            <p class="big bold">Edit Product</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,18 +19,18 @@
         </div>
     @endif
     
-    <form action="{{ route('generaldata.update', $datas->id) }} " method="POST">
+    <form action="{{ route('productcategory.update', $productcat->id) }} " method="POST">
         @csrf
         @method('PUT')
 
         <div class="Card">
-            <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $datas->name) }} " required>
+            <label for="sortOrder" class="edittitle">Sort Order</label>
+            <input type="text" class="editlabel" id="sortOrder" name="sortOrder" value="{{ old('sortOrder', $productcat->sortOrder) }} " required>
         </div>
 
         <div class="Card">
-            <label for="value" class="edittitle">Value</label>
-            <textarea class="editlabel textarea" name="value">{{ old('value', $datas->value) }}</textarea>
+            <label for="isActive" class="edittitle">isActive</label>
+            <input type="text" class="editlabel" id="isActive" name="isActive" value="{{ old('isActive', $productcat->isActive) }} " required>
         </div>
 
         <button type="submit" class="Button">Update</button>

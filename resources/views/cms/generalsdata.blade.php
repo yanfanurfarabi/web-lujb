@@ -31,9 +31,9 @@
                                 <td>{{ $data->name }} </td>
                                 <td>{{ $data->value }} </td>
                                 <td>
-                                    <button type="button"><a href="{{ route('edit', $data->id) }}">Edit</a></button>
-                                        
-                                    <form action="{{ route('destroy', $data->id) }} " method="POST">
+                                    <button type="button"><a href="{{ route('generaldata.edit', $data->id) }}">Edit</a></button>
+                                    <div class="gap-20"></div>
+                                    <form action="{{ route('generaldata.destroy', $data->id) }} " method="POST">
                                         @csrf   
                                         @method('DELETE')
                                         <button type="submit" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
@@ -47,7 +47,7 @@
                         </tbody>
                     </table>
                     
-                    <a href="{{ route('create') }}">Add New</a>
+                    <a href="{{ route('generaldata.create') }}">Add New</a>
 
     </div>
 </div>

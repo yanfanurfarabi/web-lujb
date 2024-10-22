@@ -32,14 +32,14 @@ class GeneralImageController extends Controller
             $imageName = time().'.'.$request->image->getClientOriginalextension();
             $request->image->storeAs('/public/img/'. $imageName);
 
-            Banner::create([
+            General_Image::create([
                 'name' => $request->name,
                 'image' => $imageName,
                 'isActive' => $request->isActive,
             ]);
         }   
             
-        return redirect()->route('index')->with('success', 'Banner created successfully.');
+        return redirect()->route('generalimage.index')->with('success', 'Banner created successfully.');
     }
 
     public function edit($id){
@@ -52,6 +52,7 @@ class GeneralImageController extends Controller
         $request->validate([
             'name' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
+            'isActive' => 'nullable',
         ]);
 
         $image = General_Image::find($id);
@@ -66,16 +67,17 @@ class GeneralImageController extends Controller
             $image->image = $imageName;
         }
 
+        $image->isAcitve = $request->isActive;
         $image->name = $request->name;
         $image->save();
 
-        return redirect()->route('image')->with('success', 'updated!');
+        return redirect()->route('generalimage.index')->with('success', 'updated!');
     }
 
     public function destroy($id){
         $image = General_Image::findOrFail($id);
         $image->delete();
 
-        return redirect()->route('index')->with('success', 'Deleted!');
+        return redirect()->route('generalimage.index')->with('success', 'Deleted!');
     }
 }

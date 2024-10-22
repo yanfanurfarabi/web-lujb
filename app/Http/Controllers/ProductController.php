@@ -19,61 +19,71 @@ class ProductController extends Controller
     }
 
     public function store(Request $request){
+
+        // dd ($request->all());
         $request->validate([
             'name' => 'required',
             'desc' => ' required',
             'spec' => 'nullable',
+            'sortOrder' => 'nullable',
+            'isActive' => 'nullable',
             'bannerimage' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         if($request->hasFile('bannerimage')){
-            $bannerimage = time().".".$request->image->getClientOriginalextension();
-            $request->image->storeAs('public/product'.$bannerimage);
+            $ProductName = time().".".$request->bannerimage->getClientOriginalextension();
+            $request->bannerimage->storeAs('/public/img/'. $ProductName);
             
             Product::create([
                 'name' => $request->name,
                 'spec' => $request->spec,
                 'desc' => $request->desc,
-                'bannerimage' => $bannerimage,
+                'sortOrder' => $request->sortOrder,
+                'isActive' => $request->isActive,
+                'bannerimage' => $ProductName,
             ]);
         }
 
-        return redirect()->route('cms.product')->with('success', 'Added!');
+        return redirect()->route('product.index')->with('success', 'Added!');
     }
 
     public function edit($id){
         $product = Product::findOrFail($id);
 
-        return view('cms.productedit', compact('edit'));
+        return view('cms.productedit', compact('product'));
     }
 
     public function update(Request $request, $id){
         $request->validate([
             'name' => 'required',
-            'desc' => 'required',
+            'desc' => ' required',
+            'spec' => 'nullable',
+            'sortOrder' => 'nullable',
+            'isActive' => 'nullable',
+            'bannerimage' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         $product = Product::findOrFail($id);
 
-        if($request->hasFile('image')){
+        if($request->hasFile('bannerimage')){
             if($product->image){
-                Storage::delete('public/img'. $product->image);
+                Storage::delete('/public/img/'. $product->image);
             }
             $bannerimage = time().".".$request->image->getClientOriginalextension();
-            $request->image->storeAs('public/img');
+            $request->image->storeAs('/public/img/'. $bannerimage);
             $product->image = $bannerimage;
         }
 
         $product->name = $request->name;
         $product->save();
 
-        return redirect()->route('cms.product')->with('success', 'Updated!');
+        return redirect()->route('product.index')->with('success', 'Updated!');
     }
 
     public function destroy($id){
         $product = Product::findOrFail($id);
         $product->delete();
 
-        return redirect()->route('cms.product')->with('success', 'Deleted!');
+        return redirect()->route('product.index')->with('success', 'Deleted!');
     }
 }

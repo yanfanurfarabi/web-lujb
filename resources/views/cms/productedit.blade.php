@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Edit</p>
+            <p class="big bold">Edit Product</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -39,11 +39,22 @@
         </div>
 
         <div class="Card">
-            <label for="value" class="edittitle">Product Image</label>
-            @if ($product->image)
-            <p class="semibold">Current Image : <img src=" {{ asset('storage/images/' . $product->image) }} " alt=""> </p>
+            <label for="sortOrder" class="edittitle">Sort Order</label>
+            <input type="text" class="editlabel" id="sortOrder" name="sortOrder" value="{{ old('sortOrder', $product->sortOrder) }} " required>
+        </div>
+
+        <div class="Card">
+            <label for="isActive" class="edittitle">isActive</label>
+            <input type="text" class="editlabel" id="isActive" name="isActive" value="{{ old('isActive', $product->isActive) }} " required>
+        </div>
+
+        <div class="Card">
+            <label for="bannerimage" class="edittitle">Product Image</label>
+            @if ($product->bannerimage)
+            <p class="semibold">Current Image : <img src=" {{ asset('storage/img/'. $product->bannerimage) }} " alt="" width="300px"> </p>
             @endif
-            <input type="file" class="" name="image" id="image">
+            <div class="gap-20"></div>
+            <input type="file" class="" name="imagbannerimagee" id="bannerimage">
         </div>
 
         <button type="submit" class="Button">Update</button>

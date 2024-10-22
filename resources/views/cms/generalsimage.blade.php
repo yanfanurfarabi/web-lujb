@@ -20,7 +20,6 @@
                         <tr>
                             <th>Name</th>
                             <th>Image</th>
-                            <th>link</th>
                             <th>is Active</th>
                             <th>Action</th>
                         </tr>
@@ -33,11 +32,10 @@
                                 @if ($img->image != "")
                                 <td> <img src="{{ asset('storage/img/'. $img->image) }}" alt="image" width= "300"></td>
                                 @endif
-                                <td>{{ $img->link }}</td>
                                 <td>{{ $img->isActive }}</td>
                                 <td>
-                                    <a href="{{ route('generalimage.edit', $img->id) }}" class="small">Edit</a>
-
+                                    <button type="button"><a href="{{ route('generalimage.edit', $img->id) }}">Edit</a></button>
+                                    <div class="gap-20"></div>
                                     <form action="{{ route('generalimage.destroy', $img->id) }} " method="POST">
                                         @csrf
                                         @method('DELETE')

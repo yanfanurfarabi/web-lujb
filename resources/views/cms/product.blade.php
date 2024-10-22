@@ -22,6 +22,8 @@
                             <th>Description</th>
                             <th>Specification</th>
                             <th>Product Image</th>
+                            <th>sortOrder</th>
+                            <th>is Active</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -32,10 +34,15 @@
                             <tr>
                                 <td>{{ $prod->name }} </td>
                                 <td>{{ $prod->desc }} </td>
-                                <th>{{ $prod->spec }} </th>
+                                <td>{{ $prod->spec }} </td>
+                                @if ($prod->bannerimage != "")
+                                <td> <img src="{{ asset('storage/img/'. $prod->bannerimage) }}" alt="image" width= "300px"></td>
+                                @endif
+                                <td>{{ $prod->sortOrder }} </td>
+                                <td>{{ $prod->isActive }} </td>
                                 <td>
                                     <button type="button"><a href="{{ route('product.edit', $prod->id)}}" class="">Edit</a></button>
-                                        
+                                    <div class="gap-20"></div>
                                     <form action="{{ route('product.destroy', $prod->id) }} " method="POST">
                                         @csrf   
                                         @method('DELETE')
