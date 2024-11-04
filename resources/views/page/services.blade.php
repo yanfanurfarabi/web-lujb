@@ -1,12 +1,10 @@
-@extends('index')
-
-@section('content')
+<x-layout>
     
-    <div class="BannerCanvas">
+    {{-- <div class="BannerCanvas">
         <div class="ActiveBanner">
             <img src="img/banner_services.jpg" alt="" class="Banner">
         </div>
-    </div>
+    </div> --}}
 
     <div class="Container">
         <div class="InnerContainer">
@@ -94,5 +92,4 @@
                 <div class="white Button">Inquiry</div>
         </div>
     </div>
-
-@endsection
+</x-layout>

@@ -1,161 +1,57 @@
-{{-- @dd($datas) --}}
-@extends('index')
-
-@section('content')
-
-<style>
-
-    </style>
-
-<div class="BannerCanvas">
-    <div class="ActiveBanner"></div>
-</div>
-
-<div class="Container">
-    <div class="gap-20"></div>
-        {{-- <p class="xl black bold center"> {!! $datas !!} </p> --}}
-        {{-- @foreach ($datas as $data) --}}
-        @csrf
-        <p class="xl black bold center"> {{ $datas }} </p>
-            
-        {{-- @endforeach --}}
-    <div class="gap-20"></div>
-</div>
-
-<div class="Container">
-    {{-- <div class="InnerContainer"> --}}
-        <div class="ProductNavigation">
-            <p class="black big bold center">Our Core Products</p>
-            <div class="gap-20"></div>
-            <div class="NavigationList1">
-                <a href="/product" class="Navigation1"></a>
-            </div>
-            <div class="NavigationList2">
-                <a href="/product" class="Navigation2"></a>
-                <a href="/product" class="Navigation3"></a>
-                <a href="/product" class="Navigation4"></a>
-            </div>
-            <div class="NavigationList3">
-                <a href="/product" class="Navigation5"></a>
-                <a href="/product" class="Navigation6"></a>
-            </div>
-        {{-- </div> --}}
-    </div>
-</div>
-
-<div class="Container">
-    <div class="InnerContainer">
-    <div class="InnerContent align-center">
-        <div class="ContainerBanner">
-        <img src="img/why_us.jpeg" alt="" class="ContainerImage">
-    </div>
-        <div class="ContainerContent">
-            <h3 class="xl bold black"> {{ $datas }} </h3>
-            <div class="ContainerList">
-                <p class="black small reguler">Body</p>
+<x-layout>
+    <div class="max-w-screen-xl mx-auto p-4">
+        <h3 class=" text-gray-900 text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
+        Specialized in Petrol Station <br> Equipment Products and Installation </h3>
+        {{-- our product --}}
+        <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500">
+            <div class="rounded-md ">
+                <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
+                Our Core Products </h1>  
+                <div class="grid grid-cols-2 gap-1">
+                <div class="col-span-2 grid gap-1">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation1.jpg" alt="">
+                    </div>
                 </div>
-                <div class="ContainerLink"><a href="/product" class="Button white small semibold center">Read More</a></div>
-            </div>
-    </div>
-</div>
-</div>
-
-{{-- <div class="Container">
-    <div class="FullContainer">
-        <div class="InnerContent align-center">
-            <div class="CategoryContainer">
-                <p class="xl black bold center">Our Products</p>
-                <div class="gap-20"></div>
-                <div class="ProductCategoryContainer">
-
-                    <a href="/product" class="CategoryCard">
-                        <div class="CategoryCardTitle">
-                            <p class="small semibold center">Sanki Fuel Dispenser</p>
-                        </div>
-                    </a>
-
-                    <a href="/product" class="CategoryCard">
-                        <div class="CategoryCardTitle">
-                            <p class="small semibold center">Guihe Automatic <br>
-                            Tank Gauge</p>
-                        </div>
-                    </a>
-
-                    <a href="/product" class="CategoryCard">
-                        <div class="CategoryCardTitle">
-                            <p class="small semibold center">Dantec <br>
-                            composite Hose</p>
-                        </div>
-                    </a>
-
-                    <a href="/product" class="CategoryCard">
-                        <div class="CategoryCardTitle"> 
-                            <p class="small semibold center">Halock Polyethlyene
-                                Flexible Pipes</p>
-                        </div>
-                    </a>
-
-                    <a href="/product" class="CategoryCard">
-                        <div class="CategoryCardTitle">
-                            <p class="small semibold center">Liquid Control Positive
-                                Displacement Flowmeters</p>
-                        </div>
-                    </a>
-
-                    <a href="/product" class="CategoryCard">
-                        <div class="CategoryCardTitle">
-                            <p class="small semibold center none">Goldensite Aluminium
-                                Composite Panel</p>
-                        </div>
-                    </a>
-
+                <div class="grid gap-1">
+                    <div class="row-span-2">
+                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-1">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-1">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="grid gap-1">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation3.jpg" alt="">
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
-    </div>
-</div> --}}
-
-{{-- <div class="Container">
-    <div class="FullContainer">
-        <div class="InnerContainer align-center">
-                <p class="xl black bold center">Menu</p>
-                <p class="small black semibold center">Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Optio eligendi dicta iusto debitis tenetur!
-                    Perspiciatis, dolore necessitatibus quisquam laudantium impedit
-                    voluptas ducimus non vitae blanditiis soluta dolores asperiores
-                    repellat dignissimos!</p>
-            <div class="MenuContainer">
-                
-                <a href="/product" class="MenuCard">
-                    <div class="CardTitle">
-                        <p class="big black bold center">Product</p>
-                    </div>
-                </a>
-
-                <a href="/profile" class="MenuCard">
-                    <div class="CardTitle">
-                        <p class="big black bold center">About Us</p>
-                    </div>
-                </a>
-
-                <a href="/profile" class="MenuCard">
-                    <div class="CardTitle">
-                        <p class="big black bold center">Contact</p>
-                    </div>
-                </a>
-
+    
+        {{-- why us --}}
+        <div class="grid grid-cols-2 gap-10 mt-10 mb-5">
+            <div>
+                <img class="w-full h-96 max-w-full rounded-2xl" src="img/why_us.jpeg" alt="why_us" />
+            </div>
+            <div>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">Why Us ?</h2>
+                <p class="opacity-100 text-black">Years of experience in the field of gas stations, we ensure you will be satisfied with the services we provide.<br><br>We provide the best quality gas station equipment that has certainly been tested. Our professional team is always ready to help you for maintenance or ask questions about products and others.</p>
+                <button class="rounded-full btn btn-sm btn-info text-white mt-10">Read More</button>
             </div>
         </div>
+    
     </div>
-</div> --}}
-
-<div class="Container">
-    <div class="InquiryContainer">
-        <div class="Inquiry">
-            <p class="black big semibold">Interested with our services?</p>
-        </div>
-        <div class="white Button">Inquiry</div>
-    </div>
-</div>
-
-@endsection
+    </x-layout>
+    

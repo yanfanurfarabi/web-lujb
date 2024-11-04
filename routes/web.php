@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
+Route::get('/', function () {
+    return view('page.home');
+});
+
 Route::get('/product', function () {
     return view('page.product');
 });
