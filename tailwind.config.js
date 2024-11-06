@@ -14,6 +14,9 @@ export default {
         fontFamily: {
             sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
         },
+        container: {
+          center: true,
+        }
     },
 },
   plugins: [require("flowbite/plugin"),

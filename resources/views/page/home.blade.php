@@ -51,7 +51,61 @@
                 <button class="rounded-full btn btn-sm btn-info text-white mt-10">Read More</button>
             </div>
         </div>
-    
     </div>
-    </x-layout>
+
+    {{-- trusted by --}}
+    <section class="bg-white dark:bg-gray-900 p-10 justify-items-center">
+        <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-10 mt-5">Trusted By</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+              <img
+                src="img/pertamina_1.png"
+                alt="pertamina"
+                class="w-auto h-20 p-5" />
+            </div>
+            <div class="carousel-item">
+                <img
+                  src="img/patraniaga_1.png"
+                  alt="patraniaga"
+                  class="w-auto h-20 p-5" />
+            </div>
+            <div class="carousel-item">
+                <img
+                  src="img/pertamina_retail_1.png"
+                  alt="pertamnina_retail"
+                  class="w-auto h-20 p-5" />
+            </div>
+            <div class="carousel-item">
+                <img
+                  src="img/pertamina_terminal_1.png"
+                  alt="pertamina_terminal"
+                  class="w-auto h-20 p-5" />
+            </div>
+            <div class="carousel-item">
+                <img
+                  src="img/pitsa_1.png"
+                  alt="pitsa"
+                  class="w-auto h-20 p-5" />
+            </div>
+            <div class="carousel-item">
+                <img
+                  src="img/polda_1.png"
+                  alt="polda"
+                  class="w-auto h-20 p-5" />
+            </div>
+        </div>
+    </section>
+    
+    {{-- inquiry --}}
+    <section style="background-image: url('img/bg_inquiry2.jpg')" class=" bg-white dark:bg-gray-900">
+        <div class="items-center max-w-screen-xl mx-auto p-4" >
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">Interested with our product and services?</h2>
+            </div>
+            <div class="flex justify-center">
+                <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+            </div>
+        </div>
+    </section>
+</x-layout>
     

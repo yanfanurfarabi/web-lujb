@@ -34,6 +34,10 @@ Route::get('/contact', function () {
     return view('page.contact');
 });
 
+Route::get('/productdesc', function () {
+    return view('page.productdesc');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
