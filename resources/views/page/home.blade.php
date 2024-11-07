@@ -7,33 +7,60 @@
             <div class="rounded-md ">
                 <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
                 Our Core Products </h1>  
-                <div class="grid grid-cols-2 gap-1">
-                <div class="col-span-2 grid gap-1">
+                <div class="grid grid-cols-2 gap-4">
+                <div class="col-span-2 grid gap-4">
+                    {{-- <div class="hover:shadow-lg overflow-hidden">
+                        <img class="h-auto max-w-full rounded-lg group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out w-full object-cover" src="img/banner_navigation1.jpg" alt="">
+                    </div> --}}
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation1.jpg" alt="">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="img/banner_navigation1.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="grid gap-1">
+                <div class="grid gap-4">
                     <div class="row-span-2">
-                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation2.jpg" alt="">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="img/banner_navigation2.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="grid gap-1">
+                <div class="grid gap-4">
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation3.jpg" alt="">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="img/banner_navigation3.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation5.jpg" alt="">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="img/banner_navigation5.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="grid gap-1">
+                <div class="grid gap-4">
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation3.jpg" alt="">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="img/banner_navigation3.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="grid gap-1">
+                <div class="grid gap-4">
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="img/banner_navigation3.jpg" alt="">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="#">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="img/banner_navigation3.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 </div>
