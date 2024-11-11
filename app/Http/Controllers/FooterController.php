@@ -31,6 +31,6 @@ class FooterController extends Controller
         $footer->value = $request->input('value');
         $footer->save();
 
-        return redirect()->route('footer')->with('success', 'updated!');
+        return redirect()->route('footer.index')->with('success', 'updated!');
     }
 }

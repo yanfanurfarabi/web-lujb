@@ -6,6 +6,11 @@ use App\Http\Controllers\GeneralImageController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ServicepageController;
+use App\Http\Controllers\ProfilepageController;
+use App\Http\Controllers\ProductpageController;
+use App\Http\Controllers\ContactpageController;
 use App\Models\Banner;
 use App\Models\General_Image;
 use App\Models\GeneralData;
@@ -14,25 +19,33 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
-Route::get('/', function () {
-    return view('page.home');
-});
+// Route::get('/', [GeneraldataController::class, 'show'])->name('datas');
+
+Route::get('/', [HomepageController::class, 'index'])->name('data');
+
+Route::get('/services', [ServicepageController::class, 'index'])->name('data');
+
+Route::get('/profile', [ProfilepageController::class, 'index'])->name('data');
+
+Route::get('/contact', [ContactpageController::class, 'index'])->name('data');
+
+// Route::get('/product', [ProductController::class, 'index'])->name('product');
 
 Route::get('/product', function () {
     return view('page.product');
 });
 
-Route::get('/services', function () {
-    return view('page.services');
-});
+// Route::get('/services', function () {
+//     return view('page.services');
+// });
 
-Route::get('/profile', function () {
-    return view('page.profile');
-});
+// Route::get('/profile', function () {
+//     return view('page.profile');
+// });
 
-Route::get('/contact', function () {
-    return view('page.contact');
-});
+// Route::get('/contact', function () {
+//     return view('page.contact');
+// });
 
 Route::get('/productdesc', function () {
     return view('page.productdesc');
@@ -46,51 +59,21 @@ Route::get('/dashboard', function () {
     return view('cms.dashboard');
 });
 
-
-// Route::resource(['dashboard/generaldata/' => GeneraldataController::class]);
-// Route::resource(['dashboard/generaldata/' => GeneraldataController::class]);
-
 //View, Edit & update General Data
 Route::resource('dashboard/generaldata', GeneraldataController::class);
-
-// Route::get('/dashboard/generaldata/', [GeneraldataController::class, 'index'])->name('datas');
-// Route::get('/dashboard/generaldata/{id}/edit',[GeneraldataController::class, 'edit'])->name('datas.edit');
-// Route::put('/dashboard/generaldata/{id}/', [GeneraldataController::class, 'update'])->name('datas.update');
-// Route::delete('/dashboard/generaldata/{id}/', [GeneraldataController::class, 'destroy'])->name('datas.destroy');
-// Route::get('/dashboard/generaldata/create/' ,[GeneraldataController::class, 'create'])->name('datas.create');
-// Route::post('/dashboard/generaldata/', [GeneraldataController::class, 'store']);
                 
 //View, Edit & update General Image
 Route::resource('dashboard/generalimage', GeneralImageController::class);
 
-// Route::get('/dashboard/generalimage/', [GeneralImageController::class, 'index'])->name('image');
-// Route::get('/dashboard/generalimage/{id}/edit', [GeneralImageController::class, 'edit'])->name('image.edit');
-// Route::put('/dashboard/generalimage/{id}', [GeneralImageController::class, 'update'])->name('image.update');
-// Route::resource('/dashboard/generalimage/', GeneralImageController::class)->only(['index', 'update','edit']);
-
-
 //View, Edit & update Banners 
 Route::resource('dashboard/banner', BannerController::class);
-
-// Route::get('/dashboard/banner', [BannerController::class, 'index'])->name('banner');
-// Route::get('/dashboard/banner/{id}/edit', [BannerController::class, 'edit'])->name('banner.edit');
-// Route::put('/dashboard/banner/{id}', [BannerController::class, 'update'])->name('banner.update');
-// Route::post('/');
 
 //View, Edit & update Footer 
 Route::resource('dashboard/footer', FooterController::class);
 
-// Route::get('/dashboard/footer', [FooterController::class, 'index'])->name('footer');
-// Route::get('/dashboard/footer/{id}/edit', [FooterController::class, 'edit'])->name('footer.edit');
-// Route::put('/dashboard/footer/{id}', [FooterController::class, 'update'])->name('footer.update');
-
 Route::resource('/dashboard/product', ProductController::class);
 
 Route::resource('/dashboard/productcategory', ProductCategoryController::class);
-
-// Route::get('/dashboard/productcategory', function () {
-//     return view('cms.productcategory');
-// });
 
 Route::get('/dashboard/home', function () {
     return view('cms.home');

@@ -33,7 +33,7 @@
                                 <td>{{ $footers->value }} </td>
                                 <td>{{ $footers->isActive }} </td>
                                 <td>
-                                    <a href="{{ route('footer.edit', $footers->id) }}" class="small">Edit</a>
+                                    <button type="button"><a href="{{ route('footer.edit', $footers->id) }}" class="small">Edit</a></button>
                                 </td>
                             </tr>
 

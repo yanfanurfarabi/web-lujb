@@ -13,6 +13,11 @@ class ProductController extends Controller
 
         return view ('cms.product', compact('product'));
     }
+    public function show(){
+        $product = Product::all();
+
+        return view ('page.product', compact('product'));
+    }
 
     public function create(){
         return view('cms.productcreate');

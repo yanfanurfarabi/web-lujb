@@ -13,6 +13,12 @@ class GeneraldataController extends Controller
         return view('cms.generalsdata', compact('datas'));
     }
 
+    public function show(){
+        $datas = GeneralData::all();
+
+        return view('page.home', compact('datas'));
+    }
+
     public function create(){
         return view('cms.generalsdatacreate');
     }

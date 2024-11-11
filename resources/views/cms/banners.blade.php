@@ -35,8 +35,8 @@
                                 @endif
                                 <td>{{ $banners->BannerCategory }}</td>
                                 <td>
-                                    <a href="{{ route('banner.edit', $banners->id) }}" class="small">Edit</a>
-
+                                    <button type="button"><a href="{{ route('banner.edit', $banners->id) }}" class="small">Edit</a></button>
+                                    <div class="gap-20"></div>
                                     <form action="{{ route('banner.destroy', $banners->id) }} " method="POST">
                                         @csrf
                                         @method('DELETE')

@@ -43,7 +43,7 @@ class BannerController extends Controller
         // $path = $request->file('image')->store('/public/img/');
             
             
-        return redirect()->route('index')->with('success', 'Banner created successfully.');
+        return redirect()->route('banner.index')->with('success', 'Banner created successfully.');
     }
 
     public function edit($id) {
