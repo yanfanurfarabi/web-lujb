@@ -2,20 +2,20 @@
 
 <x-layout>
     <div class="container mx-auto">
-        <div role="tablist" class="tabs tabs-boxed mt-10 mb-20">
+        <div role="tablist" class="tabs tabs-boxed flex flex-wrap mt-10 mb-20 justify-center">
             {{-- class tab active: tab-active --}}
-            <a onclick="openTab('all_products')" class="tab tab-active text-white">All Products</a>
-            <a onclick="openTab('fuel_pump')" class="tab  text-white">Fuel Pump</a>
-            <a onclick="openTab('hose')" class="tab text-white">Hose</a>
-            <a onclick="openTab('hose_meter')" class="tab text-white">Hose Meter</a>
-            <a onclick="openTab('flexible_pipes')" class="tab text-white">Flexible Pipes</a>
-            <a onclick="openTab('atg')" class="tab text-white">ATG</a>
-            <a onclick="openTab('panel')" class="tab text-white">Panel</a>
+            <a onclick="openTab('all_products')" class="tab tab-active text-white flex-auto text-center">All Products</a>
+            <a onclick="openTab('fuel_pump')" class="tab  text-white flex-auto text-center">Fuel Pump</a>
+            <a onclick="openTab('hose')" class="tab text-white flex-auto text-center">Hose</a>
+            <a onclick="openTab('hose_meter')" class="tab text-white flex-auto text-center">Hose Meter</a>
+            <a onclick="openTab('flexible_pipes')" class="tab text-white flex-auto text-center">Flexible Pipes</a>
+            <a onclick="openTab('atg')" class="tab text-white flex-auto text-center">ATG</a>
+            <a onclick="openTab('panel')" class="tab text-white flex-auto text-center">Panel</a>
         </div>
      
         {{-- Tab All Products --}}
         <div class="tab-content active" id="all_products" style="display: block;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -77,7 +77,7 @@
 
         {{-- Tab Fuel Pump --}}
         <div class="tab-content hidden" id="fuel_pump" style="display: none;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -139,7 +139,7 @@
 
         {{-- Tab Hose --}}
         <div class="tab-content hidden" id="hose" style="display: none;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -201,7 +201,7 @@
 
         {{-- Tab Hose Meter --}}
         <div class="tab-content hidden" id="hose_meter" style="display: none;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -263,7 +263,7 @@
 
         {{-- Tab Flexible Pipes --}}
         <div class="tab-content hidden" id="flexible_pipes" style="display: none;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -325,7 +325,7 @@
 
         {{-- Tab ATG --}}
         <div class="tab-content hidden" id="atg" style="display: none;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -387,7 +387,7 @@
 
         {{-- Tab Panel --}}
         <div class="tab-content hidden" id="panel" style="display: none;">
-            <div class="grid grid-cols-3 gap-4 justify-items-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -482,15 +482,5 @@
         document.getElementById(tabId).style.display = 'block';
     }
     </script>
-    {{-- <style>
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .hidden {
-            display: none;
-        }
-    </style> --}}
 </x-layout>
+
