@@ -19,7 +19,7 @@
         </div>
     @endif
     
-    <form action="{{ route('product.update', $product->id) }} " method="POST">
+    <form action="{{ route('product.update', $product->id) }} " method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -30,7 +30,7 @@
 
         <div class="Card">
             <label for="desc" class="edittitle">Description</label>
-            <textarea class="editlabel textarea" name="value">{{ old('desc', $product->desc) }}</textarea>
+            <textarea class="editlabel textarea" name="desc">{{ old('desc', $product->desc) }}</textarea>
         </div>
 
         <div class="Card">
@@ -54,7 +54,7 @@
             <p class="semibold">Current Image : <img src=" {{ asset('storage/img/'. $product->bannerimage) }} " alt="" width="300px"> </p>
             @endif
             <div class="gap-20"></div>
-            <input type="file" class="" name="imagbannerimagee" id="bannerimage">
+            <input type="file" class="" name="bannerimage" id="bannerimage">
         </div>
 
         <button type="submit" class="Button">Update</button>

@@ -5,14 +5,12 @@
             <div class="grid grid-cols-2 gap-10">
                 <div>
                     <h1 class="card-title opacity-100 text-xl lg:text-2xl font-bold text-black mb-5">Contact</h1>
-                    <p class="text-black">Phone: (021) 65301482</p>
-                    <p class="text-black">Fax Number: (021) 65302313</p>
-                    <p class="text-black">Email: LUJB_indo@hotmail.com</p>
+                    <p class="text-black">{!! $datas[25]->value !!}</p>
                     <iframe class="rounded-md mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d589.6785848539195!2d106.83485005336404!3d-6.148308506706189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ee87b39529%3A0x17db70cec35a174!2sPT.%20Ladang%20Usaha%20Jaya%20Bersama!5e0!3m2!1sen!2sid!4v1727426780001!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div>
                     <h1 class="card-title opacity-100 text-xl lg:text-2xl font-bold text-black mb-2 ">Leave us message</h1>
-                    <span>We welcome your value and feedback</span>
+                    <span>{!! $datas[26]->value !!}</span>
                     <form>
                         <div class="mb-5 mt-5">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -41,7 +39,7 @@
     <section style="background-image: url('img/bg_inquiry2.jpg')" class=" bg-white dark:bg-gray-900">
         <div class="items-center max-w-screen-xl mx-auto p-4" >
             <div>
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7 mt-5">Interested with our product and services?</h2>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7 mt-5">{!! $datas[5]->value !!}</h2>
             </div>
             <div class="flex justify-center">
                 <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>

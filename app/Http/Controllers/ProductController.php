@@ -36,7 +36,7 @@ class ProductController extends Controller
         ]);
 
         if($request->hasFile('bannerimage')){
-            $ProductName = time().".".$request->bannerimage->getClientOriginalextension();
+            $ProductName = time().'.'.$request->bannerimage->getClientOriginalextension();
             $request->bannerimage->storeAs('/public/img/'. $ProductName);
             
             Product::create([
@@ -60,26 +60,29 @@ class ProductController extends Controller
 
     public function update(Request $request, $id){
         $request->validate([
-            'name' => 'required',
-            'desc' => ' required',
+            'name' => 'nullable',
+            'desc' => ' nullable',
             'spec' => 'nullable',
             'sortOrder' => 'nullable',
             'isActive' => 'nullable',
-            'bannerimage' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'bannerimage' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
 
         if($request->hasFile('bannerimage')){
             if($product->image){
                 Storage::delete('/public/img/'. $product->image);
             }
-            $bannerimage = time().".".$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $bannerimage);
-            $product->image = $bannerimage;
+            $bannerimage = time().'.'.$request->bannerimage->getClientOriginalextension();
+            $request->bannerimage->storeAs('/public/img/'. $bannerimage);
+
+            $product->bannerimage = $bannerimage;
         }
 
         $product->name = $request->name;
+        $product->desc = $request->desc;
+        $product->spec = $request->spec;
         $product->save();
 
         return redirect()->route('product.index')->with('success', 'Updated!');

@@ -29,23 +29,7 @@ Route::get('/profile', [ProfilepageController::class, 'index'])->name('data');
 
 Route::get('/contact', [ContactpageController::class, 'index'])->name('data');
 
-// Route::get('/product', [ProductController::class, 'index'])->name('product');
-
-Route::get('/product', function () {
-    return view('page.product');
-});
-
-// Route::get('/services', function () {
-//     return view('page.services');
-// });
-
-// Route::get('/profile', function () {
-//     return view('page.profile');
-// });
-
-// Route::get('/contact', function () {
-//     return view('page.contact');
-// });
+Route::get('/product', [ProductpageController::class, 'index'])->name('data');
 
 Route::get('/productdesc', function () {
     return view('page.productdesc');

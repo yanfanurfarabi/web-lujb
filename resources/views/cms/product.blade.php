@@ -11,7 +11,7 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
-
+       <button> <a href="{{ route('product.create') }}">Add New</a></button>
         <div class="Card">
             <div class="InnerCard">
 
@@ -57,7 +57,7 @@
                         </tbody>
                     </table>
                     
-                    <a href="{{ route('product.create') }}">Add New</a>
+                    
 
     </div>
 </div>

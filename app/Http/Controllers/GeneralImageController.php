@@ -67,7 +67,7 @@ class GeneralImageController extends Controller
             $image->image = $imageName;
         }
 
-        $image->isAcitve = $request->isActive;
+        $image->isActive = $request->isActive;
         $image->name = $request->name;
         $image->save();
 

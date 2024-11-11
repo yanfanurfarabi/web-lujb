@@ -1,5 +1,3 @@
-@dd('$product')
-
 <x-layout>
     <div class="container mx-auto">
         <div role="tablist" class="tabs tabs-boxed flex flex-wrap mt-10 mb-20 justify-center">
@@ -14,84 +12,52 @@
         </div>
      
         {{-- Tab All Products --}}
+
         <div class="tab-content active" id="all_products" style="display: block;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+            
+            @foreach ($products as $product)
+
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
-                        src="img/tatsuno1.png"
+                        src="{{ asset('storage/img/'. $product->bannerimage) }}"
                         alt="tatsuno1"
                         class="w-60 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Sanki 1</h2>
+                    <h2 class="card-title text-black mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
                         <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
                     </div>
                     </div>
                 </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Sanki 1</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Sanki 1</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Sanki 1</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                
+            @endforeach
 
         {{-- Tab Fuel Pump --}}
         <div class="tab-content hidden" id="fuel_pump" style="display: none;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+
+                @foreach ($products as $product)
+
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
-                        src="img/tatsuno1.png"
+                        src="(asset)"
                         alt="tatsuno1"
                         class="w-60 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Fuel Pump</h2>
+                    <h2 class="card-title text-black mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
                         <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
                     </div>
                     </div>
                 </div>
+                
+            @endforeach
+
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
