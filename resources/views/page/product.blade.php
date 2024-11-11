@@ -22,7 +22,7 @@
                     <figure class="mt-5 mb-5">
                     <img
                         src="{{ asset('storage/img/'. $product->bannerimage) }}"
-                        alt="tatsuno1"
+                        alt="Sanki Fuel Dispenser"
                         class="w-60 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
@@ -44,7 +44,7 @@
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
-                        src="(asset)"
+                        src="{{ asset('storage/img/'. $product->bannerimage) }}"
                         alt="tatsuno1"
                         class="w-60 h-auto" />
                     </figure>
