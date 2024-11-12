@@ -22,6 +22,7 @@
                             <th>Description</th>
                             <th>Specification</th>
                             <th>Product Image</th>
+                            <th>Category</th>
                             <th>sortOrder</th>
                             <th>is Active</th>
                             <th>Actions</th>
@@ -38,6 +39,7 @@
                                 @if ($prod->bannerimage != "")
                                 <td> <img src="{{ asset('storage/img/'. $prod->bannerimage) }}" alt="image" width= "300px"></td>
                                 @endif
+                                <td>{{ $prod->category }} </td>
                                 <td>{{ $prod->sortOrder }} </td>
                                 <td>{{ $prod->isActive }} </td>
                                 <td>

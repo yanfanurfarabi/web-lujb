@@ -13,10 +13,10 @@ class ProductController extends Controller
 
         return view ('cms.product', compact('product'));
     }
-    public function show(){
-        $product = Product::all();
+    public function show($id){
+        $product = Product::where('id', $id)->firstOrFail();
 
-        return view ('page.product', compact('product'));
+        return view ('page.productdesc', compact('product'));
     }
 
     public function create(){
@@ -32,6 +32,7 @@ class ProductController extends Controller
             'spec' => 'nullable',
             'sortOrder' => 'nullable',
             'isActive' => 'nullable',
+            'category' => 'required',
             'bannerimage' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -46,6 +47,7 @@ class ProductController extends Controller
                 'sortOrder' => $request->sortOrder,
                 'isActive' => $request->isActive,
                 'bannerimage' => $ProductName,
+                'category' => $request->category,
             ]);
         }
 
@@ -65,6 +67,7 @@ class ProductController extends Controller
             'spec' => 'nullable',
             'sortOrder' => 'nullable',
             'isActive' => 'nullable',
+            'category' => 'required',
             'bannerimage' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -83,6 +86,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->desc = $request->desc;
         $product->spec = $request->spec;
+        $product->category = $request->category;
         $product->save();
 
         return redirect()->route('product.index')->with('success', 'Updated!');

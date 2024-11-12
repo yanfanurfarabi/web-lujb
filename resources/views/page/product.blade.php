@@ -23,17 +23,18 @@
                     <img
                         src="{{ asset('storage/img/'. $product->bannerimage) }}"
                         alt="Sanki Fuel Dispenser"
-                        class="w-60 h-auto" />
+                        class="w-70 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">{!! $product->name !!}</h2>
+                    <h2 class="card-title font-bold text-3xl text-gray-800 mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
-                        <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
+                        {{-- <a href="{{ route('product', $product->id) }}"></a> --}}
+                        <a href="{{ route('product', $product->name) }}"><button class="btn btn-info">Detail</button></a>
                     </div>
                     </div>
                 </div>
                 
-            @endforeach
+                @endforeach
 
         {{-- Tab Fuel Pump --}}
         <div class="tab-content hidden" id="fuel_pump" style="display: none;">
@@ -45,7 +46,7 @@
                     <figure class="mt-5 mb-5">
                     <img
                         src="{{ asset('storage/img/'. $product->bannerimage) }}"
-                        alt="tatsuno1"
+                        alt="{!! $product->name !!}"
                         class="w-60 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
@@ -58,96 +59,14 @@
                 
             @endforeach
 
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Fuel Pump</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Fuel Pump</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Fuel Pump</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
             </div>
         </div>
 
         {{-- Tab Hose --}}
         <div class="tab-content hidden" id="hose" style="display: none;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Hose</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Hose</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Hose</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
+                
+                
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -168,48 +87,9 @@
         {{-- Tab Hose Meter --}}
         <div class="tab-content hidden" id="hose_meter" style="display: none;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Hose Meter</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Hose Meter</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Hose Meter</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
+                
+                
+                
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -230,48 +110,9 @@
         {{-- Tab Flexible Pipes --}}
         <div class="tab-content hidden" id="flexible_pipes" style="display: none;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Flexible Pipes</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Flexible Pipes</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Flexible Pipes</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
+                
+                
+                
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -292,48 +133,9 @@
         {{-- Tab ATG --}}
         <div class="tab-content hidden" id="atg" style="display: none;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">ATG</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">ATG</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">ATG</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
+                
+                
+                
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -354,48 +156,8 @@
         {{-- Tab Panel --}}
         <div class="tab-content hidden" id="panel" style="display: none;">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Panel</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info" onclick="window.location.href='/productdesc'">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Panel</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
-                <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
-                    <img
-                        src="img/tatsuno1.png"
-                        alt="tatsuno1"
-                        class="w-60 h-auto" />
-                    </figure>
-                    <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title text-black mb-5">Panel</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-info">Detail</button>
-                    </div>
-                    </div>
-                </div>
+
+
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
@@ -413,6 +175,8 @@
             </div>
         </div>
 
+    </div>
+        </div>
     </div>
 
     <section style="background-image: url('img/bg_inquiry2.jpg')" class=" bg-white dark:bg-gray-900">

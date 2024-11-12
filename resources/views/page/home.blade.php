@@ -96,28 +96,29 @@
             </div>
             <div class="carousel-item">
                 <img
-                  src="img/patraniaga_1.png"
-                  alt="patraniaga"
+                  src="img/pertamina_1.png"
+                  alt="pertamina"
                   class="w-auto h-20 p-5" />
-            </div>
-            <div class="carousel-item">
+              </div>
+              <div class="carousel-item">
                 <img
-                  src="img/pertamina_retail_1.png"
-                  alt="pertamnina_retail"
+                  src="img/pertamina_1.png"
+                  alt="pertamina"
                   class="w-auto h-20 p-5" />
-            </div>
-            <div class="carousel-item">
+              </div>
+              <div class="carousel-item">
                 <img
-                  src="img/pertamina_terminal_1.png"
-                  alt="pertamina_terminal"
+                  src="img/pertamina_1.png"
+                  alt="pertamina"
                   class="w-auto h-20 p-5" />
-            </div>
-            <div class="carousel-item">
+              </div>
+              <div class="carousel-item">
                 <img
-                  src="img/pitsa_1.png"
-                  alt="pitsa"
+                  src="img/pertamina_1.png"
+                  alt="pertamina"
                   class="w-auto h-20 p-5" />
-            </div>
+              </div>
+            
             <div class="carousel-item">
                 <img
                   src="img/polda_1.png"

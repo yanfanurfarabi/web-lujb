@@ -39,6 +39,20 @@
         </div>
 
         <div class="Card">
+            <label for="category" class="edittitle">Category</label>
+            {{-- <input type="text" class="editlabel" id="name" name="name" value="{{ old('spec', $product->category) }}" required> --}}
+            <select id="category" name="category" class="select w-full max-w-xs">
+                <option disabled selected>Select Category</option>
+                <option>Fuel Pump</option>
+                <option>Hose</option>
+                <option>Hose Meter</option>
+                <option>Flexible Pipes</option>
+                <option>ATG</option>
+                <option>Panel</option>
+              </select>
+        </div>
+
+        <div class="Card">
             <label for="sortOrder" class="edittitle">Sort Order</label>
             <input type="text" class="editlabel" id="sortOrder" name="sortOrder" value="{{ old('sortOrder', $product->sortOrder) }} " required>
         </div>

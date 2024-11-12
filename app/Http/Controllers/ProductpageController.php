@@ -29,4 +29,27 @@ class ProductpageController extends Controller
             'footers' => $footers
         ]);
     }
+    public function show($name){
+        $product = Product::where('name', $name)->firstOrFail();
+
+        return view ('page.productdesc', compact('product'));
+    }
+
+    public function showHose($category){
+        $producthose = Product::where('category', $category)->firstOrFail();
+
+        return view ('page.productdesc', compact('producthose'));
+    }
+
+    public function showATG($category){
+        $productatg = Product::where('category', $category)->firstOrFail();
+
+        return view ('page.productdesc', compact('productatg'));
+    }
+
+    public function showpanel($category){
+        $producthose = Product::where('category', $category)->firstOrFail();
+
+        return view ('page.productdesc', compact('producthose'));
+    }
 }

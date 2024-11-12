@@ -31,9 +31,7 @@ Route::get('/contact', [ContactpageController::class, 'index'])->name('data');
 
 Route::get('/product', [ProductpageController::class, 'index'])->name('data');
 
-Route::get('/productdesc', function () {
-    return view('page.productdesc');
-});
+Route::get('/product/{name}', [ProductPageController::class, 'show'])->name('product');
 
 Route::get('/login', function () {
     return view('login');
