@@ -60,7 +60,7 @@
                 </div>
                 <div class="grid gap-4">
                     <div>
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="#">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[5]->image) }}" alt="">
                             </div>
@@ -129,7 +129,7 @@
     </section>
     
     {{-- inquiry --}}
-    <section style="background-image: url('img/bg_inquiry2.jpg')" class=" bg-white dark:bg-gray-900">
+    <section style="background-image: url('{{ asset('storage/img/'. $images[14]->image) }}')" class=" bg-white dark:bg-gray-900">
         <div class="items-center max-w-screen-xl mx-auto p-4" >
             <div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>

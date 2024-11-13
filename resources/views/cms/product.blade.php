@@ -11,7 +11,7 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
-       <button> <a href="{{ route('product.create') }}">Add New</a></button>
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('product.create') }}'">Add New</button>
         <div class="Card">
             <div class="InnerCard">
 
@@ -35,7 +35,7 @@
                             <tr>
                                 <td>{{ $prod->name }} </td>
                                 <td>{{ $prod->desc }} </td>
-                                <td>{{ $prod->spec }} </td>
+                                <td>{!! $prod->spec !!} </td>
                                 @if ($prod->bannerimage != "")
                                 <td> <img src="{{ asset('storage/img/'. $prod->bannerimage) }}" alt="image" width= "300px"></td>
                                 @endif
@@ -43,12 +43,12 @@
                                 <td>{{ $prod->sortOrder }} </td>
                                 <td>{{ $prod->isActive }} </td>
                                 <td>
-                                    <button type="button"><a href="{{ route('product.edit', $prod->id)}}" class="">Edit</a></button>
+                                    <button type="button" class="Button-Edit" onclick="window.location.href='{{ route('product.edit', $prod->id)}}'">Edit</button>
                                     <div class="gap-20"></div>
                                     <form action="{{ route('product.destroy', $prod->id) }} " method="POST">
                                         @csrf   
                                         @method('DELETE')
-                                        <button type="submit">Delete</button>
+                                        <button type="submit" class="Button-Delete white" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
                                     </form>
                                 </td>
                                 

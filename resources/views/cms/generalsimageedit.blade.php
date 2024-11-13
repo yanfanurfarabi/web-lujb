@@ -37,6 +37,11 @@
             <input type="file" class="" name="image" id="image">
         </div>
 
+        <div class="Card">
+            <label for="isActive" class="edittitle">isActive</label>
+            <input type="text" class="editlabel" id="isActive" name="isActive" value="{{ old('name', $image->isActive) }} " required>
+        </div>
+
         <button type="submit" class="Button">Update</button>
     </form>
 

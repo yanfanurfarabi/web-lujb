@@ -4,11 +4,11 @@
         <div class="max-w-screen-xl mx-auto p-4">
             <div class="grid grid-cols-2 gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{!! $datas[14]->value !!}</h2>
+                        <h2 class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[14]->value !!}</h2>
                         <p class="mb-4 text-black">{!! $datas[15]->value !!}</p>
                     </div>
                     <div>
-                        <img class="w-full rounded-md" src="img/ourteam2.jpg" alt="office content 1">
+                        <img class="w-full rounded-md" src="{{ asset('storage/img/'. $images[10]->image) }}" alt="office content 1">
                     </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
         <div class="max-w-screen-xl mx-auto p-4">
                 <div class="grid grid-cols-2 gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div>
-                        <img class="w-full rounded-md" src="img/profile.jpeg" alt="office content 1">
+                        <img class="w-full rounded-md" src="{{ asset('storage/img/'. $images[11]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                         <p class="mb-4 text-black">{!! $datas[17]->value !!}</p>
@@ -51,10 +51,10 @@
         <div class="max-w-screen-xl mx-auto p-4">
                 <div class="grid grid-cols-2 gap-5 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="justify-items-center">
-                        <img class="w-80 rounded-md" src="img/director.jpg" alt="office content 1">
+                        <img class="w-80 rounded-md" src="{{ asset('storage/img/'. $images[12]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{!! $datas[22]->value !!}</h2>
+                        <h2 class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[22]->value !!}</h2>
                         <p class="mb-4 text-black">{!! $datas[23]->value !!}
                     </div>
                 </div>

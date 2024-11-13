@@ -11,7 +11,7 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
-
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('banner.create') }}'">Add New</button>
         <div class="Card">
             <div class="InnerCard">
 
@@ -35,19 +35,18 @@
                                 @endif
                                 <td>{{ $banners->BannerCategory }}</td>
                                 <td>
-                                    <button type="button"><a href="{{ route('banner.edit', $banners->id) }}" class="small">Edit</a></button>
+                                    <button type="button" class="Button-Edit" onclick="window.location.href='{{ route('banner.edit', $banners->id) }}'">Edit</button>
                                     <div class="gap-20"></div>
                                     <form action="{{ route('banner.destroy', $banners->id) }} " method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
+                                        <button type="submit" class="Button-Delete white" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
                                     </form></td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-                <a href="{{ route('banner.create') }}">Add New</a>
     </div>
 </div>
 

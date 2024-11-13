@@ -11,7 +11,7 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
-
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('generalimage.create') }}'">Add New</button>
         <div class="Card">
             <div class="InnerCard">
 
@@ -34,12 +34,12 @@
                                 @endif
                                 <td>{{ $img->isActive }}</td>
                                 <td>
-                                    <button type="button"><a href="{{ route('generalimage.edit', $img->id) }}">Edit</a></button>
+                                    <button type="button" class="Button-Edit" onclick="window.location.href='{{ route('generalimage.edit', $img->id) }}'">Edit</button>
                                     <div class="gap-20"></div>
                                     <form action="{{ route('generalimage.destroy', $img->id) }} " method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
+                                        <button type="submit" class="Button-Delete white" onclick="return confirm('Yakin ingin hapus?')">Delete</button>
                                     </form>
 
                                 </td>
@@ -48,7 +48,7 @@
                     </tbody>
                 </table>
 
-                <a href="{{ route('generalimage.create') }}">Add New</a>
+                
     </div>
 </div>
 

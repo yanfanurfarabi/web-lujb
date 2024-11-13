@@ -26,9 +26,10 @@
                         class="w-70 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title font-bold text-3xl text-gray-800 mb-5">{!! $product->name !!}</h2>
+                    <h2 class="card-title font-semibold text-3xl text-gray-800 mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
                         {{-- <a href="{{ route('product', $product->id) }}"></a> --}}
+                        {{-- <button class="btn btn-info" onclick="window.location.href='{{ route('product', $product->name) }}'">Detail</button> --}}
                         <a href="{{ route('product', $product->name) }}"><button class="btn btn-info">Detail</button></a>
                     </div>
                     </div>
