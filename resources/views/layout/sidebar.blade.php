@@ -9,7 +9,7 @@
         <li class="SidebarMenu"><a href="/dashboard/generalimage" class="SideMenu semibold">Generals Image</a></li>
         <li class="SidebarMenu"><a href="/dashboard/banner" class="SideMenu semibold">Banners</a></li>
         <li class="SidebarMenu"><a href="/dashboard/product" class="SideMenu semibold">Product</a></li>
-        <li class="SidebarMenu"><a href="/dashboard/productcategory" class="SideMenu semibold">Product Category</a></li>
+        {{-- <li class="SidebarMenu"><a href="/dashboard/productcategory" class="SideMenu semibold">Product Category</a></li> --}}
         <li class="SidebarMenu"><a href="/dashboard/footer" class="SideMenu semibold">Footer</a></li>
     </ul>
 

@@ -22,13 +22,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('product_category', function (Blueprint $table) {
-            $table->id();
-            $table->string('category');
-            $table->boolean('isActive');
-            $table->string('sortOrder');
-            $table->timestamps();
-        });
+        // Schema::create('product_category', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('category');
+        //     $table->boolean('isActive');
+        //     $table->string('sortOrder');
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -36,7 +36,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
-        Schema::dropIfExists('products_category');
+        Schema::dropIfExists('product');
+        // Schema::dropIfExists('product_category');
     }
 };

@@ -29,9 +29,27 @@ Route::get('/profile', [ProfilepageController::class, 'index'])->name('data');
 
 Route::get('/contact', [ContactpageController::class, 'index'])->name('data');
 
-Route::get('/product', [ProductpageController::class, 'index'])->name('data');
+Route::get('/product', [ProductpageController::class, 'index']);
 
-Route::get('/product/{name}', [ProductPageController::class, 'show'])->name('product');
+Route::get('/product/fuelpump', [ProductpageController::class, 'indexFuel'])->name('Fuel_Pump');
+
+Route::get('/product/hose', [ProductpageController::class, 'indexHose'])->name('Hose');
+
+Route::get('/product/atg', [ProductPageController::class, 'indexATG'])->name('ATG');
+
+Route::get('/product/stp', [ProductPageController::class, 'indexSTP'])->name('STP');
+
+Route::get('/product/lcp', [ProductPageController::class, 'indexLCP'])->name('LCP');
+
+Route::get('/product/halock', [ProductPageController::class, 'indexHalock'])->name('Halock');
+
+// Route::get('/product/{category}', [ProductPageController::class, 'indexFuel'])->name('');
+
+// Route::get('/product/{category}/{name}', [ProductPageController::class, 'show'])->name('data');
+
+Route::get('/product/{name}', [ProductPageController::class, 'show'])->name('productdesc');
+
+// Route::get('/product/{category}', [ProductpageController::class, 'indexFuel', 'indexHose', 'indexATG', 'indexSTP', 'indexLCP', 'indexHalock'])->name('data');
 
 Route::get('/login', function () {
     return view('login');
@@ -55,7 +73,7 @@ Route::resource('dashboard/footer', FooterController::class);
 
 Route::resource('/dashboard/product', ProductController::class);
 
-Route::resource('/dashboard/productcategory', ProductCategoryController::class);
+// Route::resource('/dashboard/productcategory', ProductCategoryController::class);
 
 Route::get('/dashboard/home', function () {
     return view('cms.home');

@@ -5,7 +5,7 @@
                 <div class="row-span-2">
                     <div class="grid gap-4">
                         <div>
-                            <img class="h-auto w-100 rounded-lg" src="{{ asset('storage/img/'. $product->bannerimage) }}" alt="">
+                            <img class="h-auto w-100 rounded-lg" src="{{ asset('storage/img/'. $productdesc->bannerimage) }}" alt="">
                         </div>
                         {{-- <div class="grid grid-cols-5 gap-2 items-center w-auto ">
                             <div class="border border-gray-400 bg-white rounded-md items-center">
@@ -21,12 +21,12 @@
                     </div>
                 </div>
                 <div>
-                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $product->name !!} </h2>
-                    <p class="mb-4 text-black">{!! $product->desc !!} </p>
+                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $productdesc->name !!} </h2>
+                    <p class="mb-4 text-black">{!! $productdesc->desc !!} </p>
                 </div>
                 <div>
                     <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Technical Detail</h2>
-                    <p class="mb-4 text-black">{!! $product->spec !!} </p>
+                    <p class="mb-4 text-black">{!! $productdesc->spec !!} </p>
                 </div>
             </div>
         </div>

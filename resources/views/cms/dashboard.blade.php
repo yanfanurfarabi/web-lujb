@@ -38,12 +38,12 @@
         </div>
 
 
-        <div class="Card">
+        {{-- <div class="Card">
             <div class="InnerCard">
                 <p class="big bold">Product Category</p>
                 <a href="/dashboard/productcategory" class="semibold no-underline">Edit</a>
             </div>
-        </div>
+        </div> --}}
 
 
         <div class="Card">
