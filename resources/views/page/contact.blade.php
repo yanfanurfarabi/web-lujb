@@ -1,4 +1,12 @@
 <x-layout>
+    
+    <div class="hero h-auto mt-20" id="desktop">
+        <img src= "{{ asset('storage/img/'. $banners[0]->image) }}" alt="Banner"/>
+    </div>
+
+    <div class="hero h-auto mt-20" id="mobile">
+        <img src= "{{ asset('storage/img/'. $banners[1]->image) }}" alt="Banner"/>
+    </div>
 
     <div class="max-w-screen-xl mx-auto p-4 mt-10 mb-10">
         <div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">

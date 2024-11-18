@@ -1,4 +1,12 @@
 <x-layout>
+    <div class="hero h-auto mt-20" id="desktop">
+        <img src= "{{ asset('storage/img/'. $banners[0]->image) }}" alt="Banner"/>
+    </div>
+
+    <div class="hero h-auto mt-20" id="mobile">
+        <img src= "{{ asset('storage/img/'. $banners[1]->image) }}" alt="Banner"/>
+    </div>
+
     <div class="container mx-auto">
         {{-- class tab active: tab-active --}}
         <div role="tablist" class="tabs tabs-boxed flex flex-wrap mt-10 mb-20 justify-center">
@@ -19,6 +27,7 @@
         {{-- Tab All Products --}}
 
         <div class="tab-content active" id="all_products" style="display: block;">
+            
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
             
             @foreach ($products as $product)
@@ -31,46 +40,39 @@
                         class="w-70 h-auto" />
                     </figure>
                     <div class="card-body items-center text-center border-t-2">
-                    <h2 class="card-title font-semibold text-3xl text-gray-800 mb-5">{!! $product->name !!}</h2>
-                    <p class="card-title font-regular text-m text-gray-800 mb-5">{!! $product->category !!}</p>
+                    <h2 class="card-title font-bold text-3l text-gray-800 mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
-                        {{-- <a href="{{ route('product', $product->id) }}"></a> --}}
-                        {{-- <button class="btn btn-info" onclick="window.location.href='{{ route('product', $product->name) }}'">Detail</button> --}}
-                        <a href="{{ route('productdesc', $product->name) }}"><button class="btn btn-info">Detail</button></a>
+                        <a href="{{ route('productdesc', $product->name) }}"><button class="btn btn-info text-white">Detail</button></a>
                     </div>
                     </div>
                 </div>
                 
                 @endforeach
 
-        {{-- Tab Fuel Pump --}}
-
-
-        {{-- Tab Hose --}}
-
-
-        {{-- Tab Hose Meter --}}
-
-
-        {{-- Tab Flexible Pipes --}}
-
-
-        {{-- Tab ATG --}}
-
-        {{-- Tab Panel --}}
-
-
     </div>
         </div>
     </div>
 
-    <section style="background-image: url('img/bg_inquiry2.jpg')" class=" bg-white dark:bg-gray-900">
+    <section style="background-image: url('{{ asset('storage/img/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="desktop">
         <div class="items-center max-w-screen-xl mx-auto p-4" >
             <div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
             </div>
             <div class="flex justify-center">
                 <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-image: url('{{ asset('storage/img/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="mobile">
+        <div class="max-w-screen-xl mx-auto p-4" >
+            <div class="gap-20 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div>
+                    <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-center">{!! $datas[5]->value !!}</h2>
+                </div>
+                <div class="place-items-center grid gap-4">
+                    <button type="button" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+                </div>
             </div>
         </div>
     </section>

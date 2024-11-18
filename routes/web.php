@@ -11,7 +11,9 @@ use App\Http\Controllers\ServicepageController;
 use App\Http\Controllers\ProfilepageController;
 use App\Http\Controllers\ProductpageController;
 use App\Http\Controllers\ContactpageController;
+use App\Http\Controllers\ClientController;
 use App\Models\Banner;
+use App\Models\Client;
 use App\Models\General_Image;
 use App\Models\GeneralData;
 use App\Models\Product;
@@ -71,7 +73,9 @@ Route::resource('dashboard/banner', BannerController::class);
 //View, Edit & update Footer 
 Route::resource('dashboard/footer', FooterController::class);
 
-Route::resource('/dashboard/product', ProductController::class);
+Route::resource('dashboard/footer', FooterController::class);
+
+Route::resource('/dashboard/client', ClientController::class);
 
 // Route::resource('/dashboard/productcategory', ProductCategoryController::class);
 

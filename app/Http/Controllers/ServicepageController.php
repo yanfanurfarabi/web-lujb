@@ -13,8 +13,12 @@ class ServicepageController extends Controller
 {
     public function index(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Service'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Service'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $products = Product::all();
         $footers = Footer::all();
 
@@ -22,6 +26,7 @@ class ServicepageController extends Controller
             'datas' => $datas,
             'images' => $images,
             'banners' => $banners,
+            'inquire' => $inquire,
             'products' => $products,
             'footers' => $footers
         ]);

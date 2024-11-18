@@ -13,14 +13,19 @@ class ProductpageController extends Controller
 {
     public function index(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $products = Product::all();
         $footers = Footer::all();
 
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
@@ -29,8 +34,12 @@ class ProductpageController extends Controller
 
     public function indexFuel(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $category = ['Fuel Pump'];
         $products = Product::where('category', $category)->get();
         $footers = Footer::all();
@@ -38,6 +47,7 @@ class ProductpageController extends Controller
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
@@ -46,8 +56,12 @@ class ProductpageController extends Controller
 
     public function indexATG(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $category = ['Guihe ATG'];
         $products = Product::where('category', $category)->get();
         $footers = Footer::all();
@@ -55,6 +69,7 @@ class ProductpageController extends Controller
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
@@ -63,8 +78,12 @@ class ProductpageController extends Controller
 
     public function indexHose(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $category = ['Dantec Composite Hose'];
         $products = Product::where('category', $category)->get();
         $footers = Footer::all();
@@ -72,6 +91,7 @@ class ProductpageController extends Controller
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
@@ -80,8 +100,12 @@ class ProductpageController extends Controller
 
     public function indexSTP(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $category = ['Red Robe'];
         $products = Product::where('category', $category)->get();
         $footers = Footer::all();
@@ -89,6 +113,7 @@ class ProductpageController extends Controller
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
@@ -97,8 +122,12 @@ class ProductpageController extends Controller
 
     public function indexLCP(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $category = ['LCP Flowmeters'];
         $products = Product::where('category', $category)->get();
         $footers = Footer::all();
@@ -106,6 +135,7 @@ class ProductpageController extends Controller
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
@@ -114,8 +144,12 @@ class ProductpageController extends Controller
 
     public function indexHalock(){
         $datas = GeneralData::all();
-        $images = General_Image::all();
-        $banners = Banner::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
+        $imagecat = ['Product'];
+        $images = General_Image::where('category', $imagecat)->get();
+        $bannercat = ['Product'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $category = ['Halock Polythlyene Flexible Pipes'];
         $products = Product::where('category', $category)->get();
         $footers = Footer::all();
@@ -123,6 +157,7 @@ class ProductpageController extends Controller
         return view('page.product', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers

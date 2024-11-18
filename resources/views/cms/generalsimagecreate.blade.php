@@ -31,6 +31,19 @@
             <label for="image" class="edittitle">Upload Image : </label>
             <input type="file" name="image" id="image">
         </div>
+
+        <div class="Card">
+            <label for="category" class="edittitle">Banner Category</label>
+            {{-- <input type="text" class="editlabel" id="name" name="name" value="{{ old('spec', $product->category) }}" required> --}}
+            <select id="category" name="category" class="select w-full max-w-xs">
+                <option disabled selected>Select Category</option>
+                <option>Home</option>
+                <option>Service</option>
+                <option>About Us</option>
+                <option>Contact Us</option>
+                <option>Product</option>
+              </select>
+        </div>
         
         <div class="Card">
             <label for="isActive" class="edittitle">Is Active : </label>

@@ -7,6 +7,7 @@
     <ul class="SidebarMenuList">
         <li class="SidebarMenu"><a href="/dashboard/generaldata" class="SideMenu semibold">Generals Data</a></li>
         <li class="SidebarMenu"><a href="/dashboard/generalimage" class="SideMenu semibold">Generals Image</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/client" class="SideMenu semibold">Client</a></li>
         <li class="SidebarMenu"><a href="/dashboard/banner" class="SideMenu semibold">Banners</a></li>
         <li class="SidebarMenu"><a href="/dashboard/product" class="SideMenu semibold">Product</a></li>
         {{-- <li class="SidebarMenu"><a href="/dashboard/productcategory" class="SideMenu semibold">Product Category</a></li> --}}

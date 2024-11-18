@@ -14,7 +14,8 @@ class ContactpageController extends Controller
     public function index(){
         $datas = GeneralData::all();
         $images = General_Image::all();
-        $banners = Banner::all();
+        $bannercat = ['Contact Us'];
+        $banners = Banner::where('BannerCategory', $bannercat)->get();
         $products = Product::all();
         $footers = Footer::all();
 

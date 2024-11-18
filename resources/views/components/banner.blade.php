@@ -10,7 +10,6 @@
     alt="Banner"
   />
   </div>
-</div>
 
 {{-- <div
   class="hero h-auto mt-20">
@@ -19,9 +18,8 @@
   (request()->is('contact') ? asset('storage/img/'. $banners[2]->image) : 
   (request()->is('profile') ? asset('storage/img/'. $banners[1]->image) : 
   (request()->is('services') ? asset('storage/img/'. $banners[0]->image) :  
-  asset('img/banner_product.jpg'))))
+  asset('storage/img/'. $banners[0]->image))))
   }}" 
     alt="Banner"
   />
-  </div>
-</div> --}}
+  </div> --}}

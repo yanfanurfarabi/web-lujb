@@ -55,7 +55,6 @@ class BannerController extends Controller
     public function update(Request $request, $id){
         $request->validate([
             'name' => 'nullable',
-            'BannerCategory' => 'nullable',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 

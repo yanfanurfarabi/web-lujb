@@ -25,6 +25,7 @@ class GeneralImageController extends Controller
             'name' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'isActive' => 'nullable',
+            'category' => 'required'
         ]);
         
         // // Proses upload image
@@ -36,6 +37,7 @@ class GeneralImageController extends Controller
                 'name' => $request->name,
                 'image' => $imageName,
                 'isActive' => $request->isActive,
+                'category' => $request->category,
             ]);
         }   
             
@@ -53,6 +55,7 @@ class GeneralImageController extends Controller
             'name' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'isActive' => 'nullable',
+            'category' => 'required',
         ]);
 
         $image = General_Image::find($id);
@@ -69,6 +72,7 @@ class GeneralImageController extends Controller
 
         $image->isActive = $request->isActive;
         $image->name = $request->name;
+        $image->category = $request->category;
         $image->save();
 
         return redirect()->route('generalimage.index')->with('success', 'updated!');

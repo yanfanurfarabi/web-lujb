@@ -22,5 +22,29 @@
   </div>
   <x-footer></x-footer>
 
+  <style>
+    @media screen and (max-width: 1200px) {
+        #desktop{
+display: none;
+        }
+}
+
+@media screen and (min-width: 480px){
+    #mobile{
+        display: none
+    }
+
+    animation: spin 1s linear infinite;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+}
+</style>
 </body>
 </html>

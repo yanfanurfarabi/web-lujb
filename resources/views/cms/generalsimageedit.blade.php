@@ -38,6 +38,20 @@
         </div>
 
         <div class="Card">
+            <label for="category" class="edittitle">Banner Category</label>
+            {{-- <input type="text" class="editlabel" id="name" name="name" value="{{ old('spec', $product->category) }}" required> --}}
+            <select id="category" name="category" class="select w-full max-w-xs">
+                <option disabled selected>Select Category</option>
+                <option>Home</option>
+                <option>Service</option>
+                <option>About Us</option>
+                <option>Contact Us</option>
+                <option>Product</option>
+                <option>General</option>
+              </select>
+        </div>
+
+        <div class="Card">
             <label for="isActive" class="edittitle">isActive</label>
             <input type="text" class="editlabel" id="isActive" name="isActive" value="{{ old('name', $image->isActive) }} " required>
         </div>

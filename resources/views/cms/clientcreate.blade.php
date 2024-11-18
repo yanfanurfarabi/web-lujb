@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Edit Product</p>
+            <p class="big bold">Create Client</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,18 +19,22 @@
         </div>
     @endif
     
-    <form action="{{ route('productcategory.update', $productcat->id) }} " method="POST">
+    <form action="{{ route('client.store') }} " method="POST" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
 
         <div class="Card">
-            <label for="sortOrder" class="edittitle">Sort Order</label>
-            <input type="text" class="editlabel" id="sortOrder" name="sortOrder" value="{{ old('sortOrder', $productcat->sortOrder) }} " required>
+            <label for="name" class="edittitle">Name : </label>
+            <input type="text" class="editlabel" name="name" required>
         </div>
 
         <div class="Card">
-            <label for="isActive" class="edittitle">isActive</label>
-            <input type="text" class="editlabel" id="isActive" name="isActive" value="{{ old('isActive', $productcat->isActive) }} " required>
+            <label for="image" class="edittitle">Banner Image : </label>
+            <input type="file" name="image" id="image">
+        </div>
+
+        <div class="Card">
+            <label for="isActive" class="edittitle">is Active : </label>
+            <input type="number" name="isActive" id="isActive">
         </div>
 
         <button type="submit" class="Button">Update</button>

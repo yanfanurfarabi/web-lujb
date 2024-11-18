@@ -19,24 +19,19 @@
         </div>
     @endif
 
-    <form action="{{ route('banner.update', $banner->id) }} " method="POST" enctype="multipart/form-data">
+    <form action=" {{ route('client.update', $client->id) }} " method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
         <div class="Card">
             <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $banner->name) }} " required>
+            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $client->name) }} " required>
         </div>
 
-        {{-- <div class="Card">
-            <label for="BannerCategory" class="edittitle">Banner Category</label>
-            <input type="text" class="editlabel" id="BannerCategory" name="BannerCategory" value="{{ old('BannerCategory', $banner->BannerCategory) }} " required>
-        </div> --}}
-
         <div class="Card">
-            <label for="value" class="edittitle">Image</label>
-            @if ($banner->image)
-            <p class="semibold">Current Image : <img src=" {{ asset('storage/images/' . $banner->image) }} " alt=""> </p>
+            <label for="image" class="edittitle">Image</label>
+            @if ($client->image)
+            <p class="semibold">Current Image : <img src=" {{ asset('storage/images/' . $client->image) }} " alt=""></p>
             @endif
             <input type="file" class="" name="image" id="image">
         </div>

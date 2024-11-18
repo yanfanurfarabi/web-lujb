@@ -1,6 +1,15 @@
 {{-- @dd('$datas') --}}
 
 <x-layout>
+
+    <div class="hero h-auto mt-20" id="desktop">
+        <img src= "{{ asset('storage/img/'. $banners[0]->image) }}" alt="Banner"/>
+    </div>
+
+    <div class="hero h-auto mt-20" id="mobile">
+        <img src= "{{ asset('storage/img/'. $banners[1]->image) }}" alt="Banner"/>
+    </div>
+
     <div class="max-w-screen-xl mx-auto p-4">
             
         <h3 class=" text-gray-900 text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
@@ -17,7 +26,7 @@
                         <img class="h-auto max-w-full rounded-lg group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out w-full object-cover" src="img/banner_navigation1.jpg" alt="">
                     </div> --}}
                     <div>
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product"> 
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/fuelpump"> 
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[0]->image) }}" alt="">
                             </div>
@@ -26,7 +35,7 @@
                 </div>
                 <div class="grid gap-4">
                     <div class="row-span-2">
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/stp">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[1]->image) }}" alt="">
                             </div>
@@ -35,14 +44,14 @@
                 </div>
                 <div class="grid gap-4">
                     <div>
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/atg">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[2]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
                     <div>
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/hose">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[3]->image) }}" alt="">
                             </div>
@@ -51,7 +60,7 @@
                 </div>
                 <div class="grid gap-4">
                     <div>
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/lcp">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[4]->image) }}" alt="">
                             </div>
@@ -60,7 +69,7 @@
                 </div>
                 <div class="grid gap-4">
                     <div>
-                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/halock">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
                                 <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[5]->image) }}" alt="">
                             </div>
@@ -72,9 +81,26 @@
         </div>
     
         {{-- why us --}}
-        <div class="grid grid-cols-2 gap-10 mt-10 mb-5">
+        <div class="grid grid-cols-2 gap-10 mt-10 mb-5" id="desktop">
             <div>
                 <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/'. $images[6]->image) }}" alt="why_us" />
+            </div>
+            <div>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
+                <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
+                <button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm btn-info text-white mt-10">Read More</button>
+
+                  <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                  </span>
+
+            </div>
+        </div>
+
+        <div class="gap-10 mt-10 mb-5" id="mobile">
+            <div>
+                <img class="w-full h-full max-w-full rounded-2xl" src="{{ asset('storage/img/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
                 <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
@@ -82,54 +108,26 @@
                 <button class="rounded-full btn btn-sm btn-info text-white mt-10">Read More</button>
             </div>
         </div>
+
     </div>
 
     {{-- trusted by --}}
     <section class="bg-white dark:bg-gray-900 p-10 justify-items-center">
         <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-10 mt-5">{!! $datas[4]->value !!}</h2>
         <div class="carousel">
-            <div class="carousel-item">
-              <img
-                src="img/pertamina_1.png"
-                alt="pertamina"
-                class="w-auto h-20 p-5" />
-            </div>
-            <div class="carousel-item">
-                <img
-                  src="img/pertamina_1.png"
-                  alt="pertamina"
-                  class="w-auto h-20 p-5" />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="img/pertamina_1.png"
-                  alt="pertamina"
-                  class="w-auto h-20 p-5" />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="img/pertamina_1.png"
-                  alt="pertamina"
-                  class="w-auto h-20 p-5" />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="img/pertamina_1.png"
-                  alt="pertamina"
-                  class="w-auto h-20 p-5" />
-              </div>
             
+            @foreach ($client as $clients)
             <div class="carousel-item">
-                <img
-                  src="img/polda_1.png"
-                  alt="polda"
-                  class="w-auto h-20 p-5" />
+              <img src="{{ asset('storage/img/'. $clients->image) }}" alt="{{ $clients->name }}" class="w-full h-40 p-5" />
             </div>
+            @endforeach
+
+            
         </div>
     </section>
     
     {{-- inquiry --}}
-    <section style="background-image: url('{{ asset('storage/img/'. $images[14]->image) }}')" class=" bg-white dark:bg-gray-900">
+    <section style="background-image: url('{{ asset('storage/img/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="desktop">
         <div class="items-center max-w-screen-xl mx-auto p-4" >
             <div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
@@ -139,5 +137,19 @@
             </div>
         </div>
     </section>
+
+    <section style="background-image: url('{{ asset('storage/img/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="mobile">
+        <div class="max-w-screen-xl mx-auto p-4" >
+            <div class="gap-20 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div>
+                    <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-center">{!! $datas[5]->value !!}</h2>
+                </div>
+                <div class="place-items-center grid gap-4">
+                    <button type="button" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </x-layout>
     
