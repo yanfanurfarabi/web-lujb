@@ -20,6 +20,7 @@
                 <table id="form">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Value</th>
                             <th>Actions</th>
@@ -27,9 +28,10 @@
                     </thead>
                     <tbody>
 
-                        @foreach($datas as $data)
+                        @foreach($datas as $key => $data)
                             
                             <tr>
+                                <td>{{ $key + 1 }} </td>
                                 <td>{{ $data->name }} </td>
                                 <td>{{ $data->value }} </td>
                                 <td>

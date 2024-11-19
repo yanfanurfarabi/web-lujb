@@ -54,7 +54,6 @@ class BannerController extends Controller
 
     public function update(Request $request, $id){
         $request->validate([
-            'name' => 'nullable',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -69,16 +68,15 @@ class BannerController extends Controller
             $banner->image = $bannerName;
         }
         
-        $banner->name = $request->name;
         $banner->save();
         
-        return redirect()->route('index')->with('success', 'updated');
+        return redirect()->route('banner.index')->with('success', 'updated');
     }
 
     public function destroy($id){
         $banner = Banner::findOrFail($id);
         $banner->delete();
 
-        return redirect()->route('index')->with('sucess', 'Deleted!');
+        return redirect()->route('banner.index')->with('sucess', 'Deleted!');
     }
     }

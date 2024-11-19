@@ -18,6 +18,7 @@
                 <table id="form">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Image</th>
                             <th>is Active</th>
@@ -25,9 +26,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($client as $clients)
+                        @foreach($client as $key => $clients)
                             
                             <tr>
+                                <td>{{ $key + 1 }} </td>
                                 <td>{{ $clients->name }}</td>
                                 @if ($clients->image != "")
                                 <td> <img src="{{ asset('storage/img/'. $clients->image) }}" alt="image" width= "100"></td>

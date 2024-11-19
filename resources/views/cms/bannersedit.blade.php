@@ -23,10 +23,10 @@
         @csrf
         @method('PUT')
 
-        <div class="Card">
+        {{-- <div class="Card">
             <label for="name" class="edittitle">Name</label>
             <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $banner->name) }} " required>
-        </div>
+        </div> --}}
 
         {{-- <div class="Card">
             <label for="BannerCategory" class="edittitle">Banner Category</label>

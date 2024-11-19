@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfilepageController;
 use App\Http\Controllers\ProductpageController;
 use App\Http\Controllers\ContactpageController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\WbsController;
 use App\Models\Banner;
 use App\Models\Client;
 use App\Models\General_Image;
@@ -30,6 +31,8 @@ Route::get('/services', [ServicepageController::class, 'index'])->name('data');
 Route::get('/profile', [ProfilepageController::class, 'index'])->name('data');
 
 Route::get('/contact', [ContactpageController::class, 'index'])->name('data');
+
+Route::get('/wbs', [WbsController::class, 'index'])->name('wbs');
 
 Route::get('/product', [ProductpageController::class, 'index']);
 
@@ -73,7 +76,7 @@ Route::resource('dashboard/banner', BannerController::class);
 //View, Edit & update Footer 
 Route::resource('dashboard/footer', FooterController::class);
 
-Route::resource('dashboard/footer', FooterController::class);
+Route::resource('dashboard/product', ProductController::class);
 
 Route::resource('/dashboard/client', ClientController::class);
 

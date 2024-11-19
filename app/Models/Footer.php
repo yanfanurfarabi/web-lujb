@@ -11,4 +11,6 @@ class Footer extends Model
 
     protected $table = 'footer';
 
+    protected $fillable = ['name', 'value'];
+
 }

@@ -1,6 +1,6 @@
 
   <nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600" style="background-color: #FFFDFB">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="max-w-[70%] flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img class="h-12 w-15" src="{{asset( 'img/logo-lujb.png') }}" alt="lujb">
         </a>
@@ -58,6 +58,9 @@
                 <li>
                     <x-navlink href="/contact" :active="request()->is('contact')">Contact Us</x-navlink>
                 </li>
+                <li>
+                  <x-navlink href="/wbs" :active="request()->is('wbs')">Whistleblower</x-navlink>
+              </li>
             </ul>
         </div>
     </div>

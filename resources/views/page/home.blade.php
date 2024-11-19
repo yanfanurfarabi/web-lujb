@@ -112,15 +112,15 @@
     </div>
 
     {{-- trusted by --}}
-    <section class="bg-white dark:bg-gray-900 p-10 justify-items-center">
+    <section class="bg-white dark:bg-gray-900 p-10 justify-items-center overflow-hidden">
         <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-10 mt-5">{!! $datas[4]->value !!}</h2>
-        <div class="carousel">
+        <div class="carousel carousel-end rounded-box">
             
             @foreach ($client as $clients)
             <div class="carousel-item">
-              <img src="{{ asset('storage/img/'. $clients->image) }}" alt="{{ $clients->name }}" class="w-full h-40 p-5" />
+              <img src="{{ asset('storage/img/'. $clients->image) }}" alt="{{ $clients->name }}" class="h-40 p-5" />
             </div>
-            @endforeach
+              @endforeach
 
             
         </div>

@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class General_Image extends Model
+class wbs extends Model
 {
     use HasFactory;
-
-    protected $table = 'generalimage';
-
-    protected $fillable = [ 'name', 'image', 'isActive', 'category' ];
-
 }

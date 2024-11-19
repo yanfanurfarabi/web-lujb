@@ -11,13 +11,14 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
-        {{-- <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('banner.create') }}'">Add New</button> --}}
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('banner.create') }}'">Add New</button>
         <div class="Card">
             <div class="InnerCard">
 
                 <table id="form">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Image</th>
                             <th>BannerCategory</th>
@@ -26,12 +27,13 @@
                     </thead>
                     <tbody>
                         
-                        @foreach($banner as $banners)
+                        @foreach($banner as $key => $banners)
                             
                             <tr>
+                                <td>{{ $key + 1 }} </td>
                                 <td>{{ $banners->name }}</td>
                                 @if ($banners->image != "")
-                                <td> <img src="{{ asset('storage/img/'. $banners->image) }}" alt="image" width= "800"></td>
+                                <td> <img src="{{ asset('storage/img/'. $banners->image) }}" alt="image" width= "400"></td>
                                 @endif
                                 <td>{{ $banners->BannerCategory }}</td>
                                 <td>

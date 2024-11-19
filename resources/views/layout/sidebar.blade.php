@@ -1,7 +1,7 @@
 
 
 <div class="SidebarDashboard">
-    <h3 class="white big bold">Dashboard</h3>
+    <h3 class="white big bold"><a href="/dashboard" class="SideMenu bold">Dashboard</a></h3>
     {{-- <p class="big bold">Dashboard</p> --}}
     <div class="whiteseparator"></div>
     <ul class="SidebarMenuList">

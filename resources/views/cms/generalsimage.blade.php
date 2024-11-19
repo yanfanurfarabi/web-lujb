@@ -11,13 +11,14 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
-        {{-- <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('generalimage.create') }}'">Add New</button> --}}
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('generalimage.create') }}'">Add New</button>
         <div class="Card">
             <div class="InnerCard">
 
                 <table id="form">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Image</th>
                             <th>Category</th>
@@ -26,9 +27,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($image as $img)
+                        @foreach($image as $key => $img)
                             
                             <tr>
+                                <td>{{ $key + 1 }} </td>
                                 <td>{{ $img->name }}</td>
                                 @if ($img->image != "")
                                 <td> <img src="{{ asset('storage/img/'. $img->image) }}" alt="image" width= "300"></td>

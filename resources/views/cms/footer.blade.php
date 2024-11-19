@@ -11,6 +11,7 @@
 
 <div class="DashboardContainer">
     <div class="InnerDashboard">
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('footer.create') }}'">Add New</button>
 
         <div class="Card">
             <div class="InnerCard">
@@ -21,7 +22,6 @@
                             <th>Name</th>
                             <th>Value</th>
                             <th>isActive</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,7 +31,6 @@
                             <tr>
                                 <td>{{ $footers->name }} </td>
                                 <td>{{ $footers->value }} </td>
-                                <td>{{ $footers->isActive }} </td>
                                 <td>
                                     <button type="button"><a href="{{ route('footer.edit', $footers->id) }}" class="small">Edit</a></button>
                                 </td>

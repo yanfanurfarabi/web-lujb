@@ -36,6 +36,7 @@
                 <option>About Us</option>
                 <option>Contact Us</option>
                 <option>Product</option>
+                <option>WBS</option>
               </select>
         </div>
 

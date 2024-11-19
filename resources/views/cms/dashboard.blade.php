@@ -12,28 +12,35 @@
         <div class="Card">
             <div class="InnerCard">
                 <p class="big bold">Generals Data</p>
-                <a href="/dashboard/generaldata" class="semibold no-underline">Edit</a>
+                <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/generaldata'">View</button>
             </div>
         </div>
 
         <div class="Card">
             <div class="InnerCard">
                 <p class="big bold">Generals Image</p>
-                <a href="/dashboard/generalimage" class="semibold no-underline">Edit</a>
+                <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/generalimage'">View</button>
+            </div>
+        </div>
+
+        <div class="Card">
+            <div class="InnerCard">
+                <p class="big bold">Generals Image</p>
+                <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/client'">View</button>
             </div>
         </div>
 
         <div class="Card">
             <div class="InnerCard">
                 <p class="big bold">Banners</p>
-                <a href="/dashboard/banner" class="semibold no-underline">Edit</a>
+                <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/banner'">View</button>
             </div>
         </div>
 
         <div class="Card">
             <div class="InnerCard">
                 <p class="big bold">Products</p>
-                <a href="/dashboard/product" class="semibold no-underline">Edit</a>
+                <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/product'">View</button>
             </div>
         </div>
 
@@ -49,7 +56,7 @@
         <div class="Card">
             <div class="InnerCard">
                 <p class="big bold">Footer</p>
-                <a href="/dashboard/footer" class="semibold no-underline">Edit</a>
+                <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/footer'">View</button>
             </div>
         </div>
 

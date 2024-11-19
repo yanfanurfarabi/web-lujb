@@ -18,6 +18,7 @@
                 <table id="form">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Description</th>
                             <th>Specification</th>
@@ -30,14 +31,15 @@
                     </thead>
                     <tbody>
 
-                        @foreach($product as $prod)
+                        @foreach($product as $key => $prod)
                             
                             <tr>
+                                <td>{{ $key + 1 }} </td>
                                 <td>{{ $prod->name }} </td>
                                 <td>{{ $prod->desc }} </td>
                                 <td>{!! $prod->spec !!} </td>
                                 @if ($prod->bannerimage != "")
-                                <td> <img src="{{ asset('storage/img/'. $prod->bannerimage) }}" alt="image" width= "300px"></td>
+                                <td> <img src="{{ asset('storage/img/'. $prod->bannerimage) }}" alt="image" width= "200"></td>
                                 @endif
                                 <td>{{ $prod->category }} </td>
                                 <td>{{ $prod->sortOrder }} </td>

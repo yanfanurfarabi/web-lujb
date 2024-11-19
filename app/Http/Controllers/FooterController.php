@@ -19,6 +19,24 @@ class FooterController extends Controller
         return view('cms.footeredit', compact('footer'));
     }
 
+    public function create(){
+        return view('cms.footercreate');
+    }
+
+    public function store(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'value' => 'required',
+        ]);
+
+        Footer::create([
+            'name' => $request->name,
+            'value' => $request->value,
+        ]);
+
+        return redirect()->route('footer.index')->with('success', 'Added!');
+    }
+
     public function update($id, Request $request){
         $request->validate([
             'name' => 'required',

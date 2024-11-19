@@ -45,13 +45,11 @@ class GeneraldataController extends Controller
 
     public function update($id, Request $request){
         $request->validate([
-            'name' => 'required',
             'value' => 'required',
         ]);
 
         $datas = GeneralData::findOrFail($id);
-
-        $datas->name = $request->input('name');
+        
         $datas->value = $request->input('value');
         $datas->save();
 
