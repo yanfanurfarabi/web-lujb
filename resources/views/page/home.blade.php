@@ -88,11 +88,11 @@
             <div>
                 <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
                 <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
-                <button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm btn-info text-white mt-10">Read More</button>
+                
 
-                  <span class="relative flex h-3 w-3">
+                  <span class="relative flex h-3 w-3 mt-6">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-900"><button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm btn-info text-white">Read More</button></span>
                   </span>
 
             </div>

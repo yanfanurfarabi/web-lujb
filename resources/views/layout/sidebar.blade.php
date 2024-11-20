@@ -12,6 +12,7 @@
         <li class="SidebarMenu"><a href="/dashboard/product" class="SideMenu semibold">Product</a></li>
         {{-- <li class="SidebarMenu"><a href="/dashboard/productcategory" class="SideMenu semibold">Product Category</a></li> --}}
         <li class="SidebarMenu"><a href="/dashboard/footer" class="SideMenu semibold">Footer</a></li>
+        <li class="SidebarMenu"><a href="/dashboard/user" class="SideMenu semibold">User</a></li>
     </ul>
 
     {{-- <h3 class="white big bold">By Page</h3>

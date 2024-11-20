@@ -55,7 +55,7 @@ class GeneralImageController extends Controller
             'name' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'isActive' => 'nullable',
-            'category' => 'required',
+            'category' => 'nullable',
         ]);
 
         $image = General_Image::find($id);

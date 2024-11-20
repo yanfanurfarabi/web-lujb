@@ -13,6 +13,9 @@ use App\Http\Controllers\ProductpageController;
 use App\Http\Controllers\ContactpageController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WbsController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
+use App\Models\User;
 use App\Models\Banner;
 use App\Models\Client;
 use App\Models\General_Image;
@@ -21,6 +24,8 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+
+require __DIR__.'/auth.php';
 
 // Route::get('/', [GeneraldataController::class, 'show'])->name('datas');
 
@@ -48,40 +53,41 @@ Route::get('/product/lcp', [ProductPageController::class, 'indexLCP'])->name('LC
 
 Route::get('/product/halock', [ProductPageController::class, 'indexHalock'])->name('Halock');
 
-// Route::get('/product/{category}', [ProductPageController::class, 'indexFuel'])->name('');
-
-// Route::get('/product/{category}/{name}', [ProductPageController::class, 'show'])->name('data');
-
 Route::get('/product/{name}', [ProductPageController::class, 'show'])->name('productdesc');
 
-// Route::get('/product/{category}', [ProductpageController::class, 'indexFuel', 'indexHose', 'indexATG', 'indexSTP', 'indexLCP', 'indexHalock'])->name('data');
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::middleware(['auth'])->group(function (){
+    
+    Route::get('/dashboard', function(){
+        return view('cms.dashboard');
+    });
 
-Route::get('/dashboard', function () {
-    return view('cms.dashboard');
-});
-
-//View, Edit & update General Data
+    //View, Edit & update General Data
 Route::resource('dashboard/generaldata', GeneraldataController::class);
                 
 //View, Edit & update General Image
 Route::resource('dashboard/generalimage', GeneralImageController::class);
 
-//View, Edit & update Banners 
+//View, Edit & update Banners
 Route::resource('dashboard/banner', BannerController::class);
 
-//View, Edit & update Footer 
+//View, Edit & update Footer
 Route::resource('dashboard/footer', FooterController::class);
 
+//View, Edit & update Product
 Route::resource('dashboard/product', ProductController::class);
 
-Route::resource('/dashboard/client', ClientController::class);
+//View, Edit & update Client
+Route::resource('dashboard/client', ClientController::class);
 
-// Route::resource('/dashboard/productcategory', ProductCategoryController::class);
+//View, Edit & update User
+Route::resource('dashboard/user', UserController::class);
 
-Route::get('/dashboard/home', function () {
-    return view('cms.home');
 });
+
+// Route::get('/', function () {
+//     return ['Laravel' => app()->version()];
+// });
