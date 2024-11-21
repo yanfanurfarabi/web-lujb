@@ -3,11 +3,11 @@
 <x-layout>
 
     <div class="hero h-auto mt-20" id="desktop">
-        <img src= "{{ asset('storage/img/'. $banners[0]->image) }}" alt="Banner"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
     </div>
 
     <div class="hero h-auto mt-20" id="mobile">
-        <img src= "{{ asset('storage/img/'. $banners[1]->image) }}" alt="Banner"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
     </div>
 
     <div class="max-w-screen-xl mx-auto p-4">
@@ -28,7 +28,7 @@
                     <div>
                         <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/fuelpump"> 
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
-                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[0]->image) }}" alt="">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[0]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
@@ -37,7 +37,7 @@
                     <div class="row-span-2">
                         <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/stp">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
-                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[1]->image) }}" alt="">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
@@ -46,14 +46,14 @@
                     <div>
                         <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/atg">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
-                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[2]->image) }}" alt="">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[2]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
                     <div>
                         <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/hose">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
-                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[3]->image) }}" alt="">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[3]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
@@ -62,7 +62,7 @@
                     <div>
                         <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/lcp">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
-                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[4]->image) }}" alt="">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[4]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
@@ -71,7 +71,7 @@
                     <div>
                         <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/halock">
                             <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
-                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/'. $images[5]->image) }}" alt="">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[5]->image) }}" alt="">
                             </div>
                         </a>
                     </div>
@@ -83,7 +83,7 @@
         {{-- why us --}}
         <div class="grid grid-cols-2 gap-10 mt-10 mb-5" id="desktop">
             <div>
-                <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/'. $images[6]->image) }}" alt="why_us" />
+                <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
                 <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
@@ -100,7 +100,7 @@
 
         <div class="gap-10 mt-10 mb-5" id="mobile">
             <div>
-                <img class="w-full h-full max-w-full rounded-2xl" src="{{ asset('storage/img/'. $images[6]->image) }}" alt="why_us" />
+                <img class="w-full h-full max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
                 <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
@@ -118,7 +118,7 @@
             
             @foreach ($client as $clients)
             <div class="carousel-item">
-              <img src="{{ asset('storage/img/'. $clients->image) }}" alt="{{ $clients->name }}" class="h-40 p-5" />
+              <img src="{{ asset('storage/img/Client/'. $clients->image) }}" alt="{{ $clients->name }}" class="h-40 p-5" />
             </div>
               @endforeach
 
@@ -127,7 +127,7 @@
     </section>
     
     {{-- inquiry --}}
-    <section style="background-image: url('{{ asset('storage/img/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="desktop">
+    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="desktop">
         <div class="items-center max-w-screen-xl mx-auto p-4" >
             <div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
@@ -138,7 +138,7 @@
         </div>
     </section>
 
-    <section style="background-image: url('{{ asset('storage/img/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="mobile">
+    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="mobile">
         <div class="max-w-screen-xl mx-auto p-4" >
             <div class="gap-20 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div>

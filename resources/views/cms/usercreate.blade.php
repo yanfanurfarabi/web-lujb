@@ -7,7 +7,7 @@
         
     <div class="Card">
         <div class="InnerCard">
-            <p class="big bold">Create</p>
+            <p class="big bold">Create New User</p>
 
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="Card">
-            <label for="email" class="edittitle">Email : </label>
+            <label for="email" class="edittitle">Username : </label>
             <input type="text" class="editlabel" name="email" required>
         </div>
 

@@ -32,7 +32,7 @@
                                 <td>{{ $key + 1 }} </td>
                                 <td>{{ $clients->name }}</td>
                                 @if ($clients->image != "")
-                                <td> <img src="{{ asset('storage/img/'. $clients->image) }}" alt="image" width= "100"></td>
+                                <td> <img src="{{ asset('storage/img/Client/'. $clients->image) }}" alt="image" width= "100"></td>
                                 @endif
                                 <td>{{ $clients->isActive }}</td>
                                 <td>

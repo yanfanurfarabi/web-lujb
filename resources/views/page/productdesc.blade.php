@@ -5,7 +5,7 @@
                 <div class="row-span-2">
                     <div class="grid gap-4">
                         <div>
-                            <img class="h-auto w-100 rounded-lg" src="{{ asset('storage/img/'. $productdesc->bannerimage) }}" alt="">
+                            <img class="h-auto w-100 rounded-lg" src="{{ asset('storage/img/Product/'. $productdesc->bannerimage) }}" alt="">
                         </div>
                         {{-- <div class="grid grid-cols-5 gap-2 items-center w-auto ">
                             <div class="border border-gray-400 bg-white rounded-md items-center">

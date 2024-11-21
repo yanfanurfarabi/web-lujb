@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Storage;
 
 class ClientController extends Controller
 {
@@ -29,7 +30,7 @@ class ClientController extends Controller
         // // Proses upload image
         if ($request->hasFile('image')) {
             $clientName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $clientName);
+            $request->image->storeAs('/public/img/Client/'. $clientName);
 
             Client::create([
                 'name' => $request->name,
@@ -58,10 +59,10 @@ class ClientController extends Controller
 
         if($request->hasFile('image')){
             if($client->image){
-                Storage::delete('/public/img'. $client->image);
+                Storage::delete('/public/img/Client/'. $client->image);
             }
             $clientName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $clientName);
+            $request->image->storeAs('/public/img/Client/'. $clientName);
 
             $client->image = $clientName;
         }

@@ -19,7 +19,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>Name</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Password</th>
                             <th>Actions</th>

@@ -28,10 +28,9 @@ class GeneralImageController extends Controller
             'category' => 'required'
         ]);
         
-        // // Proses upload image
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $imageName);
+            $request->image->storeAs('/public/img/GeneralImage/'. $imageName);
 
             General_Image::create([
                 'name' => $request->name,
@@ -62,10 +61,10 @@ class GeneralImageController extends Controller
 
         if($request->hasFile('image')){
             if($image->image){
-                Storage::delete('/public/img'. $image->image);
+                Storage::delete('/public/img/GeneralImage/'. $image->image);
             }
             $imageName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $imageName);
+            $request->image->storeAs('/public/img/GeneralImage/'. $imageName);
 
             $image->image = $imageName;
         }

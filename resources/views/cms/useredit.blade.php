@@ -19,18 +19,23 @@
         </div>
     @endif
     
-    <form action="{{ route('generaldata.update', $datas->id) }} " method="POST">
+    <form action="{{ route('user.update', $users->id) }} " method="POST">
         @csrf
         @method('PUT')
 
         <div class="Card">
             <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $datas->name) }} " required>
+            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $users->name) }} " required>
+        </div>
+
+        <div class="Card">
+            <label for="email" class="edittitle">Username</label>
+            <input type="text" class="editlabel" id="email" name="email" value="{{ old('email', $users->email) }} " required>
         </div>
 
         <div class="Card">
             <label for="password" class="edittitle">Password</label>
-            <textarea class="editlabel textarea" name="password" hidden>{{ old('password', $datas->value) }}</textarea>
+            <textarea class="editlabel textarea" name="password" hidden>{{ old('password', $users->password) }}</textarea>
         </div>
 
         <button type="submit" class="Button">Update</button>

@@ -1,11 +1,11 @@
 <x-layout>
 
     <div class="hero h-auto mt-20" id="desktop">
-        <img src= "{{ asset('storage/img/'. $banners[0]->image) }}" alt="Banner"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
     </div>
 
     <div class="hero h-auto mt-20" id="mobile">
-        <img src= "{{ asset('storage/img/'. $banners[1]->image) }}" alt="Banner"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
     </div>
     
     <section class="bg-white dark:bg-gray-900" >

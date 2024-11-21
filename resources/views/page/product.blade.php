@@ -1,10 +1,10 @@
 <x-layout>
     <div class="hero h-auto mt-20" id="desktop">
-        <img src= "{{ asset('storage/img/'. $banners[0]->image) }}" alt="Banner"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
     </div>
 
     <div class="hero h-auto mt-20" id="mobile">
-        <img src= "{{ asset('storage/img/'. $banners[1]->image) }}" alt="Banner"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
     </div>
 
     <div class="container mx-auto">
@@ -35,7 +35,7 @@
                 <div class="card bg-white w-96 shadow-xl mb-20">
                     <figure class="mt-5 mb-5">
                     <img
-                        src="{{ asset('storage/img/'. $product->bannerimage) }}"
+                        src="{{ asset('storage/img/Product/'. $product->bannerimage) }}"
                         alt="{!! $product->name !!}"
                         class="w-70 h-auto" />
                     </figure>

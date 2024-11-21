@@ -39,7 +39,7 @@
                                 <td>{{ $prod->desc }} </td>
                                 <td>{!! $prod->spec !!} </td>
                                 @if ($prod->bannerimage != "")
-                                <td> <img src="{{ asset('storage/img/'. $prod->bannerimage) }}" alt="image" width= "200"></td>
+                                <td> <img src="{{ asset('storage/img/Product/'. $prod->bannerimage) }}" alt="image" width= "200"></td>
                                 @endif
                                 <td>{{ $prod->category }} </td>
                                 <td>{{ $prod->sortOrder }} </td>

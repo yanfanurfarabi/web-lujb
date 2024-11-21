@@ -54,9 +54,9 @@ class UserController extends Controller
         //
     }
 
-    protected function authenticated(Request $request, $user)
+    protected function authenticated(Request $request, $users)
 {
-    if ($user->role) {
+    if ($users->role) {
         return redirect('/dashboard');
     }
 
@@ -68,6 +68,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
+        $users = User::findOrFail($id);
+
         return view('cms.useredit', compact('users'));
     }
 
@@ -85,7 +87,7 @@ class UserController extends Controller
 
         $users->name = $request->name;
         $users->email = $request->email;
-        $users->passowrd = $request->password;
+        $users->password = $request->password;
         $users->save();
 
         return redirect()->route('user.index')->with('Success', 'User Updated!');

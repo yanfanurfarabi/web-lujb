@@ -42,7 +42,7 @@
             <label for="category" class="edittitle">Category</label>
             {{-- <input type="text" class="editlabel" id="name" name="name" value="{{ old('spec', $product->category) }}" required> --}}
             <select id="category" name="category" class="select w-full max-w-xs">
-                <option disabled selected>{{ old('spec', $product->category) }}</option>
+                <option disabled selected>{{ old('category', $product->category) }}</option>
                 <option>Fuel Pump</option>
                 <option>Red Robe</option>
                 <option>Guihe ATG</option>

@@ -33,7 +33,7 @@
                                 <td>{{ $key + 1 }} </td>
                                 <td>{{ $banners->name }}</td>
                                 @if ($banners->image != "")
-                                <td> <img src="{{ asset('storage/img/'. $banners->image) }}" alt="image" width= "400"></td>
+                                <td> <img src="{{ asset('storage/img/Banner/'. $banners->image) }}" alt="image" width= "400"></td>
                                 @endif
                                 <td>{{ $banners->BannerCategory }}</td>
                                 <td>

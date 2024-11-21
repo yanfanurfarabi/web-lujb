@@ -38,7 +38,7 @@ class ProductController extends Controller
 
         if($request->hasFile('bannerimage')){
             $ProductName = time().'.'.$request->bannerimage->getClientOriginalextension();
-            $request->bannerimage->storeAs('/public/img/'. $ProductName);
+            $request->bannerimage->storeAs('/public/img/Product/'. $ProductName);
             
             Product::create([
                 'name' => $request->name,
@@ -67,7 +67,7 @@ class ProductController extends Controller
             'spec' => 'nullable',
             'sortOrder' => 'nullable',
             'isActive' => 'nullable',
-            'category' => 'required',
+            'category' => 'nullable',
             'bannerimage' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
@@ -75,10 +75,10 @@ class ProductController extends Controller
 
         if($request->hasFile('bannerimage')){
             if($product->image){
-                Storage::delete('/public/img/'. $product->image);
+                Storage::delete('/public/img/Product/'. $product->image);
             }
             $bannerimage = time().'.'.$request->bannerimage->getClientOriginalextension();
-            $request->bannerimage->storeAs('/public/img/'. $bannerimage);
+            $request->bannerimage->storeAs('/public/img/Product/'. $bannerimage);
 
             $product->bannerimage = $bannerimage;
         }
