@@ -14,6 +14,8 @@ class ContactpageController extends Controller
     public function index(){
         $datas = GeneralData::all();
         $images = General_Image::all();
+        $inquiry = ['General'];
+        $inquire = General_Image::where('category', $inquiry)->get();
         $bannercat = ['Contact Us'];
         $banners = Banner::where('BannerCategory', $bannercat)->get();
         $products = Product::all();
@@ -22,6 +24,7 @@ class ContactpageController extends Controller
         return view('page.contact', [
             'datas' => $datas,
             'images' => $images,
+            'inquire' => $inquire,
             'banners' => $banners,
             'products' => $products,
             'footers' => $footers
