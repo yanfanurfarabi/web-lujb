@@ -23,7 +23,7 @@
                 <div>
                     <h1 class="card-title opacity-100 text-xl lg:text-2xl font-bold text-black mb-2 ">Leave us message</h1>
                     <span>{!! $datas[26]->value !!}</span>
-                    <form action="{{ route('email.store') }}" method="POST">
+                    <form action="{{ route('email.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-5 mt-5">
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -40,7 +40,7 @@
                             <select id="subject" name="subject" class="bg-gray-50 focus:border-blue-500 focus:ring-blue-500 text-gray-500 border-gray-300 select w-full max-w">
                                 <option disabled selected>Select subject</option>
                                 <option>Product Inquiry</option>
-                                <option>SeAfter-sales Supportrvice</option>
+                                <option>After-sales Supportrvice</option>
                               </select>
                         </div>
                         {{-- <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required /> --}}

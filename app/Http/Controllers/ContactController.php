@@ -2,23 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Email;
+use App\Models\Contact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class MailController extends Controller
+class ContactController extends Controller
 {
     public function index()
     {
-        $email = Email::all();
+        $email = Contact::all();
         return view('cms.email', compact('email'));
     }
-
-    // public function show($id)
-    // {
-    //     $email = Email::find($id);
-    //     return view('cms.mailview', compact('email'));
-    // }
 
     public function store(Request $request)
     {
@@ -30,10 +24,10 @@ class MailController extends Controller
         ]);
 
         // Simpan ke database
-        Email::create($request->all());
-
+        Contact::create($request->all());
+        
         // Kirim email
-        Email::send('emails.contact', $request->all(), function ($mail) use ($request) {
+        Contact::send('emails.contact', $request->all(), function ($mail) use ($request) {
             $mail->to('mail.test@lujb.co.id')
                 ->subject('New Contact Message: ' . $request->subject);
         });

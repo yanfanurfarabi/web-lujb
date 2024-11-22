@@ -15,8 +15,10 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WbsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\MailController;
-use App\Models\Email;
+use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
+use App\Models\Contact;
 use App\Models\User;
 use App\Models\Banner;
 use App\Models\Client;
@@ -38,7 +40,7 @@ Route::get('/services', [ServicepageController::class, 'index'])->name('data');
 Route::get('/profile', [ProfilepageController::class, 'index'])->name('data');
 
 Route::get('/contact', [ContactpageController::class, 'index'])->name('data');
-Route::post('/contact', [MailController::class, 'store'])->name('email.store');
+Route::post('/contact', [ContactController::class, 'store'])->name('email.store');
 
 Route::get('/wbs', [WbsController::class, 'index'])->name('wbs');
 
@@ -90,7 +92,7 @@ Route::resource('dashboard/client', ClientController::class);
 Route::resource('dashboard/user', UserController::class);
 
 //View, Edit & update User
-Route::get('dashboard/email', [MailController::class, 'index'])->name('email');
+Route::get('dashboard/email', [ContactController::class, 'index'])->name('email');
 
 });
 
