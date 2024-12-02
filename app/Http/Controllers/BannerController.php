@@ -31,7 +31,7 @@ class BannerController extends Controller
         // // Proses upload image
         if ($request->hasFile('image')) {
             $bannerName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/Banner/'. $bannerName);
+            $request->image->storeAs('/public/img/'. $bannerName);
 
             Banner::create([
                 'name' => $request->name,
@@ -61,10 +61,10 @@ class BannerController extends Controller
 
         if($request->hasFile('image')){
             if($banner->image){
-                Storage::delete('/public/img/Banner/'. $banner->image);
+                Storage::delete('/public/img/'. $banner->image);
             }
             $bannerName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/Banner/'. $bannerName);
+            $request->image->storeAs('/public/img/'. $bannerName);
             $banner->image = $bannerName;
         }
         

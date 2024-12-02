@@ -29,8 +29,8 @@ class GeneralImageController extends Controller
         ]);
         
         if ($request->hasFile('image')) {
-            $imageName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/GeneralImage/'. $imageName);
+            $imageName = $originalName.'.'.$request->image->getClientOriginalextension();
+            $request->image->storeAs('storage/img/GeneralImage/'. $imageName);
 
             General_Image::create([
                 'name' => $request->name,

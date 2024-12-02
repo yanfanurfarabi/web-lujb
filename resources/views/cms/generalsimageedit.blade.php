@@ -25,7 +25,7 @@
 
         <div class="Card">
             <label for="name" class="edittitle">Name</label>
-            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $image->name) }} " required>
+            <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $image->name) }} " disabled>
         </div>
 
         <div class="Card">

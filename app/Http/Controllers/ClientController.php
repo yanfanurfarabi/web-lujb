@@ -30,7 +30,7 @@ class ClientController extends Controller
         // // Proses upload image
         if ($request->hasFile('image')) {
             $clientName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/Client/'. $clientName);
+            $request->image->storeAs('/public/img/'. $clientName);
 
             Client::create([
                 'name' => $request->name,
@@ -59,10 +59,10 @@ class ClientController extends Controller
 
         if($request->hasFile('image')){
             if($client->image){
-                Storage::delete('/public/img/Client/'. $client->image);
+                Storage::delete('/public/img/'. $client->image);
             }
             $clientName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/Client/'. $clientName);
+            $request->image->storeAs('/public/img/'. $clientName);
 
             $client->image = $clientName;
         }

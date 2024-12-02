@@ -15,12 +15,12 @@
         <h3 class=" text-gray-900 text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
             {!! $datas[0]->value !!} </h3>
         
-            {{-- our product --}}
-        <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500">
+            {{-- our product Desktop --}}
+        <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500" id="desktop">
             <div class="rounded-md ">
                 <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
                     {!! $datas[1]->value !!} </h1>  
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4" id="">
                 <div class="col-span-2 grid gap-4">
                     {{-- <div class="hover:shadow-lg overflow-hidden">
                         <img class="h-auto max-w-full rounded-lg group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out w-full object-cover" src="img/banner_navigation1.jpg" alt="">
@@ -79,7 +79,72 @@
                 </div>
             </div>
         </div>
-    
+
+        {{-- Our Products Mobile --}}
+        <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500" id="mobile">
+            <div class="rounded-md ">
+                <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
+                    {!! $datas[1]->value !!} </h1>  
+                <div class="gap-4">
+                <div class="col-span-2 grid gap-4">
+                    {{-- <div class="hover:shadow-lg overflow-hidden">
+                        <img class="h-auto max-w-full rounded-lg group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out w-full object-cover" src="img/banner_navigation1.jpg" alt="">
+                    </div> --}}
+                    <div>
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/fuelpump"> 
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[7]->image) }}" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div class="row-span-2">
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/stp">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/atg">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[8]->image) }}" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/hose">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[9]->image) }}" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/lcp">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[10]->image) }}" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid gap-4">
+                    <div>
+                        <a class="group relative block rounded-lg overflow-hidden focus:outline-none" href="/product/halock">
+                            <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-lg overflow-hidden">
+                                <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-lg w-full object-cover" src="{{ asset('storage/img/GeneralImage/'. $images[11]->image) }}" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
         {{-- why us --}}
         <div class="grid grid-cols-2 gap-10 mt-10 mb-5" id="desktop">
             <div>

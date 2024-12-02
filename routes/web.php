@@ -16,7 +16,6 @@ use App\Http\Controllers\WbsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
 use App\Models\Contact;
 use App\Models\User;
@@ -26,12 +25,11 @@ use App\Models\General_Image;
 use App\Models\GeneralData;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 require __DIR__.'/auth.php';
-
-// Route::get('/', [GeneraldataController::class, 'show'])->name('datas');
 
 Route::get('/', [HomepageController::class, 'index'])->name('data');
 

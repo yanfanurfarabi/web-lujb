@@ -38,7 +38,7 @@ class ProductController extends Controller
 
         if($request->hasFile('bannerimage')){
             $ProductName = time().'.'.$request->bannerimage->getClientOriginalextension();
-            $request->bannerimage->storeAs('/public/img/Product/'. $ProductName);
+            $request->bannerimage->storeAs('/public/img/'. $ProductName);
             
             Product::create([
                 'name' => $request->name,
@@ -75,10 +75,10 @@ class ProductController extends Controller
 
         if($request->hasFile('bannerimage')){
             if($product->image){
-                Storage::delete('/public/img/Product/'. $product->image);
+                Storage::delete('/public/img/'. $product->image);
             }
             $bannerimage = time().'.'.$request->bannerimage->getClientOriginalextension();
-            $request->bannerimage->storeAs('/public/img/Product/'. $bannerimage);
+            $request->bannerimage->storeAs('/public/img/'. $bannerimage);
 
             $product->bannerimage = $bannerimage;
         }

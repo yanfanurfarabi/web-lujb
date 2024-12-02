@@ -12,7 +12,7 @@
 <div class="DashboardContainer">
     <div class="InnerDashboard">
 
-        {{-- <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('generaldata.create') }}'">Add New</button> --}}
+        <button type="button" class="Button-Add white" onclick="window.location.href='{{ route('generaldata.create') }}'">Add New</button>
 
         <div class="Card">
             <div class="InnerCard">

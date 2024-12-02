@@ -6,7 +6,7 @@
 
 <div class="Container">
     <div class="gap-20"></div>
-        <h1 class="center black">General Data</h3>
+        <h1 class="center black">Email</h3>
 </div>
 
 <div class="DashboardContainer">
