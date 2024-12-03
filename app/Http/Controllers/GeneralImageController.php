@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\General_Image;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Storage;
 use Storage;
 
 class GeneralImageController extends Controller
@@ -27,18 +28,30 @@ class GeneralImageController extends Controller
             'isActive' => 'nullable',
             'category' => 'required'
         ]);
-        
-        if ($request->hasFile('image')) {
-            $imageName = $originalName.'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('storage/img/GeneralImage/'. $imageName);
 
-            General_Image::create([
-                'name' => $request->name,
-                'image' => $imageName,
-                'isActive' => $request->isActive,
-                'category' => $request->category,
-            ]);
-        }   
+        $file = $request->file('image');
+        $originalName = $file->getClientOriginalName();
+        $destinationPath = public_path('storage/img/GeneralImage/');
+        $file->move($destinationPath, $originalName);
+
+        General_Image::create([
+            'name' => $request->name,
+            'image' => $originalName,
+            'isActive' => $request->isActive,
+            'category' => $request->category,
+        ]);
+        
+        // if ($request->hasFile('image')) {
+        //     $imageName = time().'.'.$request->image->getClientOriginalextension();
+        //     $request->image->storeAs('/public/img/GeneralImage/'. $imageName);
+
+        //     General_Image::create([
+        //         'name' => $request->name,
+        //         'image' => $imageName,
+        //         'isActive' => $request->isActive,
+        //         'category' => $request->category,
+        //     ]);
+        // }   
             
         return redirect()->route('generalimage.index')->with('success', 'Banner created successfully.');
     }
@@ -51,7 +64,6 @@ class GeneralImageController extends Controller
 
     public function update($id, Request $request){
         $request->validate([
-            'name' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'isActive' => 'nullable',
             'category' => 'nullable',
@@ -63,14 +75,19 @@ class GeneralImageController extends Controller
             if($image->image){
                 Storage::delete('/public/img/GeneralImage/'. $image->image);
             }
-            $imageName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/GeneralImage/'. $imageName);
+            $file = $request->file('image');
+            $originalName = $file->getClientOriginalName();
+            $destinationPath = public_path('storage/img/GeneralImage/');
+            $file->move($destinationPath, $originalName);
 
-            $image->image = $imageName;
+            $image->image = $originalName;
+
+            // $imageName = time().'.'.$request->image->getClientOriginalextension();
+            // $request->image->storeAs('/public/img/GeneralImage/'. $imageName);
+            // $image->image = $imageName;
         }
 
         $image->isActive = $request->isActive;
-        $image->name = $request->name;
         $image->category = $request->category;
         $image->save();
 

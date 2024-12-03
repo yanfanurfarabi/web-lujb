@@ -33,7 +33,7 @@
                                 <td>{{ $key + 1 }} </td>
                                 <td>{{ $img->name }}</td>
                                 @if ($img->image != "")
-                                <td> <img src="{{ asset('storage/img/GeneralImage/'. $img->image) }}" alt="{{ $img->name }}" width= "300"></td>
+                                <td> <img src="{{ asset('storage/img/GeneralImage/'. $img->image) }}" alt="{{ $img->image }}" width= "300"></td>
                                 @endif
                                 <td>{{ $img->category }}</td>
                                 <td>{{ $img->isActive }}</td>

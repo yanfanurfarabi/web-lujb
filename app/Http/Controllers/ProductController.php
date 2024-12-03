@@ -36,20 +36,35 @@ class ProductController extends Controller
             'bannerimage' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
-        if($request->hasFile('bannerimage')){
-            $ProductName = time().'.'.$request->bannerimage->getClientOriginalextension();
-            $request->bannerimage->storeAs('/public/img/'. $ProductName);
+        $file = $request->file('bannerimage');
+        $ProductName = $file->getClientOriginalName();
+        $destinationPath = public_path('storage/img/Product/');
+        $file->move($destinationPath, $ProductName);
+
+        Product::create([
+            'name' => $request->name,
+            'spec' => $request->spec,
+            'desc' => $request->desc,
+            'sortOrder' => $request->sortOrder,
+            'isActive' => $request->isActive,
+            'bannerimage' => $ProductName,
+            'category' => $request->category,
+        ]);
+
+        // if($request->hasFile('bannerimage')){
+        //     $ProductName = time().'.'.$request->bannerimage->getClientOriginalextension();
+        //     $request->bannerimage->storeAs('/public/img/'. $ProductName);
             
-            Product::create([
-                'name' => $request->name,
-                'spec' => $request->spec,
-                'desc' => $request->desc,
-                'sortOrder' => $request->sortOrder,
-                'isActive' => $request->isActive,
-                'bannerimage' => $ProductName,
-                'category' => $request->category,
-            ]);
-        }
+        //     Product::create([
+        //         'name' => $request->name,
+        //         'spec' => $request->spec,
+        //         'desc' => $request->desc,
+        //         'sortOrder' => $request->sortOrder,
+        //         'isActive' => $request->isActive,
+        //         'bannerimage' => $ProductName,
+        //         'category' => $request->category,
+        //     ]);
+        // }
 
         return redirect()->route('product.index')->with('success', 'Added!');
     }
@@ -75,12 +90,15 @@ class ProductController extends Controller
 
         if($request->hasFile('bannerimage')){
             if($product->image){
-                Storage::delete('/public/img/'. $product->image);
+                Storage::delete('/public/img/Product/'. $product->image);
             }
-            $bannerimage = time().'.'.$request->bannerimage->getClientOriginalextension();
-            $request->bannerimage->storeAs('/public/img/'. $bannerimage);
 
-            $product->bannerimage = $bannerimage;
+            $file = $request->file('bannerimage');
+            $ProductName = $file->getClientOriginalName();
+            $destinationPath = public_path('storage/img/Product/');
+            $file->move($destinationPath, $ProductName);
+
+            $product->bannerimage = $ProductName;
         }
 
         $product->name = $request->name;

@@ -25,7 +25,7 @@
 
         <div class="Card">
             <div class="InnerCard">
-                <p class="big bold">Generals Image</p>
+                <p class="big bold">Client</p>
                 <button type="button" class="Button-Edit" onclick="window.location.href='/dashboard/client'">View</button>
             </div>
         </div>

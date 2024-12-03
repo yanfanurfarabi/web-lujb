@@ -24,20 +24,29 @@ class ClientController extends Controller
         $request->validate([
             'name' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            'isActive' => 'nullable',
+        ]);
+
+        $file = $request->file('image');
+        $clientName = $file->getClientOriginalName();
+        $destinationPath = public_path('storage/img/Client/');
+        $file->move($destinationPath, $clientName);
+
+        Client::create([
+            'name' => $request->name,
+            'image' => $clientName,
         ]);
         
         // // Proses upload image
-        if ($request->hasFile('image')) {
-            $clientName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $clientName);
+        // if ($request->hasFile('image')) {
+        //     $clientName = time().'.'.$request->image->getClientOriginalextension();
+        //     $request->image->storeAs('/public/img/'. $clientName);
 
-            Client::create([
-                'name' => $request->name,
-                'image' => $clientName,
-                'isActive' => $request->isActive,
-            ]);
-        }   
+        //     Client::create([
+        //         'name' => $request->name,
+        //         'image' => $clientName,
+        //         'isActive' => $request->isActive,
+        //     ]);
+        // }   
             
         return redirect()->route('client.index')->with('success', 'Client created successfully.');
     }
@@ -50,24 +59,30 @@ class ClientController extends Controller
 
     public function update($id, Request $request){
         $request->validate([
-            'name' => 'required',
+            'name' => 'nullable',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
-            'isActive' => 'nullable',
         ]);
 
         $client = Client::find($id);
 
         if($request->hasFile('image')){
             if($client->image){
-                Storage::delete('/public/img/'. $client->image);
+                Storage::delete('/public/img/Client/'. $client->image);
             }
-            $clientName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $clientName);
+
+            $file = $request->file('image');
+            $clientName = $file->getClientOriginalName();
+            $destinationPath = public_path('storage/img/Client/');
+            $file->move($destinationPath, $clientName);
 
             $client->image = $clientName;
+
+            // $clientName = time().'.'.$request->image->getClientOriginalextension();
+            // $request->image->storeAs('/public/img/'. $clientName);
+
         }
 
-        $client->isActive = $request->isActive;
+
         $client->name = $request->name;
         $client->save();
 

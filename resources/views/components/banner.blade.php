@@ -1,5 +1,5 @@
 <div
-  class="hero h-auto mt-20">
+  class="hero h-auto">
   <img src= "{{ 
   request()->is('product') ? asset('img/banner_product.jpg') : 
   (request()->is('contact') ? asset('img/banner_contact.jpg') : 

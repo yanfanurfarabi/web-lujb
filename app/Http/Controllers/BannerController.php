@@ -27,18 +27,29 @@ class BannerController extends Controller
             'BannerCategory' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
+
+        $file = $request->file('image');
+        $bannerName = $file->getClientOriginalName();
+        $destinationPath = public_path('storage/img/Banner/');
+        $file->move($destinationPath, $bannerName);
+
+        Banner::create([
+            'name' => $request->name,
+            'BannerCategory' => $request->BannerCategory,
+            'image' => $bannerName,
+        ]);
         
         // // Proses upload image
-        if ($request->hasFile('image')) {
-            $bannerName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $bannerName);
+        // if ($request->hasFile('image')) {
+        //     $bannerName = time().'.'.$request->image->getClientOriginalextension();
+        //     $request->image->storeAs('/public/img/'. $bannerName);
 
-            Banner::create([
-                'name' => $request->name,
-                'BannerCategory' => $request->BannerCategory,
-                'image' => $bannerName,
-            ]);
-        }
+        //     Banner::create([
+        //         'name' => $request->name,
+        //         'BannerCategory' => $request->BannerCategory,
+        //         'image' => $bannerName,
+        //     ]);
+        // }
 
         // $path = $request->file('image')->store('/public/img/');
             
@@ -61,11 +72,19 @@ class BannerController extends Controller
 
         if($request->hasFile('image')){
             if($banner->image){
-                Storage::delete('/public/img/'. $banner->image);
+                Storage::delete('/public/img/Banner/'. $banner->image);
             }
-            $bannerName = time().'.'.$request->image->getClientOriginalextension();
-            $request->image->storeAs('/public/img/'. $bannerName);
+
+            $file = $request->file('image');
+            $bannerName = $file->getClientOriginalName();
+            $destinationPath = public_path('storage/img/Banner/');
+            $file->move($destinationPath, $bannerName);
+
             $banner->image = $bannerName;
+
+            // $bannerName = time().'.'.$request->image->getClientOriginalextension();
+            // $request->image->storeAs('/public/img/'. $bannerName);
+            // $banner->image = $bannerName;
         }
         
         $banner->save();
