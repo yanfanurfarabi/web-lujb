@@ -21,7 +21,6 @@
                             <th>No.</th>
                             <th>Name</th>
                             <th>Image</th>
-                            <th>is Active</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -34,7 +33,6 @@
                                 @if ($clients->image != "")
                                 <td> <img src="{{ asset('storage/img/Client/'. $clients->image) }}" alt="image" width= "100"></td>
                                 @endif
-                                <td>{{ $clients->isActive }}</td>
                                 <td>
                                     <button type="button" class="Button-Edit" onclick="window.location.href='{{ route('client.edit', $clients->id) }}'">Edit</button>
                                     <div class="gap-20"></div>

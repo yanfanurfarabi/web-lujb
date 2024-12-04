@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('client', function (Blueprint $table) {
-            //
+            $table->dropColumn('isActive');
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('client', function (Blueprint $table) {
-            //
+            $table->boolean('isActive');
         });
     }
 };

@@ -3,16 +3,18 @@
 <x-layout>
 
     <div class="hero h-auto" id="desktop">
-        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner" class="h-[100vh]"/>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner" class="w-full h-[100vh]"/>
+        <p class="absolute px-4 text-white left-40 bottom-50 font-semibold text-7xl">Home</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
+        <p class="absolute px-4 text-white bottom-50 font-semibold text-7xl">Home</p>
     </div>
 
     <div class="max-w-screen-xl mx-auto p-4">
             
-        <h3 class=" text-gray-900 text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
+        <h3 class=" text-[#2aa595] text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
             {!! $datas[0]->value !!} </h3>
         
             {{-- our product Desktop --}}
@@ -20,7 +22,7 @@
             <div class="rounded-md ">
                 <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
                     {!! $datas[1]->value !!} </h1>  
-                <div class="grid grid-cols-2 gap-4" id="">
+                <div class="grid grid-cols-2 gap-4">
                 <div class="col-span-2 grid gap-4">
                     {{-- <div class="hover:shadow-lg overflow-hidden">
                         <img class="h-auto max-w-full rounded-lg group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out w-full object-cover" src="img/banner_navigation1.jpg" alt="">
@@ -151,13 +153,14 @@
                 <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
-                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-[#2aa595] mb-5 mt-5">{!! $datas[2]->value !!}</h2>
                 <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
                 
 
                   <span class="relative flex h-3 w-3 mt-6">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-900"><button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm btn-info text-white">Read More</button></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#2aa595]"></span>
+                    <button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm bg-[#2aa595] text-white">Read More</button>
                   </span>
 
             </div>
@@ -170,7 +173,7 @@
             <div>
                 <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
                 <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
-                <button class="rounded-full btn btn-sm btn-info text-white mt-10">Read More</button>
+                <button class="rounded-full btn btn-sm bg-green-700 text-white mt-10">Read More</button>
             </div>
         </div>
 
@@ -192,8 +195,8 @@
     </section>
     
     {{-- inquiry --}}
-    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="desktop">
-        <div class="items-center max-w-screen-xl mx-auto p-4" >
+    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900 h-[300px]" id="desktop">
+        <div class="items-center max-w-screen-xl mx-auto my-auto p-4 py-20" >
             <div>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
             </div>

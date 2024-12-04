@@ -18,7 +18,7 @@ class HomepageController extends Controller
         $inquiry = ['General'];
         $inquire = General_Image::where('category', $inquiry)->get();
         $images = General_Image::where('category', $imagecat)->get();
-        $bannercat = ['Service'];
+        $bannercat = ['Home'];
         $banner = Banner::where('BannerCategory', $bannercat)->get();
         $products = Product::all();
         $footers = Footer::all();

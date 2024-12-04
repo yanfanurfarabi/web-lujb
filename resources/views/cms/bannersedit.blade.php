@@ -28,6 +28,20 @@
             <input type="text" class="editlabel" id="name" name="name" value="{{ old('name', $banner->name) }} " disabled>
         </div>
 
+        <div class="Card">
+            <label for="BannerCategory" class="edittitle">Banner Category</label>
+            {{-- <input type="text" class="editlabel" id="name" name="name" value="{{ old('spec', $product->category) }}" required> --}}
+            <select id="BannerCategory" name="BannerCategory" class="select w-full max-w-xs">
+                <option selected>{{ old('name', $banner->category) }}</option>
+                <option>Home</option>
+                <option>Service</option>
+                <option>About Us</option>
+                <option>Contact Us</option>
+                <option>Product</option>
+                <option>WBS</option>
+              </select>
+        </div>
+
         {{-- <div class="Card">
             <label for="BannerCategory" class="edittitle">Banner Category</label>
             <input type="text" class="editlabel" id="BannerCategory" name="BannerCategory" value="{{ old('BannerCategory', $banner->BannerCategory) }} " required>

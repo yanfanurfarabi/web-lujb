@@ -24,6 +24,7 @@ class ClientController extends Controller
         $request->validate([
             'name' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'isActive' => 'nullable'
         ]);
 
         $file = $request->file('image');
@@ -34,6 +35,7 @@ class ClientController extends Controller
         Client::create([
             'name' => $request->name,
             'image' => $clientName,
+            'isActive' => $request->isActive
         ]);
         
         // // Proses upload image
@@ -81,7 +83,6 @@ class ClientController extends Controller
             // $request->image->storeAs('/public/img/'. $clientName);
 
         }
-
 
         $client->name = $request->name;
         $client->save();

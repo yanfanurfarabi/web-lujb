@@ -1,5 +1,5 @@
 
-  <nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600" style="background-color: #2AA595">
+  <nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600 bg-[#ffffff00] transition ease-in delay-100">
     <div class="max-w-[70%] flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img class="h-12 w-15" src="{{asset( 'img/logo-lujb.png') }}" alt="lujb">
@@ -78,4 +78,11 @@
             navbar.classList.toggle('hidden', expanded);
         });
     });
+</script>
+
+<script>
+  window.addEventListener("scroll", function(){
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("bg-[#2AA595]", window.scrollY > 0);
+  })
 </script>

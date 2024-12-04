@@ -32,6 +32,7 @@
             {{-- <input type="text" class="editlabel" id="name" name="name" value="{{ old('spec', $product->category) }}" required> --}}
             <select id="BannerCategory" name="BannerCategory" class="select w-full max-w-xs">
                 <option disabled selected>Select Category</option>
+                <option>Home</option>
                 <option>Service</option>
                 <option>About Us</option>
                 <option>Contact Us</option>

@@ -22,7 +22,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->boolean('isActive');
             $table->timestamps();
         });
 
@@ -30,7 +29,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
-            $table->boolean('isActive');
             $table->timestamps();
         });
     }
@@ -42,5 +40,6 @@ return new class extends Migration
     {
         Schema::dropIfExists('generaldata');
         Schema::dropIfExists('generalimage');
+        Schema::dropIfExists('client');
     }
 };

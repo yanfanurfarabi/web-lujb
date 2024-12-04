@@ -32,10 +32,10 @@
             <input type="file" name="image" id="image">
         </div>
 
-        <div class="Card">
+        {{-- <div class="Card">
             <label for="isActive" class="edittitle">is Active : </label>
             <input type="number" name="isActive" id="isActive">
-        </div>
+        </div> --}}
 
         <button type="submit" class="Button">Update</button>
     </form>
