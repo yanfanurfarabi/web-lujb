@@ -1,6 +1,6 @@
 
-  <nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600 bg-[#ffffff00] transition ease-in delay-100">
-    <div class="max-w-[70%] flex flex-wrap items-center justify-between mx-auto p-4">
+  <nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600 ">
+    <div class="max-w-[70%] flex flex-wrap items-center justify-between mx-auto p-4 transition ease-in delay-100 rounded" id="navbar-id">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img class="h-12 w-15" src="{{asset( 'img/logo-lujb.png') }}" alt="lujb">
         </a>
@@ -22,7 +22,7 @@
                 <li>
                     {{-- <x-navlink href="/product" :active="request()->is('product')">Product</x-navlink> --}}
 
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Product <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-300 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Product <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                       </svg></button>
                       
@@ -82,7 +82,7 @@
 
 <script>
   window.addEventListener("scroll", function(){
-    var nav = document.querySelector("nav");
-    nav.classList.toggle("bg-[#2AA595]", window.scrollY > 0);
+    var nav = document.querySelector("#navbar-id");
+    nav.classList.toggle("bg-[#fff]", window.scrollY > 0);
   })
 </script>

@@ -3,24 +3,29 @@
 <x-layout>
 
     <div class="hero h-auto" id="desktop">
-        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner" class="w-full h-[100vh]"/>
-        <p class="absolute px-4 text-white left-40 bottom-50 font-semibold text-7xl">Home</p>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner" class="w-full h-[80vh]"/>
+        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-6xl">Courteous, Expedient, Professional Service
+            of the Highest Caliber.</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
-        <p class="absolute px-4 text-white bottom-50 font-semibold text-7xl">Home</p>
+        <p class="absolute px-4 text-white bottom-50 font-semibold text-4xl">Courteous, Expedient, Professional Service
+            of the Highest Caliber.</p>
     </div>
 
     <div class="max-w-screen-xl mx-auto p-4">
             
-        <h3 class=" text-[#2aa595] text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
+        <h3 class=" text-[#000000] text-2xl lg:text-3xl font-bold dark:text-white text-center mb-5">
             {!! $datas[0]->value !!} </h3>
+            <hr class="w-48 h-1 mx-auto bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
+
+            <p class="mb-4 text-black">PT Ladang Usaha Jaya Bersama is a leading provider of Fuel Dispensing Equipment Established in 2007, we have built a reputation for excellence and reliability in supporting gas stations across Indonesia. Our commitment to quality and innovation ensures that our clients benefit from top-notch solutions designed to enhance operational efficiency and customer satisfaction.</p>
         
             {{-- our product Desktop --}}
         <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500" id="desktop">
             <div class="rounded-md ">
-                <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
+                <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5">
                     {!! $datas[1]->value !!} </h1>  
                 <div class="grid grid-cols-2 gap-4">
                 <div class="col-span-2 grid gap-4">
@@ -85,7 +90,7 @@
         {{-- Our Products Mobile --}}
         <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500" id="mobile">
             <div class="rounded-md ">
-                <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-10">
+                <h1 class=" text-gray-900 text-xl lg:text-2xl font-bold dark:text-white text-center mt-5 mb-5">
                     {!! $datas[1]->value !!} </h1>  
                 <div class="gap-4">
                 <div class="col-span-2 grid gap-4">
@@ -153,14 +158,14 @@
                 <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
-                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-[#2aa595] mb-5 mt-5">{!! $datas[2]->value !!}</h2>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-[#000] mb-5 mt-5">{!! $datas[2]->value !!}</h2>
+                <hr class="w-48 h-1 bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
                 <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
-                
 
                   <span class="relative flex h-3 w-3 mt-6">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-3 w-3 bg-[#2aa595]"></span>
-                    <button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm bg-[#2aa595] text-white">Read More</button>
+                    <button onclick="window.location.href='/profile'" class="rounded-full btn btn-sm bg-[#384fd4] text-white">Read More</button>
                   </span>
 
             </div>
@@ -179,9 +184,41 @@
 
     </div>
 
+    {{-- Card Services --}}
+
+    <h3 class=" text-[#000000] text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10">
+        {!! $datas[0]->value !!} </h3>
+        <hr class="w-48 h-1 mx-auto bg-[#384fd4] border-0 rounded md:my-10 dark:bg-gray-700">
+
+        <section class="columns-4 mb-10">
+            <div class="mx-auto w-[50%]">
+                <img src="{{ asset('storage/img/GeneralImage/'. $images[12]->image) }}" alt="" class="rounded">
+                <p class="font-bold text-[#283891] text-2xl text-center">Equipment Installation</p>
+            </div>
+
+            <div class=" mx-auto w-[50%]">
+                <div class="w-full"> 
+                <img src="{{ asset('storage/img/GeneralImage/'. $images[13]->image) }}" alt="" class="rounded">
+            </div>
+                <p class="font-bold text-[#283891] text-2xl text-center">Maintenance</p>
+            </div>
+
+            <div class=" mx-auto w-[50%]">
+                <img src="{{ asset('storage/img/GeneralImage/'. $images[14]->image) }}" alt="" class="rounded">
+                <p class="font-bold text-[#283891] text-2xl text-center">Construction</p>
+            </div>
+
+            <div class=" mx-auto w-[50%]">
+                <img src="{{ asset('storage/img/GeneralImage/'. $images[15]->image) }}" alt="" class="rounded">
+                <p class="font-bold text-[#283891] text-2xl text-center">Hydrotest</p>
+            </div>
+
+    </section>
+
     {{-- trusted by --}}
     <section class="bg-white dark:bg-gray-900 p-10 justify-items-center overflow-hidden">
         <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-10 mt-5">{!! $datas[4]->value !!}</h2>
+        <hr class="w-48 h-1 mx-auto bg-[#384fd4] border-0 rounded md:my-10 dark:bg-gray-700">
         <div class="carousel carousel-end rounded-box">
             
             @foreach ($client as $clients)

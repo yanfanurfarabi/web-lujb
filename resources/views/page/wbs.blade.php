@@ -1,10 +1,10 @@
 <x-layout>
 
-    <div class="hero h-auto mt-20" id="desktop">
+    <div class="hero h-auto" id="desktop">
         <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
     </div>
 
-    <div class="hero h-auto mt-20" id="mobile">
+    <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
     </div>
     
