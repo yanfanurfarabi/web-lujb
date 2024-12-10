@@ -7,7 +7,7 @@
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">Our Company Profile.</p>
+        <p class="absolute w-80 px-4 text-white bottom-50 font-semibold text-4xl">Our Company Profile.</p>
     </div>
 
     {{-- section 1 about --}}
@@ -16,6 +16,7 @@
             <div class="grid grid-cols-2 gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-reguler text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[14]->value !!}</h2>
+                        <hr class="w-48 h-1 bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
                         <p class="mb-4 text-black">{!! $datas[15]->value !!}</p>
                     </div>
                     <div>
@@ -30,7 +31,7 @@
             <div class="gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[14]->value !!}</h2>
-                        <p class="mb-4 text-black">{!! $datas[15]->value !!}</p>
+                        <p class="mb-4 font-normal text-black">{!! $datas[15]->value !!}</p>
                     </div>
                     <div>
                         <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[0]->image) }}" alt="office content 1">
@@ -47,7 +48,7 @@
                         <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-reguler text-gray-500 sm:text-lg dark:text-gray-400">
-                        <p class="mb-4 text-black">{!! $datas[17]->value !!}</p>
+                        <p class="mb-4 font-medium text-black">{!! $datas[17]->value !!}</p>
                     </div>
                 </div>
         </div>
@@ -60,7 +61,7 @@
                         <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        <p class="mt-4 text-black">{!! $datas[17]->value !!}</p>
+                        <p class="mt-4 font-normal text-black">{!! $datas[17]->value !!}</p>
                     </div>
                 </div>
         </div>
@@ -90,12 +91,12 @@
                 <div class="justify-items-center">
                     <img src="{{ asset('storage/img/GeneralImage/'. $images[3]->image) }}" class="w-auto h-20 mb-5" alt="vission icon" />
                     <h3 class="text-gray-900 text-xl lg:text-2xl font-bold dark:text-white mb-5">{!! $datas[18]->value !!}</h3>
-                    <p class="font-reguler text-gray-900 dark:text-white text-center">{!! $datas[19]->value !!}</p>
+                    <p class="text-gray-900 dark:text-white text-center">{!! $datas[19]->value !!}</p>
                 </div>
                 <div class="justify-items-center mt-4">
                     <img src="{{ asset('storage/img/GeneralImage/'. $images[4]->image) }}" class="w-auto h-20 mb-5" alt="mission icon" />
                     <h3 class="text-gray-900 text-xl lg:text-2xl font-bold dark:text-white mb-5">{!! $datas[20]->value !!}</h3>
-                    <p class="font-reguler text-gray-900 dark:text-white text-center">{!! $datas[21]->value !!}</p>
+                    <p class="text-gray-900 dark:text-white text-center">{!! $datas[21]->value !!}</p>
                 </div>
             </div>
         </div>
@@ -124,8 +125,8 @@
                     <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[2]->image) }}" alt="office content 1">
                 </div>
                     <div class="font-regular text-gray-500 sm:text-lg dark:text-gray-400">
-                        <h2 class="mt-4 mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[14]->value !!}</h2>
-                        <p class="mb-4 text-black">{!! $datas[15]->value !!}</p>
+                        <h2 class="mt-4 mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[22]->value !!}</h2>
+                        <p class="mb-4 font-normal text-black">{!! $datas[23]->value !!}</p>
                     </div>
             </div>
         </div>
@@ -152,7 +153,7 @@
 
             @foreach ($client as $clients)
             <div class="carousel-item">
-              <img src="{{asset('storage/img/'. $clients->image)}}" alt="{{ $clients->name}}" class="w-auto h-40 p-5" />
+              <img src="{{asset('storage/img/Client/'. $clients->image)}}" alt="{{ $clients->name}}" class="w-auto h-40 p-5" />
             </div>
                 
             @endforeach
