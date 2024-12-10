@@ -48,7 +48,7 @@
                         <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-reguler text-gray-500 sm:text-lg dark:text-gray-400">
-                        <p class="mb-4 font-medium text-black">{!! $datas[17]->value !!}</p>
+                        <p class="mb-4 text-black">{!! $datas[17]->value !!}</p>
                     </div>
                 </div>
         </div>
