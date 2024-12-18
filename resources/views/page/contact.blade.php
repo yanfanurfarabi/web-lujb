@@ -2,12 +2,12 @@
     
     <div class="hero h-auto" id="desktop">
         <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">Get In Touch With Us.</p>
+        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">{!! $datas[34]->value !!}</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white bottom-50 font-semibold text-4xl">Get In Touch With Us.</p>
+        <p class="absolute w-80 px-4 text-white bottom-50 font-semibold text-4xl">{!! $datas[34]->value !!}</p>
     </div>
 
             @if (session('success'))

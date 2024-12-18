@@ -2,12 +2,12 @@
 
     <div class="hero h-auto" id="desktop">
         <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">Our Company Profile.</p>
+        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">{!! $datas[33]->value !!}</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white bottom-50 font-semibold text-4xl">Our Company Profile.</p>
+        <p class="absolute w-80 px-4 text-white top-60 font-semibold text-4xl">{!! $datas[33]->value !!}</p>
     </div>
 
     {{-- section 1 about --}}
@@ -176,7 +176,7 @@
                     <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-right">{!! $datas[5]->value !!}</h2>
                 </div>
                 <div class="justify-items-center">
-                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+                    <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                     <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-center">{!! $datas[5]->value !!}</h2>
                 </div>
                 <div class="place-items-center grid gap-4">
-                    <button type="button" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+                    <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
                 </div>
             </div>
         </div>

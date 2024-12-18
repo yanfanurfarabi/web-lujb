@@ -1,12 +1,12 @@
 <x-layout>
     <div class="hero h-auto" id="desktop">
         <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">Our Products.</p>
+        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">{!! $datas[31]->value !!}</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white bottom-50 font-semibold text-4xl">Our Products.</p>
+        <p class="absolute w-80 px-4 text-white top-60 font-semibold text-4xl">{!! $datas[31]->value !!}</p>
     </div>
 
     <div class="container mx-auto">
@@ -35,7 +35,7 @@
             @foreach ($products as $product)
 
                 <div class="card bg-white w-96 shadow-xl mb-20">
-                    <figure class="mt-5 mb-5">
+                    <figure class="mt-5 mb-5 hover:scale-105 ease-in-out duration-500 transition">
                     <img
                         src="{{ asset('storage/img/Product/'. $product->bannerimage) }}"
                         alt="{!! $product->name !!}"
@@ -44,7 +44,7 @@
                     <div class="card-body items-center text-center border-t-2">
                     <h2 class="card-title font-bold text-3l text-gray-800 mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
-                        <a href="{{ route('productdesc', $product->name) }}"><button class="btn btn-info text-white">Detail</button></a>
+                        <a href="{{ route('productdesc', $product->name) }}" class="btn rounded-full bg-[#384fd4] btn-info text-white w-[120px]">Detail</a>
                     </div>
                     </div>
                 </div>
