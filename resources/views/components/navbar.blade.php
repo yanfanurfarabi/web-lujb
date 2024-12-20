@@ -1,8 +1,8 @@
 
   <nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 dark:border-gray-600 mt-2">
-    <div class="max-w-[80%] flex flex-wrap items-center justify-between mx-auto p-4 transition ease-in delay-150 rounded-xl" id="navbar-id">
+    <div class="max-w-[70%] flex flex-wrap items-center justify-between mx-auto px-10 py-2 transition ease-in delay-150 rounded-xl" id="navbar-id">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img class="h-12 w-15" src="{{asset( 'img/logo-lujb.png') }}" alt="lujb">
+            <img class="h-16 w-15" src="{{asset( 'img/logo-lujb.png') }}" alt="#home">
         </a>
         
         <!-- Hamburger button for mobile -->

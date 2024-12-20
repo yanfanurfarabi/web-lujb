@@ -20,7 +20,7 @@
                         <p class="mb-4 text-black">{!! $datas[15]->value !!}</p>
                     </div>
                     <div>
-                        <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[0]->image) }}" alt="office content 1">
+                        <img class="w-full rounded-md shadow-lg" src="{{ asset('storage/img/GeneralImage/'. $images[0]->image) }}" alt="office content 1">
                     </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                         <p class="mb-4 font-normal text-black">{!! $datas[15]->value !!}</p>
                     </div>
                     <div>
-                        <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[0]->image) }}" alt="office content 1">
+                        <img class="w-full rounded-lg" src="{{ asset('storage/img/GeneralImage/'. $images[0]->image) }}" alt="office content 1">
                     </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="max-w-screen-xl mx-auto p-4">
                 <div class="grid grid-cols-2 gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div>
-                        <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
+                        <img class="w-full rounded-md shadow-lg" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-reguler text-gray-500 sm:text-lg dark:text-gray-400">
                         <p class="mb-4 text-black">{!! $datas[17]->value !!}</p>
@@ -58,7 +58,7 @@
         <div class="max-w-screen-xl mx-auto p-4">
                 <div class="gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div>
-                        <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
+                        <img class="w-full rounded-md shadow-lg" src="{{ asset('storage/img/GeneralImage/'. $images[1]->image) }}" alt="office content 1">
                     </div>
                     <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                         <p class="mt-4 font-normal text-black">{!! $datas[17]->value !!}</p>
@@ -89,12 +89,12 @@
         <div class="max-w-screen-xl mx-auto p-4">
             <div class="gap-20 justify-items-center mb-16 mt-10">
                 <div class="justify-items-center">
-                    <img src="{{ asset('storage/img/GeneralImage/'. $images[3]->image) }}" class="w-auto h-20 mb-5" alt="vission icon" />
+                    <img src="{{ asset('storage/img/GeneralImage/'. $images[3]->image) }}" class="w-auto h-20 mb-5 shadow-md" alt="vission icon" />
                     <h3 class="text-gray-900 text-xl lg:text-2xl font-bold dark:text-white mb-5">{!! $datas[18]->value !!}</h3>
                     <p class="text-gray-900 dark:text-white text-center">{!! $datas[19]->value !!}</p>
                 </div>
                 <div class="justify-items-center mt-4">
-                    <img src="{{ asset('storage/img/GeneralImage/'. $images[4]->image) }}" class="w-auto h-20 mb-5" alt="mission icon" />
+                    <img src="{{ asset('storage/img/GeneralImage/'. $images[4]->image) }}" class="w-auto h-20 mb-5 shadow-md" alt="mission icon" />
                     <h3 class="text-gray-900 text-xl lg:text-2xl font-bold dark:text-white mb-5">{!! $datas[20]->value !!}</h3>
                     <p class="text-gray-900 dark:text-white text-center">{!! $datas[21]->value !!}</p>
                 </div>
@@ -108,10 +108,11 @@
         <div class="max-w-screen-xl mx-auto p-4">
             <div class="grid grid-cols-2 gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div>
-                    <img class="w-96 rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[2]->image) }}" alt="office content 1">
+                    <img class="w-96 rounded-md shadow-lg" src="{{ asset('storage/img/GeneralImage/'. $images[2]->image) }}" alt="office content 1">
                 </div>
                     <div class="font-regular text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[22]->value !!}</h2>
+                        <hr class="w-48 h-1 bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
                         <p class="mb-4 text-black">{!! $datas[23]->value !!}</p>
                     </div>
             </div>
@@ -122,7 +123,7 @@
         <div class="max-w-screen-xl mx-auto p-4">
             <div class="gap-10 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div>
-                    <img class="w-full rounded-md" src="{{ asset('storage/img/GeneralImage/'. $images[2]->image) }}" alt="office content 1">
+                    <img class="w-full rounded-md shadow-md" src="{{ asset('storage/img/GeneralImage/'. $images[2]->image) }}" alt="office content 1">
                 </div>
                     <div class="font-regular text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 class="mt-4 mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">{!! $datas[22]->value !!}</h2>
@@ -134,7 +135,8 @@
 
     {{-- section 5 client --}}
     <section class="bg-white dark:bg-gray-900  p-10 justify-items-center overflow-hidden" id="desktop">
-        <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-10 mt-5">{!! $datas[24]->value !!}</h2>
+        <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-2 mt-5">{!! $datas[24]->value !!}</h2>
+        <hr class="w-48 h-1 bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
         <div class="carousel carousel-center max-w-screen-xl mx-auto">
 
             @foreach ($client as $clients)
@@ -168,29 +170,19 @@
         </div>
     </section>
 
-    {{-- section 7 inquiry --}}
-    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class="bg-white dark:bg-gray-900" id="desktop">
-        <div class="max-w-screen-xl mx-auto p-4" >
-            <div class="grid grid-cols-2 gap-20 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div>
-                    <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-right">{!! $datas[5]->value !!}</h2>
-                </div>
-                <div class="justify-items-center">
-                    <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
-                </div>
+    {{-- inquiry --}}
+    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900 h-[300px]" >
+        <div class="items-center max-w-screen-xl mx-auto my-auto p-4 py-20" >
+            <div>
+                <h2 class="text-2xl font-bold text-[#142792] dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
             </div>
-        </div>
-    </section>
+            <div class="flex justify-center">
+                <button onclick="window.open('https://wa.wizard.id/62abfd')" class="btn rounded-full btn-m w-[120px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#384fd4] rounded hover:bg-[#384fd4] group py-1.5 px-2.5 mt-4">
+                    <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                    <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#142792]">Inquiry</span>
+                    </button>
 
-    <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900" id="mobile">
-        <div class="max-w-screen-xl mx-auto p-4" >
-            <div class="gap-20 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div>
-                    <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-center">{!! $datas[5]->value !!}</h2>
-                </div>
-                <div class="place-items-center grid gap-4">
-                    <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
-                </div>
+                {{-- <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button> --}}
             </div>
         </div>
     </section>

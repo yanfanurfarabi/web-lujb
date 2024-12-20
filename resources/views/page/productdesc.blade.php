@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout2>
     <section>
         <div class="max-w-screen-xl mx-auto p-4">
             <div class="grid grid-rows-2 grid-flow-col gap-4">
@@ -95,4 +95,4 @@
             </div>
         </div>
     </section>
-</x-layout>
+</x-layout2>

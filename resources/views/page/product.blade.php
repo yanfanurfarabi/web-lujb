@@ -11,19 +11,13 @@
 
     <div class="container mx-auto">
         {{-- class tab active: tab-active --}}
-        <div role="tablist" class="tabs tabs-boxed flex flex-wrap mt-10 mb-20 justify-center">
-            <a href="/product/fuelpump" class="tab text-white flex-auto text-center">Sanki Dispensing Pump</a>
-            <a href="/product/stp" class="tab text-white flex-auto text-center">Red Robe Turbine Pump</a>
-            <a href="/product/atg" class="tab  text-white flex-auto text-center">Guihe ATG</a>
-            <a href="/product/hose" class="tab  text-white flex-auto text-center">Dantec Composite Hose</a>
-            <a href="/product/lcp" class="tab  text-white flex-auto text-center">LC Meter</a>
-            <a href="/product/halock" class="tab  text-white flex-auto text-center">Halock Flexible Pipes</a>
-            
-            {{-- <a onclick="openTab('all_products')" class="tab tab-active text-white flex-auto text-center">All Products</a>
-            <a onclick="openTab('hose_meter')" class="tab text-white flex-auto text-center">Guihe ATG</a>
-            <a onclick="openTab('flexible_pipes')" class="tab text-white flex-auto text-center">Dantec Composite Hose</a>
-            <a onclick="openTab('atg')" class="tab text-white flex-auto text-center">LCP Flowmeters</a>
-            <a onclick="openTab('panel')" class="tab text-white flex-auto text-center">Halock Flexible Pipes</a> --}}
+        <div role="tablist" class="tabs tabs-boxed flex py-5 flex-wrap mt-10 mb-20 justify-center">
+            <a href="/product/fuelpump" class="tab text-white flex-auto font-medium text-center hover:text-[#f1ff00]">Sanki Dispensing Pump</a>
+            <a href="/product/stp" class="tab text-white flex-auto font-medium text-center hover:text-[#f1ff00]">Red Robe Turbine Pump</a>
+            <a href="/product/atg" class="tab  text-white flex-auto font-medium text-center hover:text-[#f1ff00]">Guihe ATG</a>
+            <a href="/product/hose" class="tab  text-white flex-auto font-medium text-center hover:text-[#f1ff00]">Dantec Composite Hose</a>
+            <a href="/product/lcp" class="tab  text-white flex-auto font-medium text-center hover:text-[#f1ff00]">LC Meter</a>
+            <a href="/product/halock" class="tab  text-white flex-auto font-medium text-center hover:text-[#f1ff00]">Halock Flexible Pipes</a>
         </div>
      
         {{-- Tab All Products --}}
@@ -44,7 +38,12 @@
                     <div class="card-body items-center text-center border-t-2">
                     <h2 class="card-title font-bold text-3l text-gray-800 mb-5">{!! $product->name !!}</h2>
                     <div class="card-actions">
-                        <a href="{{ route('productdesc', $product->name) }}" class="btn rounded-full bg-[#384fd4] btn-info text-white w-[120px]">Detail</a>
+                        <button onclick="window.location.href='{{ route('productdesc', $product->name) }}'" class="btn rounded-full w-[120px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#384fd4] rounded hover:bg-[#384fd4] group py-1.5 px-2.5 mt-4">
+                            <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                            <span class="relative w-full text-left text-white text-center transition-colors duration-300 ease-in-out group-hover:text-[#142792]">Detail</span>
+                            </button>
+
+                        {{-- <a href="{{ route('productdesc', $product->name) }}" class="btn rounded-full bg-[#384fd4] btn-info text-white w-[120px]">Detail</a> --}}
                     </div>
                     </div>
                 </div>
