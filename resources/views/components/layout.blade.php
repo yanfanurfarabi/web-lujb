@@ -23,7 +23,7 @@
   <x-footer></x-footer>
 
   <style>
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1280px) {
         #desktop{
 display: none;
         }

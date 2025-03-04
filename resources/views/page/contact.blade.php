@@ -2,7 +2,7 @@
     
     <div class="hero h-auto" id="desktop">
         <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner"/>
-        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">{!! $datas[34]->value !!}</p>
+        <p class="absolute w-80 px-4 py-6 text-white bg-[#229e89] rounded-2xl right-60 bottom-50 font-semibold text-4xl">{!! $datas[34]->value !!}</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
@@ -18,12 +18,12 @@
         <div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl p-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400">
             <div class="grid grid-cols-2 gap-10">
                 <div>
-                    <h1 class="card-title opacity-100 text-xl lg:text-2xl font-bold text-black mb-5">Contact</h1>
+                    <h1 class="card-title opacity-100 text-xl lg:text-2xl font-semibold text-[#229e89] mb-5">Contact</h1>
                     <p class="text-black">{!! $datas[25]->value !!}</p>
                     <iframe class="rounded-md mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d589.6785848539195!2d106.83485005336404!3d-6.148308506706189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5ee87b39529%3A0x17db70cec35a174!2sPT.%20Ladang%20Usaha%20Jaya%20Bersama!5e0!3m2!1sen!2sid!4v1727426780001!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div>
-                    <h1 class="card-title opacity-100 text-xl lg:text-2xl font-bold text-black mb-2 ">Leave us message</h1>
+                    <h1 class="card-title opacity-100 text-xl lg:text-2xl font-semibold text-[#229e89] mb-2 ">Leave us message</h1>
                     <span>{!! $datas[26]->value !!}</span>
                     <form action="{{ route('email.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -64,12 +64,12 @@
     <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900 h-[300px]" >
         <div class="items-center max-w-screen-xl mx-auto my-auto p-4 py-20" >
             <div>
-                <h2 class="text-2xl font-bold text-[#142792] dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
+                <h2 class="text-2xl font-bold text-[#229e89] dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
             </div>
             <div class="flex justify-center">
-                <button onclick="window.open('https://wa.wizard.id/62abfd')" class="btn rounded-full btn-m w-[120px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#384fd4] rounded hover:bg-[#384fd4] group py-1.5 px-2.5 mt-4">
+                <button onclick="window.open('https://wa.wizard.id/62abfd')" class="btn rounded-full btn-m w-[120px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
                     <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#142792]">Inquiry</span>
+                    <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#229e89]">Inquiry</span>
                     </button>
 
                 {{-- <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button> --}}

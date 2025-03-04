@@ -17,13 +17,14 @@
 <body class="h-full">
 
   <x-header></x-header>
+  <div style="background-color: #142792;" class="h-24"></div>
   <div class="mt-20">
   {{ $slot }}
   </div>
   <x-footer></x-footer>
 
   <style>
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1080px) {
         #desktop{
 display: none;
         }

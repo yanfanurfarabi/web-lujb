@@ -1,53 +1,46 @@
-{{-- @dd('$datas') --}}
-
 <x-layout>
 
     <div class="hero h-auto" id="desktop">
-        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner" class="w-full h-[80vh]"/>
-        <p class="absolute w-80 px-4 text-white right-60 bottom-50 font-semibold text-4xl">{!! $datas[30]->value !!}</p>
+        <img src= "{{ asset('storage/img/Banner/'. $banners[0]->image) }}" alt="Banner" class="w-full"/>
+        <p class="absolute w-80 px-4 py-6 text-white bg-[#229e89] rounded-2xl right-60 bottom-50 font-semibold text-4xl">{!! $datas[30]->value !!}</p>
     </div>
 
     <div class="hero h-auto" id="mobile">
         <img src= "{{ asset('storage/img/Banner/'. $banners[1]->image) }}" alt="Banner"/>
-        <p class="absolute px-4 text-white top-60 font-semibold text-4xl">{!! $datas[30]->value !!}</p>
+        <p class="absolute px-4 text-white bg-[#229e89] top-60 font-bold text-4xl">{!! $datas[30]->value !!}</p>
     </div>
 
     <div class="max-w-screen-xl mx-auto p-4">
-            
-        <h3 class=" text-[#000000] text-2xl lg:text-3xl font-bold dark:text-white text-center mt-4 mb-2">
-            {!! $datas[0]->value !!} </h3>
-            <hr class="w-48 h-1 mx-auto bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700 mb-4">
-
-            <p class="mb-4 text-black">{!! $datas[17]->value !!} </p>
+    {{-- <div class="max-w-5xl mx-auto p-4"> --}}
+        <h3 class=" text-[#187666] mx-auto text-2xl lg:text-3xl font-semibold dark:text-white mt-4 mb-8">{!! $datas[0]->value !!} </h3>
+            <p class="mb-4 mx-auto text-black">{!! $datas[17]->value !!}</p>
     
             {{-- Card Services --}}
 
-            <h3 class=" text-[#000000] text-2xl lg:text-3xl font-bold dark:text-white text-center mb-2">
-                {!! $datas[29]->value !!} </h3>
-                <hr class="w-48 h-1 mx-auto bg-[#384fd4] mb-4 border-0 rounded md:my-5 dark:bg-gray-700">
+            <h3 class=" text-[#229e89] text-2xl lg:text-3xl font-semibold dark:text-white text-center mt-8 mb-8">{!! $datas[29]->value !!} </h3>
 
                 {{-- Desktop --}}
                 <section class="columns-4 mb-10" id="desktop">
                     <div class="mx-auto w-[50%]">
                         <img src="{{ asset('storage/img/GeneralImage/'. $images[12]->image) }}" alt="{{ $images[12]->name }}" class="hover:scale-105 ease-in-out duration-500 transition">
-                        <p class="font-bold text-[#283891] text-2xl text-center">Equipment Installation</p>
+                        <p class="font-semibold text-[#229e89] text-2xl text-center">Equipment Installation</p>
                     </div>
 
                     <div class=" mx-auto w-[50%]">
                         <div class="w-full"> 
                         <img src="{{ asset('storage/img/GeneralImage/'. $images[13]->image) }}" alt="" class="hover:scale-105 ease-in-out duration-500 transition">
                     </div>
-                        <p class="font-bold text-[#283891] text-2xl text-center">Maintenance</p>
+                        <p class="font-semibold text-[#229e89] text-2xl text-center">Maintenance</p>
                     </div>
 
                     <div class=" mx-auto w-[50%]">
                         <img src="{{ asset('storage/img/GeneralImage/'. $images[14]->image) }}" alt="" class="hover:scale-105 ease-in-out duration-500 transition">
-                        <p class="font-bold text-[#283891] text-2xl text-center">Construction</p>
+                        <p class="font-semibold text-[#229e89] text-2xl text-center">Construction</p>
                     </div>
 
                     <div class=" mx-auto w-[50%]">
                         <img src="{{ asset('storage/img/GeneralImage/'. $images[15]->image) }}" alt="" class="hover:scale-105 ease-in-out duration-500 transition">
-                        <p class="font-bold text-[#283891] text-2xl text-center">Hydrotest</p>
+                        <p class="font-semibold text-[#229e89] text-2xl text-center">Hydrotest</p>
                     </div>
 
             </section>
@@ -56,24 +49,24 @@
             <section class="columns-2 mb-10" id="mobile">
                 <div class="mx-auto w-[50%] mb-2">
                     <img src="{{ asset('storage/img/GeneralImage/'. $images[12]->image) }}" alt="" class="rounded">
-                    <p class="font-bold text-[#283891] text-l text-center">Equipment Installation</p>
+                    <p class="font-bold text-[#229e89] text-l text-center">Equipment Installation</p>
                 </div>
 
                 <div class=" mx-auto w-[50%] mb-4">
                     <div class="w-full"> 
                     <img src="{{ asset('storage/img/GeneralImage/'. $images[13]->image) }}" alt="" class="rounded">
                 </div>
-                    <p class="font-bold text-[#283891] text-l text-center">Maintenance</p>
+                    <p class="font-bold text-[#229e89] text-l text-center">Maintenance</p>
                 </div>
 
                 <div class=" mx-auto w-[50%] mb-5">
                     <img src="{{ asset('storage/img/GeneralImage/'. $images[14]->image) }}" alt="" class="rounded">
-                    <p class="font-bold text-[#283891] text-l text-center">Construction</p>
+                    <p class="font-bold text-[#229e89] text-l text-center">Construction</p>
                 </div>
 
                 <div class=" mx-auto w-[50%] mb-5">
                     <img src="{{ asset('storage/img/GeneralImage/'. $images[15]->image) }}" alt="" class="rounded">
-                    <p class="font-bold text-[#283891] text-l text-center">Hydrotest</p>
+                    <p class="font-bold text-[#229e89] text-l text-center">Hydrotest</p>
                 </div>
 
         </section>
@@ -84,13 +77,12 @@
                 <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
-                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-[#000] mb-5 mt-5">{!! $datas[2]->value !!}</h2>
-                <hr class="w-48 h-1 bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
-                <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-semibold text-[#229e89] mb-2 mt-5">{!! $datas[2]->value !!}</h2>
+                <p class="opacity-100 text-black mt-8">{!! $datas[3]->value !!}</p>
                   
-                  <button onclick="window.location.href='/profile'" class="btn rounded-full btn-sm relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#384fd4] rounded hover:bg-[#384fd4] group py-1.5 px-2.5 mt-4">
+                  <button onclick="window.location.href='/profile'" class="btn rounded-full btn-sm relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
                     <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-[#142792]">Read More</span>
+                    <span class="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-[#229e89]">Read More</span>
                     </button>
             </div>
         </div>
@@ -100,17 +92,16 @@
                 <img class="w-full h-full max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
-                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-semibold text-black mb-5 mt-5">{!! $datas[2]->value !!}</h2>
                 <p class="opacity-100 text-black">{!! $datas[3]->value !!}</p>
                 <button class="rounded-full btn btn-sm bg-[#384fd4] text-white mt-4 mb-4">Read More</button>
             </div>
         </div>
 
 {{-- our product Desktop --}}
-<div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-slate-500" id="desktop">
+<div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-[#229e89]" id="desktop">
     <div class="rounded-md ">
-        <h1 class=" text-gray-900 text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10 mt-3">
-            {!! $datas[1]->value !!} </h1>  
+        <h1 class=" text-[#229e89] text-2xl lg:text-3xl font-semibold dark:text-white text-center mb-10 mt-3">{!! $datas[1]->value !!} </h1>  
         <div class="grid grid-cols-2 gap-4">
         <div class="col-span-2 grid gap-4">
             {{-- <div class="hover:shadow-lg overflow-hidden">
@@ -253,10 +244,9 @@
         </div>
     </section> --}}
 
-    {{-- Test --}}
+    {{-- TRUSTED BY --}}
     <section class="dark:bg-gray-900 p-10 justify-items-center overflow-hidden" id="desktop">
-    <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-black mb-2 mt-2">{!! $datas[4]->value !!}</h2>
-    <hr class="w-48 h-1 mx-auto bg-[#384fd4] border-0 rounded md:my-5 dark:bg-gray-700">
+    <h2 class="opacity-100 text-2xl lg:text-3xl font-semibold text-[#229e89] mb-2 mt-2">{!! $datas[4]->value !!}</h2>
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-32">
@@ -309,12 +299,12 @@
     <section style="background-image: url('{{ asset('storage/img/GeneralImage/'. $inquire[0]->image) }}')" class=" bg-white dark:bg-gray-900 h-[300px]" >
         <div class="items-center max-w-screen-xl mx-auto my-auto p-4 py-20" >
             <div>
-                <h2 class="text-2xl font-bold text-[#142792] dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
+                <h2 class="text-2xl font-semibold text-[#229e89] dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
             </div>
             <div class="flex justify-center">
-                <button onclick="window.open('https://wa.wizard.id/62abfd')" class="btn rounded-full btn-m w-[120px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#384fd4] rounded hover:bg-[#384fd4] group py-1.5 px-2.5 mt-4">
+                <button onclick="window.open('https://wa.wizard.id/62abfd')" class="btn rounded-full btn-m w-[120px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
                     <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                    <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#142792]">Inquiry</span>
+                    <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#229e89]">Inquiry</span>
                     </button>
 
                 {{-- <button type="button" onclick="window.open('https://wa.wizard.id/62abfd')" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button> --}}
