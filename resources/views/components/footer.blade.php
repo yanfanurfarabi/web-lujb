@@ -2,11 +2,9 @@
 {{-- Desktop View --}}
 <footer class="footer p-10" style="background-color: #2c3f50; color:#ffffff" id="desktop">
   <div class="max-w-screen-xl items-center justify-between mx-auto">
-    <div class="grid grid-cols-4 gap-6">
-      <div>
-        <p class="font-bold text-white-900 text-2xl lg:text-2l">Specialized in Petrol Station Equipment Products and Installation.</p>
-      </div>
-      <div>
+    <div class="grid grid-cols-3 gap-6">
+      <div class="mx-auto">
+        <p class="font-bold text-white-900 text-2xl lg:text-2l mb-4">PT Ladang Usaha Jaya Bersama</p>
         <h6 class="footer-title opacity-100">Contact</h6>
         <p>Phone : (021) 6530 1482</p>
         <p>Fax : (021) 6530 2313</p>
@@ -14,7 +12,15 @@
         <h6 class="footer-title opacity-100 mt-4">Address</h6>
         <p>Jl. Gunung Sahari Raya 1,<br> Blok A-13 Jakarta Pusat 10720, Indonesia</p>
       </div>
-      <div>
+      {{-- <div>
+        <h6 class="footer-title opacity-100">Contact</h6>
+        <p>Phone : (021) 6530 1482</p>
+        <p>Fax : (021) 6530 2313</p>
+        <p>Email : LUJB_indo@hotmail.com</p>
+        <h6 class="footer-title opacity-100 mt-4">Address</h6>
+        <p>Jl. Gunung Sahari Raya 1,<br> Blok A-13 Jakarta Pusat 10720, Indonesia</p>
+      </div> --}}
+      <div class="mx-auto">
         <h6 class="footer-title opacity-100">Product</h6>
         <ul class="list-disc list-inside">
             <a href="https://lujb.co.id/product/fuelpump" class="FooterLink">Sanki Fuel Pump</a>
@@ -26,7 +32,7 @@
         </ul>
   
       </div>
-      <div>
+      <div class="mx-auto">
         <h6 class="footer-title opacity-100">Whistleblowing System</h6>
         <img src="" alt="">
         <button onclick="window.open('https://forms.gle/W1hE5k7cQrsgGV3j8')" class="btn rounded-full btn-m w-[180px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
@@ -47,7 +53,7 @@
   <div class="max-w-screen-xl items-center text-center justify-between mx-auto">
     <div class="gap-6">
       <div>
-        <p class="font-bold text-white text-2xl lg:text-2l">Specialized in Petrol Station Equipment Products and Installation.</p>
+        <p class="font-bold text-white text-2xl lg:text-2l">PT Ladang Usaha Jaya Bersama</p>
       </div>
       <div class="mt-5">
         <h6 class="footer-title opacity-100">Contact</h6>
@@ -69,7 +75,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div>  
 
 </footer>
 

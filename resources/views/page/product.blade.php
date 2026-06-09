@@ -60,7 +60,13 @@
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-7">{!! $datas[5]->value !!}</h2>
             </div>
             <div class="flex justify-center">
-                <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+                {{-- <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button> --}}
+            
+                <button class="btn rounded-full btn-m w-[160px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
+                    <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                    <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#229e89]">Make A Complaint</span>
+                    </button>
+
             </div>
         </div>
     </section>
@@ -72,7 +78,13 @@
                     <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white text-center">{!! $datas[5]->value !!}</h2>
                 </div>
                 <div class="place-items-center grid gap-4">
-                    <button type="button" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button>
+                    {{-- <button type="button" class="items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Inquiry</button> --}}
+
+                    <button class="btn rounded-full btn-m w-[160px] relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
+                        <span class="w-56 h-48 rounded bg-indigo-100 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                        <span class="relative w-full text-left text-center text-white transition-colors duration-300 ease-in-out group-hover:text-[#229e89]">Make A Complaint</span>
+                        </button>
+
                 </div>
             </div>
         </div>

@@ -17,14 +17,14 @@
 <body class="h-full">
 
   <x-header></x-header>
-  <div style="background-color: #142792;" class="h-24"></div>
+  {{-- <div style="background-color: #142792;" class="h-24"></div> --}}
   <div class="mt-20">
   {{ $slot }}
   </div>
   <x-footer></x-footer>
 
   <style>
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 1280px) {
         #desktop{
 display: none;
         }
@@ -45,6 +45,10 @@ display: none;
     transform: rotate(360deg);
   }
 }
+}
+
+li{
+  color: #000;
 }
 </style>
 

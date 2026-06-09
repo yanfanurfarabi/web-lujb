@@ -12,12 +12,12 @@
 
     <div class="max-w-screen-xl mx-auto p-4">
     {{-- <div class="max-w-5xl mx-auto p-4"> --}}
-        <h3 class=" text-[#187666] mx-auto text-2xl lg:text-3xl font-semibold dark:text-white mt-4 mb-8">{!! $datas[0]->value !!} </h3>
+        <h3 class=" text-[#187666] mx-auto text-2xl lg:text-3xl font-bold dark:text-white mt-4 mb-8">{!! $datas[0]->value !!} </h3>
             <p class="mb-4 mx-auto text-black">{!! $datas[17]->value !!}</p>
     
             {{-- Card Services --}}
 
-            <h3 class=" text-[#229e89] text-2xl lg:text-3xl font-semibold dark:text-white text-center mt-8 mb-8">{!! $datas[29]->value !!} </h3>
+            <h3 class=" text-[#229e89] text-2xl lg:text-3xl font-bold dark:text-white text-center mt-8 mb-8">{!! $datas[29]->value !!} </h3>
 
                 {{-- Desktop --}}
                 <section class="columns-4 mb-10" id="desktop">
@@ -77,7 +77,7 @@
                 <img class="w-full h-96 max-w-full rounded-2xl" src="{{ asset('storage/img/GeneralImage/'. $images[6]->image) }}" alt="why_us" />
             </div>
             <div>
-                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-semibold text-[#229e89] mb-2 mt-5">{!! $datas[2]->value !!}</h2>
+                <h2 class="card-title opacity-100 text-2xl lg:text-3xl font-bold text-[#229e89] mb-2 mt-5">{!! $datas[2]->value !!}</h2>
                 <p class="opacity-100 text-black mt-8">{!! $datas[3]->value !!}</p>
                   
                   <button onclick="window.location.href='/profile'" class="btn rounded-full btn-sm relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-[#229e89] rounded hover:bg-[#229e89] group py-1.5 px-2.5 mt-4">
@@ -101,7 +101,7 @@
 {{-- our product Desktop --}}
 <div class="flex flex-col  shadow-sm rounded-xl p-5 md:p-5 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 border-2 border-[#229e89]" id="desktop">
     <div class="rounded-md ">
-        <h1 class=" text-[#229e89] text-2xl lg:text-3xl font-semibold dark:text-white text-center mb-10 mt-3">{!! $datas[1]->value !!} </h1>  
+        <h1 class=" text-[#229e89] text-2xl lg:text-3xl font-bold dark:text-white text-center mb-10 mt-3">{!! $datas[1]->value !!} </h1>  
         <div class="grid grid-cols-2 gap-4">
         <div class="col-span-2 grid gap-4">
             {{-- <div class="hover:shadow-lg overflow-hidden">
@@ -246,7 +246,7 @@
 
     {{-- TRUSTED BY --}}
     <section class="dark:bg-gray-900 p-10 justify-items-center overflow-hidden" id="desktop">
-    <h2 class="opacity-100 text-2xl lg:text-3xl font-semibold text-[#229e89] mb-2 mt-2">{!! $datas[4]->value !!}</h2>
+    <h2 class="opacity-100 text-2xl lg:text-3xl font-bold text-[#229e89] mb-2 mt-2">{!! $datas[4]->value !!}</h2>
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-32">
